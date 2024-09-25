@@ -55,17 +55,43 @@ def main():
         st.header("About Me")
         st.write("""
         Hello, my name is Caleb Traxler. 
-        
+    
         I'm a data scientist, machine learning engineer, investor and an aspiring entrepreneur with a passion for innovation and space exploration. 
-        As a UCLA Mathematics and Computer Science Alumni (Class of 2024) and current graduate student UC Irvine, 
+        As a UCLA Mathematics and Computer Science Alumni (Class of 2024) and current graduate student at UC Irvine, 
         I bring a strong technical foundation to my work. My experience as an Ex-Data Scientist and ML Engineer at Amgen has honed my 
         skills in applying cutting-edge technologies to real-world problems.
-
+    
         Beyond my technical pursuits, I'm an active investor in both real estate and securities markets, always looking for new 
         opportunities to grow and diversify my portfolio. My entrepreneurial spirit has led me to found Traxler Technology, 
         where we're working on advancing humanity's reach into the cosmos through innovative Mars exploration and colonization solutions.
+    
+        In my free time, I enjoy:
+        - Traveling to new places
+        - Visiting amusement parks
+        - Staying fit by going to the gym
         """)
-        
+    
+        # Display personal interest photos
+        col1, col2, col3 = st.columns(3)
+    
+        with col1:
+            st.subheader("Traveling")
+            st.image("/api/placeholder/300/200", caption="My latest travel adventure")
+            # Replace the placeholder with your actual travel photo:
+            # st.image("path_to_your_travel_photo.jpg", caption="My latest travel adventure")
+    
+        with col2:
+            st.subheader("Amusement Parks")
+            st.image("/api/placeholder/300/200", caption="Fun at the amusement park")
+            # Replace the placeholder with your actual amusement park photo:
+            # st.image("path_to_your_amusement_park_photo.jpg", caption="Fun at the amusement park")
+    
+        with col3:
+            st.subheader("Gym")
+            st.image("/api/placeholder/300/200", caption="Staying fit at the gym")
+            # Replace the placeholder with your actual gym photo:
+            # st.image("path_to_your_gym_photo.jpg", caption="Staying fit at the gym")
+    
         if st.button("Download Resume"):
             # Replace with your actual resume file path
             st.markdown("[Download Resume](ResumeFinalpro.pdf)")
