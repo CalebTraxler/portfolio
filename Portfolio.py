@@ -64,12 +64,17 @@ def main():
         Beyond my technical pursuits, I'm an active investor in both real estate and securities markets, always looking for new 
         opportunities to grow and diversify my portfolio. My entrepreneurial spirit has led me to found Traxler Technology, 
         where we're working on advancing humanity's reach into the cosmos through innovative Mars exploration and colonization solutions.
+        
     
         In my free time, I enjoy:
         - Traveling to new places
         - Visiting amusement parks
         - Eating amazing foods
         """)
+
+        if st.button("Download Resume"):
+            # Replace with your actual resume file path
+            st.markdown("[Download Resume](ResumeFinalpro.pdf)")
     
         # Display personal interest photos
         col1, col2, col3 = st.columns(3)
@@ -97,10 +102,6 @@ def main():
             st.image("food/omlet.png", caption="Eating tamagoyaki in Japan.")
             # Replace the placeholder with your actual gym photo:
             # st.image("path_to_your_gym_photo.jpg", caption="Staying fit at the gym")
-    
-        if st.button("Download Resume"):
-            # Replace with your actual resume file path
-            st.markdown("[Download Resume](ResumeFinalpro.pdf)")
     
     with tab2:
         st.header("Education")
