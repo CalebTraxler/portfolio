@@ -76,9 +76,9 @@ def main():
     
         with col1:
             st.subheader("Traveling - Japan")
-            st.image("travel/japan.heif", caption="My latest travel adventure")
+            st.image("travel/japan.png", caption="My latest travel adventure")
 
-            st.image("travel/japan2.HEIC", caption="My latest travel adventure")
+            st.image("travel/japan2.png", caption="My latest travel adventure")
             # Replace the placeholder with your actual travel photo:
             # st.image("path_to_your_travel_photo.jpg", caption="My latest travel adventure")
     
