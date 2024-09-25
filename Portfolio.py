@@ -44,7 +44,7 @@ def main():
     with col2:
         st.title("Caleb Traxler")
         st.subheader("Data Scientist, ML Engineer, Entrepreneur, and Investor")
-        st.write("(805) 377-8182 | calebtraxler34@gmail.com")
+        st.write("(805) 377-8182 | calebtraxler34@gmail.com | traxlerc@uci.edu")
         st.write("[LinkedIn](https://www.linkedin.com/in/calebtraxler) | [GitHub](https://www.github.com/calebtraxler) | [Traxler Technology](https://traxler.streamlit.app)")
     
     st.markdown("---")
