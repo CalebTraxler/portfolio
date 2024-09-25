@@ -68,14 +68,14 @@ def main():
         In my free time, I enjoy:
         - Traveling to new places
         - Visiting amusement parks
-        - Staying fit by going to the gym
+        - Eating amazing foods
         """)
     
         # Display personal interest photos
         col1, col2, col3 = st.columns(3)
     
         with col1:
-            st.subheader("Traveling")
+            st.subheader("Traveling - Japan")
             st.image("/api/placeholder/300/200", caption="My latest travel adventure")
             # Replace the placeholder with your actual travel photo:
             # st.image("path_to_your_travel_photo.jpg", caption="My latest travel adventure")
@@ -87,8 +87,8 @@ def main():
             # st.image("path_to_your_amusement_park_photo.jpg", caption="Fun at the amusement park")
     
         with col3:
-            st.subheader("Gym")
-            st.image("/api/placeholder/300/200", caption="Staying fit at the gym")
+            st.subheader("Food")
+            st.image("/api/placeholder/300/200", caption="Eating amazing foods.")
             # Replace the placeholder with your actual gym photo:
             # st.image("path_to_your_gym_photo.jpg", caption="Staying fit at the gym")
     
