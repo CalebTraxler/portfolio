@@ -54,8 +54,10 @@ def main():
     with tab1:
         st.header("About Me")
         st.write("""
-        I'm a data scientist, machine learning engineer, and aspiring entrepreneur with a passion for innovation and space exploration. 
-        As a UCLA Mathematics and Computer Science Alumni (Class of 2024) and current graduate student in Data Science at UC Irvine, 
+        Hello, my name is Caleb Traxler. 
+        
+        I'm a data scientist, machine learning engineer, investor and an aspiring entrepreneur with a passion for innovation and space exploration. 
+        As a UCLA Mathematics and Computer Science Alumni (Class of 2024) and current graduate student UC Irvine, 
         I bring a strong technical foundation to my work. My experience as an Ex-Data Scientist and ML Engineer at Amgen has honed my 
         skills in applying cutting-edge technologies to real-world problems.
 
