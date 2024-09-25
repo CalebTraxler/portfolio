@@ -84,13 +84,17 @@ def main():
     
         with col2:
             st.subheader("Amusement Parks")
-            st.image("/api/placeholder/300/200", caption="Fun at the amusement park")
+            st.image("parks/universal.png", caption="Fun at the Universal Studios amusement park")
+
+            st.image("parks/stormtroopers.png", caption="Fun at the Disneyland amusement park")
             # Replace the placeholder with your actual amusement park photo:
             # st.image("path_to_your_amusement_park_photo.jpg", caption="Fun at the amusement park")
     
         with col3:
             st.subheader("Food")
-            st.image("/api/placeholder/300/200", caption="Eating amazing foods.")
+            st.image("food/crab.png", caption="Eating crab on the Santa Barbra pier")
+
+            st.image("food/omlet.png", caption="Eating tamagoyaki in Japan.")
             # Replace the placeholder with your actual gym photo:
             # st.image("path_to_your_gym_photo.jpg", caption="Staying fit at the gym")
     
