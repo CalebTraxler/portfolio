@@ -77,6 +77,8 @@ def main():
         with col1:
             st.subheader("Traveling - Japan")
             st.image("/api/placeholder/300/200", caption="My latest travel adventure")
+
+            st.image("/api/placeholder/300/200", caption="My latest travel adventure")
             # Replace the placeholder with your actual travel photo:
             # st.image("path_to_your_travel_photo.jpg", caption="My latest travel adventure")
     
