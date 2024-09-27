@@ -190,7 +190,7 @@ def main():
             st.write("Joined the Technology and Innovation Lab at Amgen for a 10-week data science and machine learning role, focused on accelerating research and development using machine learning, AI and digital technologies. Used python to build a rare disease prioritization model able to automate a rare disease scoring process with generative artificial intelligence, yielding an accuracy of 96%. Accelerated a year-long scoring process into a few days.")
     
         with st.expander("AI-Safety Fellowship - UCLA"):
-            col1, col2 = st.columns([1, 8])
+            col1, col2 = st.columns([1, 5])
             with col1:
                 st.image("Experience/ai_safety.png", width=50)
             with col2:
