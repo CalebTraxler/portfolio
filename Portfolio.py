@@ -127,6 +127,7 @@ def main():
                 st.write(" ")
                 st.subheader("University of California Los Angeles (UCLA)")
             st.write("September 2022 - June 2024")
+            st.write(" Graduated from UCLA with a Bachelor Degree in Mathematics and Computer Science. I was involved in many activities and societies: Undergraduate Mathematics Student Association (UMSA), AI Safety Fellowship. Phi Theta Kappa Honors Society. Undergraduate Mathematics Research under the supervision of Professor Shiba Biswal.")
             st.write("• Joint Degree with Concentrations in Applied Mathematics and Computer Science")
             st.write("• GPA: 3.81/4.00")
             st.write("• UCLA Mathematics and Computer Science Alumni, Class of 2024")
