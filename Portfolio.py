@@ -160,7 +160,7 @@ def main():
                 st.write(" ")
                 st.subheader("Moorpark College")
             st.write("August 2020 - June 2022")
-            st.write("I graduated from Moorpark College in 2022 and transferred to UCLA. At Moorpark College I studied Mathematics, Physics and Computer Science. I was also an active partcipant of many activities and societies: Deans List (2020-2022), Honor Roll (2020 - 2022), Phi Theta Kappa Honors Society 2020-present, Nasa Community College Aerospace Scholars Internship, and a Mathematics tutor ")
+            st.write("I graduated from Moorpark College in 2022 and transferred to UCLA. At Moorpark College I studied Mathematics, Physics and Computer Science. I was also an active partcipant of many activities and societies: Deans List (2020-2022), Honor Roll (2020 - 2022), Phi Theta Kappa Honors Society 2020-present, Nasa Community College Aerospace Scholars Internship, and I was a Mathematics tutor ")
             st.write("• GPA: 4.00/4.00")
     
     with tab3:
