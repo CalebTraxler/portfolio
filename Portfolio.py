@@ -50,7 +50,7 @@ def main():
     
     st.markdown("---")
     
-    tab1, tab2, tab3, tab4, tab5, tab6 = st.tabs(["About Me", "Education", "Experience", "Projects", "Entrepreneurship", "Investments"])
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(["About Me", "Education", "Experience", "Projects", "Investments"])
     
     with tab1:
         st.header("About Me")
@@ -240,22 +240,8 @@ def main():
             st.write("• Implemented an embedded notch filter to eliminate noise frequencies")
     
     with tab5:
-        st.header("Entrepreneurship")
-        st.subheader("Traxler Technology")
-        st.write("""
-        As the Founder and CEO of Traxler Technology, I'm leading our mission to advance humanity's reach into the cosmos. 
-        We're exploring innovative solutions for Mars exploration and colonization, believing in a future where humans 
-        live and thrive on multiple planets.
-        """)
-        st.write("Key Focus Areas:")
-        st.write("• Developing interactive tools and simulations for Mars research")
-        st.write("• Exploring sustainable technologies for Mars colonization")
-        st.write("• Collaborating with space agencies and private space companies")
-        st.markdown("[Explore Traxler Technology](https://traxler.streamlit.app)")
+        st.header("Real Estate Investments")
     
-    with tab6:
-        st.header("Investments")
-        st.subheader("Real Estate")
         st.markdown("""
         <div class="highlight">
         <h4>First Property Investment - Topeka, Kansas</h4>
@@ -265,14 +251,30 @@ def main():
         • Actively seeking next property investment in Texas by end of 2025
         </div>
         """, unsafe_allow_html=True)
-        
-        st.subheader("Securities")
-        st.write("Active investor in the stock market and other securities")
-        st.write("• Diversified portfolio across various sectors")
-        st.write("• Focus on long-term growth and value investing")
     
+        st.markdown("""
+        <div class="highlight">
+        <h4>Investment Strategy</h4>
+        • Focus on up-and-coming neighborhoods with growth potential<br>
+        • Target properties with value-add opportunities through renovation<br>
+        • Utilize house hacking strategy for initial investments to offset costs<br>
+        • Aim to build a diverse portfolio of residential and potentially commercial properties
+        </div>
+        """, unsafe_allow_html=True)
+    
+        st.markdown("""
+        <div class="highlight">
+        <h4>Future Plans</h4>
+        • Research multi-family properties in emerging markets<br>
+        • Explore real estate investment trusts (REITs) for portfolio diversification<br>
+        • Network with local real estate investors and join investment groups<br>
+        • Continuously educate myself on real estate market trends and investment strategies
+        </div>
+        """, unsafe_allow_html=True)
+    
+        st.info("My goal is to build a robust real estate portfolio that generates passive income and appreciates in value over time. I'm committed to learning and growing as a real estate investor.")
+
     st.markdown("---")
     st.write("© 2024 Caleb Traxler. All rights reserved.")
-
 if __name__ == "__main__":
     main()
