@@ -274,7 +274,6 @@ def main():
         <h4>Investment Strategy</h4>
         • Focus on up-and-coming neighborhoods with growth potential<br>
         • Target properties with value-add opportunities through renovation<br>
-        • Utilize house hacking strategy for initial investments to offset costs<br>
         • Aim to build a diverse portfolio of residential and potentially commercial properties
         </div>
         """, unsafe_allow_html=True)
@@ -283,7 +282,6 @@ def main():
         <div class="highlight">
         <h4>Future Plans</h4>
         • Research multi-family properties in emerging markets<br>
-        • Explore real estate investment trusts (REITs) for portfolio diversification<br>
         • Network with local real estate investors and join investment groups<br>
         • Continuously educate myself on real estate market trends and investment strategies
         </div>
