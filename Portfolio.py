@@ -105,23 +105,35 @@ def main():
     
     with tab2:
         st.header("Education")
-        
+    
         with st.expander("M.S. Data Science - UC Irvine"):
-            st.subheader("University of California Irvine (UCI)")
+            col1, col2 = st.columns([1, 4])
+            with col1:
+                st.image("/Education/uci_image.png", width=50)
+            with col2:
+                st.subheader("University of California Irvine (UCI)")
             st.write("September 2024 - Expected December 2025")
             st.write("• Concentrations in Machine Learning, Computer Vision and Artificial Intelligence")
             st.write("• UCI Master of Data Science Scholarship Recipient")
             st.write("• Accelerated Masters in Data Science Program (~15 months)")
-        
+    
         with st.expander("B.S. Mathematics and Computer Science - UCLA"):
-            st.subheader("University of California Los Angeles (UCLA)")
+            col1, col2 = st.columns([1, 4])
+            with col1:
+                st.image("/Education/ucla_image.png", width=50)
+            with col2:
+                st.subheader("University of California Los Angeles (UCLA)")
             st.write("September 2022 - June 2024")
             st.write("• Joint Degree with Concentrations in Applied Mathematics and Computer Science")
             st.write("• GPA: 3.81/4.00")
             st.write("• UCLA Mathematics and Computer Science Alumni, Class of 2024")
-        
+    
         with st.expander("A.S. Mathematics, Physics and Computer Science - Moorpark College"):
-            st.subheader("Moorpark College")
+            col1, col2 = st.columns([1, 4])
+            with col1:
+                st.image("/Education/mpc_image.png", width=50)
+            with col2:
+                st.subheader("Moorpark College")
             st.write("August 2020 - June 2022")
             st.write("• GPA: 4.00/4.00")
     
