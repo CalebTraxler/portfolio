@@ -114,6 +114,7 @@ def main():
                 st.write(" ")
                 st.subheader("University of California Irvine (UCI)")
             st.write("September 2024 - Expected December 2025")
+            st.write("I am pursuing a Master of Science in Data Science at UCI with a focus in machine learning and artificial intelligence at the UCI School of Information and Computer Sciences.")
             st.write("• Concentrations in Machine Learning, Computer Vision and Artificial Intelligence")
             st.write("• UCI Master of Data Science Scholarship Recipient")
             st.write("• Accelerated Masters in Data Science Program (~15 months)")
