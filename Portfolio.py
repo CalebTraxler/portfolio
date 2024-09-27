@@ -109,7 +109,7 @@ def main():
         with st.expander("M.S. Data Science - UC Irvine"):
             col1, col2 = st.columns([1, 4])
             with col1:
-                st.image("/Education/uci_image.png", width=50)
+                st.image("Education/uci_image.png", width=50)
             with col2:
                 st.subheader("University of California Irvine (UCI)")
             st.write("September 2024 - Expected December 2025")
@@ -120,7 +120,7 @@ def main():
         with st.expander("B.S. Mathematics and Computer Science - UCLA"):
             col1, col2 = st.columns([1, 4])
             with col1:
-                st.image("/Education/ucla_image.png", width=50)
+                st.image("Education/ucla_image.png", width=50)
             with col2:
                 st.subheader("University of California Los Angeles (UCLA)")
             st.write("September 2022 - June 2024")
@@ -131,7 +131,7 @@ def main():
         with st.expander("A.S. Mathematics, Physics and Computer Science - Moorpark College"):
             col1, col2 = st.columns([1, 4])
             with col1:
-                st.image("/Education/mpc_image.png", width=50)
+                st.image("Education/mpc_image.png", width=50)
             with col2:
                 st.subheader("Moorpark College")
             st.write("August 2020 - June 2022")
