@@ -127,7 +127,7 @@ def main():
         st.header("Education")
 
         with st.expander("M.S. Data Science - UC Irvine"):
-            col1, col2, col3 = st.columns([1, 10, 1])
+            col1, col2, col3 = st.columns([1, 8, 1])
             with col1:
                 st.image("Education/uci_image.png", width=100)
             with col2:
@@ -140,7 +140,7 @@ def main():
             st.write("• Accelerated Masters in Data Science Program (~15 months)")
 
         with st.expander("B.S. Mathematics and Computer Science - UCLA"):
-            col1, col2, col3 = st.columns([1, 10, 1])
+            col1, col2, col3 = st.columns([1, 8, 1])
             with col1:
                 st.image("Education/ucla_image.png", width=100)
             with col2:
@@ -153,7 +153,7 @@ def main():
             st.write("• UCLA Mathematics and Computer Science Alumni, Class of 2024")
 
         with st.expander("A.S. Mathematics, Physics and Computer Science - Moorpark College"):
-            col1, col2, col3 = st.columns([1, 10, 1])
+            col1, col2, col3 = st.columns([1, 8, 1])
             with col1:
                 st.image("Education/mpc_image.png", width=100)
             with col2:
