@@ -104,7 +104,7 @@ def main():
             # st.image("path_to_your_gym_photo.jpg", caption="Staying fit at the gym")
     
     with tab2:
-    st.header("Education")
+        st.header("Education")
 
         with st.expander("M.S. Data Science - UC Irvine"):
             col1, col2, col3 = st.columns([1, 3, 2])
