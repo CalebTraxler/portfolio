@@ -179,14 +179,14 @@ def main():
             st.write("June 2024 - September 2024")
             st.write("• Built a rare disease prioritization model using Python and generative AI, achieving 96% accuracy")
             st.write("• Accelerated a year-long scoring process to just a few days")
-            st.write("I joined the Technology and Innovation Lab team at Amgen for a 10-week internship focusing on accelerating R&D through AI and digital technologies, involving project-based and experiential learning. Focused on applying machine learning and data science for predictive and prescriptive model development.")
+            st.write(" Joined the Technology and Innovation Lab at Amgen for a 10-week data science and machine learning role, focused on accelerating research and development using machine learning, AI and digital technologies. Used python to build a rare disease prioritization model able to automate a rare disease scoring process with generative artificial intelligence, yielding an accuracy of 96%. Accelerated a year-long scoring process into a few days.")
         
         with st.expander("AI-Safety Fellowship - UCLA"):
             st.subheader("UCLA AI Safety, Los Angeles, CA")
             st.write("January 2024 - March 2024")
             st.write("• Developed practical skills in ML, including neural networks using PyTorch and micrograd")
             st.write("• Explored AI safety and alignment challenges")
-            st.write(" I joined UCLA's AI Safety team, I was engaged in advanced computer vision projects, developed models to enhance image recognition and analysis. I also learned about the risk associated with the rapid development of artificial intelligence.")
+            st.write(" Worked alongside fellow machine learning students at UCLA and gained insights about AI existential risks and the impacts of AI advancements on humanity’s future. Developed practical stills in ML, including neural networks by using tools like PyTorch and micrograd. Explored AI safety and alignment challenges, contributing to understanding and mitigating potential failure modes in AI systems.")
         
         with st.expander("Undergraduate Mathematics Researcher - UCLA"):
             st.subheader("UCLA Mathematics Department, Los Angeles, CA")
