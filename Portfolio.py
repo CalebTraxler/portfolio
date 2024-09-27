@@ -219,6 +219,7 @@ def main():
             with col1:
                 st.image("Experience/nasa.png", width=100)
             with col2:
+                st.write(" ")
                 st.subheader("NASA (Remote)")
             st.write("February 2022 - August 2022")
             st.write("• Collaborated on a Mars rover capstone project")
