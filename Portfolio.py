@@ -181,7 +181,7 @@ def main():
         with st.expander("Data Science and ML Engineer - Amgen"):
             col1, col2 = st.columns([1, 8])
             with col1:
-                st.image("Experience/amgen_img.png", width=200)
+                st.image("Experience/amgen_img.png", width=150)
             with col2:
                 st.subheader("Amgen, Thousand Oaks, CA")
             st.write("June 2024 - September 2024")
