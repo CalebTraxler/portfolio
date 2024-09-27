@@ -249,17 +249,47 @@ def main():
         • Currently renovating the property<br>
         • Plans to refinance and rent out for passive income<br>
         • Actively seeking next property investment in Texas by end of 2025
-
-        
-
-        I've just purchased my first real estate property in Topeka, Kansas at 22 years old! This home is definitely a fixer upper, however I am ready to take on the challenge. With some hard work and dedication, I plan to transform it, refinance, and rent it out and make this investment worthwhile. This is just the beginning of my real estate journey. I am already looking ahead to purchase my next property in Texas before the end of 2025. Stay tuned for more updates as I continue to grow my real estate portfolio!
-        
         </div>
         """, unsafe_allow_html=True)
-
-        
     
-        st.write("My goal is to build a robust real estate portfolio that generates passive income and appreciates in value over time. I'm committed to learning and growing as a real estate investor.")
+        st.write("I've just purchased my first real estate property in Topeka, Kansas at 22 years old! This home is definitely a fixer upper, however I am ready to take on the challenge. With some hard work and dedication, I plan to transform it, refinance, and rent it out and make this investment worthwhile. This is just the beginning of my real estate journey. I am already looking ahead to purchase my next property in Texas before the end of 2025. Stay tuned for more updates as I continue to grow my real estate portfolio!")
+    
+        # Display images in a row
+        col1, col2, col3 = st.columns(3)
+    
+        with col1:
+            image1 = Image.open("Investments/1.jpg")
+            st.image(image1, caption="Property View 1", use_column_width=True)
+    
+        with col2:
+            image2 = Image.open("Investments/2.jpg")
+            st.image(image2, caption="Property View 2", use_column_width=True)
+    
+        with col3:
+            image3 = Image.open("Investments/3.jpg")
+            st.image(image3, caption="Property View 3", use_column_width=True)
+    
+        st.markdown("""
+        <div class="highlight">
+        <h4>Investment Strategy</h4>
+        • Focus on up-and-coming neighborhoods with growth potential<br>
+        • Target properties with value-add opportunities through renovation<br>
+        • Utilize house hacking strategy for initial investments to offset costs<br>
+        • Aim to build a diverse portfolio of residential and potentially commercial properties
+        </div>
+        """, unsafe_allow_html=True)
+    
+        st.markdown("""
+        <div class="highlight">
+        <h4>Future Plans</h4>
+        • Research multi-family properties in emerging markets<br>
+        • Explore real estate investment trusts (REITs) for portfolio diversification<br>
+        • Network with local real estate investors and join investment groups<br>
+        • Continuously educate myself on real estate market trends and investment strategies
+        </div>
+        """, unsafe_allow_html=True)
+    
+        st.info("My goal is to build a robust real estate portfolio that generates passive income and appreciates in value over time. I'm committed to learning and growing as a real estate investor.")
 
     st.markdown("---")
     st.write("© 2024 Caleb Traxler. All rights reserved.")
