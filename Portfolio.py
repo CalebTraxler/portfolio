@@ -182,7 +182,7 @@ def main():
             st.write("I joined the Technology and Innovation Lab team at Amgen for a 10-week internship focusing on accelerating R&D through AI and digital technologies, involving project-based and experiential learning. Focused on applying machine learning and data science for predictive and prescriptive model development.")
         
         with st.expander("AI-Safety Fellowship - UCLA"):
-            st.subheader("UCLA, Los Angeles, CA")
+            st.subheader("UCLA AI Safety Fellowship, Los Angeles, CA")
             st.write("January 2024 - March 2024")
             st.write("• Developed practical skills in ML, including neural networks using PyTorch and micrograd")
             st.write("• Explored AI safety and alignment challenges")
