@@ -68,7 +68,7 @@ def main():
             background-color: transparent;
             border-radius: 5px 5px 0 0;
             color: #31333F;
-            font-size: 8px;
+            font-size: 16px;
             font-weight: 400;
             align-items: center;
             justify-content: center;
