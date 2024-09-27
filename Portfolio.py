@@ -262,7 +262,7 @@ def main():
             st.image(image1, caption="Property View 1", use_column_width=True)
     
         with col2:
-            image2 = Image.open("Investments/2.jpg")
+            image2 = Image.open("Investments/2.png")
             st.image(image2, caption="Property View 2", use_column_width=True)
     
         with col3:
