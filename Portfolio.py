@@ -53,36 +53,44 @@ def main():
     # Custom CSS to style the tabs
     st.markdown("""
     <style>
+        .stTabs {
+            background-color: #f0f2f6;
+            padding: 10px 0px;
+            border-radius: 8px;
+        }
         .stTabs [data-baseweb="tab-list"] {
-            gap: 24px;
+            gap: 0;
+            justify-content: space-evenly;
         }
         .stTabs [data-baseweb="tab"] {
             height: 50px;
             white-space: pre-wrap;
-            background-color: #0E1117;
-            border-radius: 4px;
-            color: #FAFAFA;
-            font-size: 18px;
+            background-color: transparent;
+            border-radius: 5px 5px 0 0;
+            color: #31333F;
+            font-size: 16px;
             font-weight: 400;
             align-items: center;
             justify-content: center;
             border: none;
-            box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
             transition: all 0.3s ease;
+            border-bottom: 3px solid transparent;
+            margin: 0 5px;
         }
         .stTabs [aria-selected="true"] {
-            background-color: #4CAF50;
-            color: #FFFFFF;
+            background-color: white;
+            color: #4CAF50;
             font-weight: 600;
-            box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+            border-bottom-color: #4CAF50;
         }
         .stTabs [data-baseweb="tab"]:hover {
-            color: #FFFFFF;
-            background-color: #39853C;
-            box-shadow: 0 0 10px rgba(57, 133, 60, 0.5);
+            color: #4CAF50;
+            background-color: rgba(255, 255, 255, 0.5);
         }
     </style>
     """, unsafe_allow_html=True)
+
+    
 
     # Create the tabs
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
