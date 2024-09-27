@@ -193,7 +193,7 @@ def main():
             st.write("March 2023 - June 2023")
             st.write("• Led a COVID-19 research project, analyzing data using Python and Jupyter notebooks")
             st.write("• Developed innovative bifurcation diagrams for predictive modeling")
-            st.write(" Led a COVID-19 research project at UCLA Mathematics Department in Junior year, under Professor Shiba Biswals supervision. Analyzed Orange County COVID-19 data using Jupyter notebooks and python; focused on data processing an in-depth analysis in python. Implemented error analysis methods using Matlab, enhancing accuracy. Utilized SIR and SEIR differential equations and nonlinear equations to develop an innovative bifurcatin diagram, hence identifying a critical transcritical bifurcation threshold used for predictions.")
+            st.write(" Led a COVID-19 research project at UCLA Mathematics Department in Junior year, under Professor Shiba Biswals supervision. Analyzed Orange County COVID-19 data using Jupyter notebooks and python; focused on data processing an in-depth analysis in python. Implemented error analysis methods using Matlab, enhancing accuracy. Utilized SIR and SEIR differential equations and nonlinear equations to develop an innovative bifurcation diagram, hence identifying a critical transcritical bifurcation threshold used for predictions.")
         
         with st.expander("Engineering and Design Internship - NASA"):
             st.subheader("NASA (Remote)")
