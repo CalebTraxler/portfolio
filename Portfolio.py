@@ -266,7 +266,7 @@ def main():
             st.image(image2, caption="Property View 2", use_column_width=True)
     
         with col3:
-            image3 = Image.open("Investments/3.jpg")
+            image3 = Image.open("Investments/3.png")
             st.image(image3, caption="Property View 3", use_column_width=True)
     
         st.markdown("""
