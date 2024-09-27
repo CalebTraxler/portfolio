@@ -74,7 +74,7 @@ def main():
 
         if st.button("Download Resume"):
             # Replace with your actual resume file path
-            st.markdown("[Download Resume](ResumeFinalpro.pdf)")
+            st.markdown("[Download Resume](ResumeFinalpro.docx (8).pdf)")
     
         # Display personal interest photos
         col1, col2, col3 = st.columns(3)
