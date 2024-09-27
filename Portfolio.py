@@ -165,42 +165,62 @@ def main():
     
     with tab3:
         st.header("Experience")
-        
+    
         with st.expander("Founder and CEO - Traxler Technology"):
-            st.subheader("Traxler Technology, Irvine, CA")
+            col1, col2 = st.columns([1, 5])
+            with col1:
+                st.image("Experience/the_x.png", width=100)
+            with col2:
+                st.subheader("Traxler Technology, Irvine, CA")
             st.write("June 2024 - Present")
             st.write("• Founded a company focused on advancing Mars exploration and colonization")
             st.write("• Developing interactive tools and simulations for Mars-related research")
-            st.write(" At Traxler Technology, our mission is to advance humanity's reach into the cosmos by exploring innovative solutions for Mars exploration and colonization. We believe in a future where humans live and thrive on multiple planets. Explore our interactive tools and simulations to learn more about the Red Planet and how we plan to establish a sustainable human presence on Mars.")
+            st.write("At Traxler Technology, our mission is to advance humanity's reach into the cosmos by exploring innovative solutions for Mars exploration and colonization. We believe in a future where humans live and thrive on multiple planets. Explore our interactive tools and simulations to learn more about the Red Planet and how we plan to establish a sustainable human presence on Mars.")
             st.write("• [Visit Traxler Technology](https://traxler.streamlit.app)")
-        
+    
         with st.expander("Data Science and ML Engineer - Amgen"):
-            st.subheader("Amgen, Thousand Oaks, CA")
+            col1, col2 = st.columns([1, 5])
+            with col1:
+                st.image("Experience/amgen_img.png", width=100)
+            with col2:
+                st.subheader("Amgen, Thousand Oaks, CA")
             st.write("June 2024 - September 2024")
             st.write("• Built a rare disease prioritization model using Python and generative AI, achieving 96% accuracy")
             st.write("• Accelerated a year-long scoring process to just a few days")
-            st.write(" Joined the Technology and Innovation Lab at Amgen for a 10-week data science and machine learning role, focused on accelerating research and development using machine learning, AI and digital technologies. Used python to build a rare disease prioritization model able to automate a rare disease scoring process with generative artificial intelligence, yielding an accuracy of 96%. Accelerated a year-long scoring process into a few days.")
-        
+            st.write("Joined the Technology and Innovation Lab at Amgen for a 10-week data science and machine learning role, focused on accelerating research and development using machine learning, AI and digital technologies. Used python to build a rare disease prioritization model able to automate a rare disease scoring process with generative artificial intelligence, yielding an accuracy of 96%. Accelerated a year-long scoring process into a few days.")
+    
         with st.expander("AI-Safety Fellowship - UCLA"):
-            st.subheader("UCLA AI Safety, Los Angeles, CA")
+            col1, col2 = st.columns([1, 5])
+            with col1:
+                st.image("Experience/ai_safety.png", width=100)
+            with col2:
+                st.subheader("UCLA AI Safety, Los Angeles, CA")
             st.write("January 2024 - March 2024")
             st.write("• Developed practical skills in ML, including neural networks using PyTorch and micrograd")
             st.write("• Explored AI safety and alignment challenges")
-            st.write(" Worked alongside fellow machine learning students at UCLA and gained insights about AI existential risks and the impacts of AI advancements on humanity’s future. Developed practical stills in ML, including neural networks by using tools like PyTorch and micrograd. Explored AI safety and alignment challenges, contributing to understanding and mitigating potential failure modes in AI systems.")
-        
+            st.write("Worked alongside fellow machine learning students at UCLA and gained insights about AI existential risks and the impacts of AI advancements on humanity's future. Developed practical stills in ML, including neural networks by using tools like PyTorch and micrograd. Explored AI safety and alignment challenges, contributing to understanding and mitigating potential failure modes in AI systems.")
+    
         with st.expander("Undergraduate Mathematics Researcher - UCLA"):
-            st.subheader("UCLA Mathematics Department, Los Angeles, CA")
+            col1, col2 = st.columns([1, 5])
+            with col1:
+                st.image("Experience/ucla_math.png", width=100)
+            with col2:
+                st.subheader("UCLA Mathematics Department, Los Angeles, CA")
             st.write("March 2023 - June 2023")
             st.write("• Led a COVID-19 research project, analyzing data using Python and Jupyter notebooks")
             st.write("• Developed innovative bifurcation diagrams for predictive modeling")
-            st.write(" Led a COVID-19 research project at UCLA Mathematics Department in Junior year, under Professor Shiba Biswals supervision. Analyzed Orange County COVID-19 data using Jupyter notebooks and python; focused on data processing an in-depth analysis in python. Implemented error analysis methods using Matlab, enhancing accuracy. Utilized SIR and SEIR differential equations and nonlinear equations to develop an innovative bifurcation diagram, hence identifying a critical transcritical bifurcation threshold used for predictions.")
-        
+            st.write("Led a COVID-19 research project at UCLA Mathematics Department in Junior year, under Professor Shiba Biswals supervision. Analyzed Orange County COVID-19 data using Jupyter notebooks and python; focused on data processing an in-depth analysis in python. Implemented error analysis methods using Matlab, enhancing accuracy. Utilized SIR and SEIR differential equations and nonlinear equations to develop an innovative bifurcatin diagram, hence identifying a critical transcritical bifurcation threshold used for predictions.")
+    
         with st.expander("Engineering and Design Internship - NASA"):
-            st.subheader("NASA (Remote)")
+            col1, col2 = st.columns([1, 5])
+            with col1:
+                st.image("Experience/nasa.png", width=100)
+            with col2:
+                st.subheader("NASA (Remote)")
             st.write("February 2022 - August 2022")
             st.write("• Collaborated on a Mars rover capstone project")
             st.write("• Designed a modern Mars rover blueprint, introducing ML and AI systems")
-            st.write(" Collaborated in a NASA mission capstone project, addressing complications with today's Mars rovers. Designed a modern Mars rover blueprint; the project served as an introduction to machine learning and AI systems. I was further able to build this project's hardware and software as a personal project. Improved NASA’s Mars rover functionality and adaptability with this design.")
+            st.write("Collaborated in a NASA mission capstone project, addressing complications with today's Mars rovers. Designed a modern Mars rover blueprint; the project served as an introduction to machine learning and AI systems. I was further able to build this project's hardware and software as a personal project. Improved NASA's Mars rover functionality and adaptability with this design.")
     
     with tab4:
         st.header("Projects")
