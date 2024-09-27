@@ -250,15 +250,12 @@ def main():
         • Plans to refinance and rent out for passive income<br>
         • Actively seeking next property investment in Texas by end of 2025
 
-         I've just purchased my first real estate property in Topeka, Kansas at 22 years old!
-
-This home is definitely a fixer upper, however I am ready to take on the challenge. With some hard work and dedication, I plan to transform it, refinance, and rent it out and make this investment worthwhile. 
-
-This is just the beginning of my real estate journey. I am already looking ahead to purchase my next property in Texas before the end of 2025. 
-
-Stay tuned for more updates as I continue to grow my real estate portfolio!
+        I've just purchased my first real estate property in Topeka, Kansas at 22 years old! This home is definitely a fixer upper, however I am ready to take on the challenge. With some hard work and dedication, I plan to transform it, refinance, and rent it out and make this investment worthwhile. This is just the beginning of my real estate journey. I am already looking ahead to purchase my next property in Texas before the end of 2025. Stay tuned for more updates as I continue to grow my real estate portfolio!
+        
         </div>
         """, unsafe_allow_html=True)
+
+        
     
         st.info("My goal is to build a robust real estate portfolio that generates passive income and appreciates in value over time. I'm committed to learning and growing as a real estate investor.")
 
