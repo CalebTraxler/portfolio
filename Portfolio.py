@@ -4,6 +4,7 @@
 
 import streamlit as st
 from PIL import Image
+import base64
 
 def set_custom_style():
     st.markdown("""
@@ -72,9 +73,28 @@ def main():
         - Eating amazing foods
         """)
 
+        def get_binary_file_downloader_html(bin_file, file_label='File'):
+            with open(bin_file, 'rb') as f:
+                data = f.read()
+            bin_str = base64.b64encode(data).decode()
+            href = f'<a href="data:application/octet-stream;base64,{bin_str}" download="{os.path.basename(bin_file)}">Download {file_label}</a>'
+            return href
+
         if st.button("Download Resume"):
-            # Replace with your actual resume file path
-            st.markdown("[Download Resume](ResumeFinalpro.docx (8).pdf)")
+            file_path = "ResumeFinalpro.docx (8).pdf"
+    
+            try:
+                with open(file_path, "rb") as pdf_file:
+                    PDFbyte = pdf_file.read()
+        
+                st.download_button(
+                    label="Click here to download",
+                    data=PDFbyte,
+                    file_name="Your_Resume.pdf",
+                    mime="application/octet-stream"
+                )
+            except FileNotFoundError:
+                st.error("Resume file not found. Please check the file path.")
     
         # Display personal interest photos
         col1, col2, col3 = st.columns(3)
