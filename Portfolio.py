@@ -111,6 +111,7 @@ def main():
             with col1:
                 st.image("Education/uci_image.png", width=100)
             with col2:
+                st.write(" ")
                 st.subheader("University of California Irvine (UCI)")
             st.write("September 2024 - Expected December 2025")
             st.write("• Concentrations in Machine Learning, Computer Vision and Artificial Intelligence")
@@ -122,6 +123,7 @@ def main():
             with col1:
                 st.image("Education/ucla_image.png", width=100)
             with col2:
+                st.write(" ")
                 st.subheader("University of California Los Angeles (UCLA)")
             st.write("September 2022 - June 2024")
             st.write("• Joint Degree with Concentrations in Applied Mathematics and Computer Science")
@@ -133,6 +135,7 @@ def main():
             with col1:
                 st.image("Education/mpc_image.png", width=100)
             with col2:
+                st.write(" ")
                 st.subheader("Moorpark College")
             st.write("August 2020 - June 2022")
             st.write("• GPA: 4.00/4.00")
