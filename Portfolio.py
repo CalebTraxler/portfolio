@@ -179,7 +179,7 @@ def main():
             st.write("At Traxler Technology, our mission is to advance humanity's reach into the cosmos by exploring innovative solutions for Mars exploration and colonization. We believe in a future where humans live and thrive on multiple planets. Explore our interactive tools and simulations to learn more about the Red Planet and how we plan to establish a sustainable human presence on Mars.")
             st.write("• [Visit Traxler Technology](https://traxler.streamlit.app)")
     
-        with st.expander("Data Science and ML Engineer - Amgen"):
+        with st.expander("Data Science and ML Engineer Internship- Amgen"):
             col1, col2 = st.columns([1, 5])
             with col1:
                 st.image("Experience/amgen_img.png", width=150)
@@ -224,7 +224,7 @@ def main():
             st.write("February 2022 - August 2022")
             st.write("• Collaborated on a Mars rover capstone project")
             st.write("• Designed a modern Mars rover blueprint, introducing ML and AI systems")
-            st.write("Collaborated in a NASA mission capstone project, addressing complications with today's Mars rovers. Designed a modern Mars rover blueprint; the project served as an introduction to machine learning and AI systems. I was further able to build this project's hardware and software as a personal project. Improved NASA's Mars rover functionality and adaptability with this design.")
+            st.write("Collaborated in a NASA National Community College Aerospace Scholars program and completed a mission capstone project; addressing complications with today's Mars rovers. Designed a modern Mars rover blueprint; the project served as an introduction to machine learning and AI systems. I was further able to build this project's hardware and software as a personal project. Improved NASA's Mars rover functionality and adaptability with this design.")
     
     with tab4:
         st.header("Projects")
