@@ -259,9 +259,11 @@ def main():
 
         
     
-        st.info("My goal is to build a robust real estate portfolio that generates passive income and appreciates in value over time. I'm committed to learning and growing as a real estate investor.")
+        st.write("My goal is to build a robust real estate portfolio that generates passive income and appreciates in value over time. I'm committed to learning and growing as a real estate investor.")
 
     st.markdown("---")
     st.write("© 2024 Caleb Traxler. All rights reserved.")
+
+
 if __name__ == "__main__":
     main()
