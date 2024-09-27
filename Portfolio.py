@@ -179,6 +179,8 @@ def main():
             st.write("June 2024 - September 2024")
             st.write("• Built a rare disease prioritization model using Python and generative AI, achieving 96% accuracy")
             st.write("• Accelerated a year-long scoring process to just a few days")
+            st.write(" I Joined the Technology and Innovation Lab team at Amgen for a 10-week internship focusing on accelerating R&D
+through AI and digital technologies, involving project-based and experiential learning. Focused on applying machine learning and data science for predictive and prescriptive model development.")
         
         with st.expander("AI-Safety Fellowship - UCLA"):
             st.subheader("UCLA, Los Angeles, CA")
