@@ -90,7 +90,7 @@ def main():
                 st.download_button(
                     label="Click here to download",
                     data=PDFbyte,
-                    file_name="Your_Resume.pdf",
+                    file_name="CalebTraxler_Resume.pdf",
                     mime="application/octet-stream"
                 )
             except FileNotFoundError:
