@@ -186,7 +186,7 @@ def main():
             st.write("January 2024 - March 2024")
             st.write("• Developed practical skills in ML, including neural networks using PyTorch and micrograd")
             st.write("• Explored AI safety and alignment challenges")
-            st.write(" I joined UCLA's AI Safety team, I was engaged in advanced computer vision projects, developing models to enhance image recognition and analysis. I also learned about the risk associated with the rapid development of artificial intelligence.")
+            st.write(" I joined UCLA's AI Safety team, I was engaged in advanced computer vision projects, developed models to enhance image recognition and analysis. I also learned about the risk associated with the rapid development of artificial intelligence.")
         
         with st.expander("Undergraduate Mathematics Researcher - UCLA"):
             st.subheader("UCLA, Los Angeles, CA")
