@@ -50,7 +50,44 @@ def main():
     
     st.markdown("---")
     
-    tab1, tab2, tab3, tab4, tab5 = st.tabs(["About Me", "Education", "Experience", "Projects", "Investments"])
+    # Custom CSS to style the tabs
+    st.markdown("""
+    <style>
+        .stTabs [data-baseweb="tab-list"] {
+            gap: 24px;
+        }
+        .stTabs [data-baseweb="tab"] {
+            height: 50px;
+            white-space: pre-wrap;
+            background-color: #0E1117;
+            border-radius: 4px;
+            color: #FAFAFA;
+            font-size: 18px;
+            font-weight: 400;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        .stTabs [aria-selected="true"] {
+            background-color: #4CAF50;
+            color: #FFFFFF;
+            font-weight: 600;
+            box-shadow: 0 0 10px rgba(76, 175, 80, 0.5);
+        }
+        .stTabs [data-baseweb="tab"]:hover {
+            color: #FFFFFF;
+            background-color: #39853C;
+            box-shadow: 0 0 10px rgba(57, 133, 60, 0.5);
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
+    # Create the tabs
+    tab1, tab2, tab3, tab4, tab5 = st.tabs([
+        "About Me", "Education", "Experience", "Projects", "Investments"
+    ])
     
     with tab1:
         st.header("About Me")
