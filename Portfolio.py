@@ -40,7 +40,7 @@ def main():
     with col1:
         # Replace with your actual image path
         image = Image.open("output.png")
-        st.image(image, width=300)
+        st.image(image, width=275)
     
     with col2:
         st.title("Caleb Traxler")
