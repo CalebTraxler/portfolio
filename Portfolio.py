@@ -45,7 +45,7 @@ def main():
         st.title("Caleb Traxler")
         st.subheader("Data Scientist, ML Engineer, Entrepreneur, and Investor")
         st.write("Contact Me : (805) 377-8182 | calebtraxler34@gmail.com | traxlerc@uci.edu")
-        st.write("Visit my other websites : [LinkedIn](https://www.linkedin.com/in/calebtraxler) | [GitHub](https://www.github.com/calebtraxler) | [Traxler Technology](https://traxler.streamlit.app)")
+        st.write("Visit Websites : [LinkedIn](https://www.linkedin.com/in/calebtraxler) | [GitHub](https://www.github.com/calebtraxler) | [Traxler Technology](https://traxler.streamlit.app)")
     
     st.markdown("---")
     
@@ -109,8 +109,7 @@ def main():
         with st.expander("M.S. Data Science - UC Irvine"):
             col1, col2 = st.columns([1, 4])
             with col1:
-                st.image("Education/uci_image.png", width=50)
-            with col2:
+                st.image("Education/uci_image.png", width=100)
                 st.subheader("University of California Irvine (UCI)")
             st.write("September 2024 - Expected December 2025")
             st.write("• Concentrations in Machine Learning, Computer Vision and Artificial Intelligence")
@@ -120,8 +119,7 @@ def main():
         with st.expander("B.S. Mathematics and Computer Science - UCLA"):
             col1, col2 = st.columns([1, 4])
             with col1:
-                st.image("Education/ucla_image.png", width=50)
-            with col2:
+                st.image("Education/ucla_image.png", width=100)
                 st.subheader("University of California Los Angeles (UCLA)")
             st.write("September 2022 - June 2024")
             st.write("• Joint Degree with Concentrations in Applied Mathematics and Computer Science")
@@ -131,8 +129,7 @@ def main():
         with st.expander("A.S. Mathematics, Physics and Computer Science - Moorpark College"):
             col1, col2 = st.columns([1, 4])
             with col1:
-                st.image("Education/mpc_image.png", width=50)
-            with col2:
+                st.image("Education/mpc_image.png", width=100)
                 st.subheader("Moorpark College")
             st.write("August 2020 - June 2022")
             st.write("• GPA: 4.00/4.00")
