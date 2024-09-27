@@ -200,6 +200,7 @@ def main():
             st.write("February 2022 - August 2022")
             st.write("• Collaborated on a Mars rover capstone project")
             st.write("• Designed a modern Mars rover blueprint, introducing ML and AI systems")
+            st.write(" Collaborated in a NASA mission capstone project, addressing complications with today's Mars rovers. Designed a modern Mars rover blueprint; the project served as an introduction to machine learning and AI systems. I was further able to build this project's hardware and software as a personal project. Improved NASA’s Mars rover functionality and adaptability with this design.")
     
     with tab4:
         st.header("Projects")
