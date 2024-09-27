@@ -182,17 +182,18 @@ def main():
             st.write("I joined the Technology and Innovation Lab team at Amgen for a 10-week internship focusing on accelerating R&D through AI and digital technologies, involving project-based and experiential learning. Focused on applying machine learning and data science for predictive and prescriptive model development.")
         
         with st.expander("AI-Safety Fellowship - UCLA"):
-            st.subheader("UCLA AI Safety Fellowship, Los Angeles, CA")
+            st.subheader("UCLA AI Safety, Los Angeles, CA")
             st.write("January 2024 - March 2024")
             st.write("• Developed practical skills in ML, including neural networks using PyTorch and micrograd")
             st.write("• Explored AI safety and alignment challenges")
             st.write(" I joined UCLA's AI Safety team, I was engaged in advanced computer vision projects, developed models to enhance image recognition and analysis. I also learned about the risk associated with the rapid development of artificial intelligence.")
         
         with st.expander("Undergraduate Mathematics Researcher - UCLA"):
-            st.subheader("UCLA, Los Angeles, CA")
+            st.subheader("UCLA Mathematics Department, Los Angeles, CA")
             st.write("March 2023 - June 2023")
             st.write("• Led a COVID-19 research project, analyzing data using Python and Jupyter notebooks")
             st.write("• Developed innovative bifurcation diagrams for predictive modeling")
+            st.write(" Led a COVID-19 research project at UCLA Mathematics Department in Junior year, under Professor Shiba Biswals supervision. Analyzed Orange County COVID-19 data using Jupyter notebooks and python; focused on data processing an in-depth analysis in python. Implemented error analysis methods using Matlab, enhancing accuracy. Utilized SIR and SEIR differential equations and nonlinear equations to develop an innovative bifurcatin diagram, hence identifying a critical transcritical bifurcation threshold used for predictions.")
         
         with st.expander("Engineering and Design Internship - NASA"):
             st.subheader("NASA (Remote)")
