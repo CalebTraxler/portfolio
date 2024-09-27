@@ -171,6 +171,7 @@ def main():
             st.write("June 2024 - Present")
             st.write("• Founded a company focused on advancing Mars exploration and colonization")
             st.write("• Developing interactive tools and simulations for Mars-related research")
+            st.write(" At Traxler Technology, our mission is to advance humanity's reach into the cosmos by exploring innovative solutions for Mars exploration and colonization. We believe in a future where humans live and thrive on multiple planets. Explore our interactive tools and simulations to learn more about the Red Planet and how we plan to establish a sustainable human presence on Mars.")
             st.write("• [Visit Traxler Technology](https://traxler.streamlit.app)")
         
         with st.expander("Data Science and ML Engineer - Amgen"):
