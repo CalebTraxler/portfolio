@@ -171,6 +171,7 @@ def main():
             with col1:
                 st.image("Experience/the_x.png", width=100)
             with col2:
+                st.write(" ")
                 st.subheader("Traxler Technology, Irvine, CA")
             st.write("June 2024 - Present")
             st.write("• Founded a company focused on advancing Mars exploration and colonization")
@@ -179,7 +180,7 @@ def main():
             st.write("• [Visit Traxler Technology](https://traxler.streamlit.app)")
     
         with st.expander("Data Science and ML Engineer - Amgen"):
-            col1, col2 = st.columns([1, 4])
+            col1, col2 = st.columns([1, 5])
             with col1:
                 st.image("Experience/amgen_img.png", width=150)
             with col2:
@@ -194,6 +195,7 @@ def main():
             with col1:
                 st.image("Experience/ai_safety.png", width=75)
             with col2:
+                st.write(" ")
                 st.subheader("UCLA AI Safety, Los Angeles, CA")
             st.write("January 2024 - March 2024")
             st.write("• Developed practical skills in ML, including neural networks using PyTorch and micrograd")
@@ -205,6 +207,7 @@ def main():
             with col1:
                 st.image("Experience/ucla_math.png", width=100)
             with col2:
+                st.write(" ")
                 st.subheader("UCLA Mathematics Department, Los Angeles, CA")
             st.write("March 2023 - June 2023")
             st.write("• Led a COVID-19 research project, analyzing data using Python and Jupyter notebooks")
