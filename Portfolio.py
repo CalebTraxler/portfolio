@@ -167,7 +167,7 @@ def main():
         st.header("Experience")
     
         with st.expander("Founder and CEO - Traxler Technology"):
-            col1, col2 = st.columns([1, 5])
+            col1, col2 = st.columns([1, 8])
             with col1:
                 st.image("Experience/the_x.png", width=100)
             with col2:
@@ -179,9 +179,9 @@ def main():
             st.write("• [Visit Traxler Technology](https://traxler.streamlit.app)")
     
         with st.expander("Data Science and ML Engineer - Amgen"):
-            col1, col2 = st.columns([1, 5])
+            col1, col2 = st.columns([1, 8])
             with col1:
-                st.image("Experience/amgen_img.png", width=100)
+                st.image("Experience/amgen_img.png", width=200)
             with col2:
                 st.subheader("Amgen, Thousand Oaks, CA")
             st.write("June 2024 - September 2024")
@@ -190,9 +190,9 @@ def main():
             st.write("Joined the Technology and Innovation Lab at Amgen for a 10-week data science and machine learning role, focused on accelerating research and development using machine learning, AI and digital technologies. Used python to build a rare disease prioritization model able to automate a rare disease scoring process with generative artificial intelligence, yielding an accuracy of 96%. Accelerated a year-long scoring process into a few days.")
     
         with st.expander("AI-Safety Fellowship - UCLA"):
-            col1, col2 = st.columns([1, 5])
+            col1, col2 = st.columns([1, 8])
             with col1:
-                st.image("Experience/ai_safety.png", width=100)
+                st.image("Experience/ai_safety.png", width=50)
             with col2:
                 st.subheader("UCLA AI Safety, Los Angeles, CA")
             st.write("January 2024 - March 2024")
@@ -201,7 +201,7 @@ def main():
             st.write("Worked alongside fellow machine learning students at UCLA and gained insights about AI existential risks and the impacts of AI advancements on humanity's future. Developed practical stills in ML, including neural networks by using tools like PyTorch and micrograd. Explored AI safety and alignment challenges, contributing to understanding and mitigating potential failure modes in AI systems.")
     
         with st.expander("Undergraduate Mathematics Researcher - UCLA"):
-            col1, col2 = st.columns([1, 5])
+            col1, col2 = st.columns([1, 8])
             with col1:
                 st.image("Experience/ucla_math.png", width=100)
             with col2:
@@ -212,7 +212,7 @@ def main():
             st.write("Led a COVID-19 research project at UCLA Mathematics Department in Junior year, under Professor Shiba Biswals supervision. Analyzed Orange County COVID-19 data using Jupyter notebooks and python; focused on data processing an in-depth analysis in python. Implemented error analysis methods using Matlab, enhancing accuracy. Utilized SIR and SEIR differential equations and nonlinear equations to develop an innovative bifurcatin diagram, hence identifying a critical transcritical bifurcation threshold used for predictions.")
     
         with st.expander("Engineering and Design Internship - NASA"):
-            col1, col2 = st.columns([1, 5])
+            col1, col2 = st.columns([1, 8])
             with col1:
                 st.image("Experience/nasa.png", width=100)
             with col2:
