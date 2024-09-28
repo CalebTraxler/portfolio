@@ -50,21 +50,23 @@ def main():
     
     st.markdown("---")
     
-    # Custom CSS to style the tabs
+   # Custom CSS to style the tabs
     st.markdown("""
     <style>
         .stTabs {
             background-color: #f0f2f6;
-            padding: 15px 0px;
-            border-radius: 15px;
+            padding: 6px 0px;
+            border-radius: 6px;
         }
         .stTabs [data-baseweb="tab-list"] {
             gap: 0;
             justify-content: space-evenly;
+            flex-wrap: wrap;
         }
         .stTabs [data-baseweb="tab"] {
-            height: 28px;
-            white-space: pre-wrap;
+            height: auto;
+            min-height: 28px;
+            white-space: normal;
             background-color: transparent;
             border-radius: 4px 4px 0 0;
             color: #31333F;
@@ -75,9 +77,12 @@ def main():
             border: none;
             transition: all 0.2s ease;
             border-bottom: 1px solid transparent;
-            margin: 0 3px;
-            padding: 0 8px;
-        }    
+            margin: 2px;
+            padding: 4px 8px;
+            text-align: center;
+            word-break: keep-all;
+            overflow-wrap: anywhere;
+        }
         .stTabs [aria-selected="true"] {
             background-color: white;
             color: #4CAF50;
@@ -87,6 +92,12 @@ def main():
         .stTabs [data-baseweb="tab"]:hover {
             color: #4CAF50;
             background-color: rgba(255, 255, 255, 0.5);
+        }
+        @media (max-width: 600px) {
+            .stTabs [data-baseweb="tab"] {
+                flex: 1 1 auto;
+                font-size: 9px;
+            }
         }
     </style>
     """, unsafe_allow_html=True)
