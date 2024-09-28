@@ -346,6 +346,9 @@ def main():
             with col3:
                 st.image("Projects/AI/sako3.png", caption="Sokoban Game State 3", width=400)
 
+            st.write(" Note: blank = 0, wall = 1, box = 2, keeper = 3, star = 4, boxstar = 5, keeperstar = 6 ")
+            st.write("  Details: Used the A* algorithm given a start-state and using specific admissible heuristics to obtain the final-state in the least  number of moves and in the fastest time. Overall I was able to create an agent that was able to solve 19 Sokoban games, all under 4 seconds. My fast heuristic approach was due to a combination of the minimization of the Manhattan distance between box and goal, subject to the minimization between the keeper and the box, with a particular usage of breadth first search for the next best move. ")
+
         with st.expander("Math Imaging Projects"):
             st.subheader("Feature Enhancement via Brightness Adjustments")
             st.write("• Developed algorithms for feature extraction using brightness adjustments")
