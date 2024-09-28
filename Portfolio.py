@@ -351,12 +351,12 @@ def main():
             st.subheader("Image Sharpening")
             st.write("• Implemented image sharpening techniques to enhance details")
             st.write("• Compared various sharpening algorithms and their effects")
-            display_image("Projects/Imaging/sharpening.png", "Image Sharpening Result", width=450)
+            display_image("Projects/Imaging/sharpening.png", "Image Sharpening Result", width=600)
 
             st.subheader("Notch Filter using Fourier Transforms")
             st.write("• Applied Fourier transforms to implement a notch filter")
             st.write("• Removed specific frequency components to reduce image noise")
-            display_image("Projects/Imaging/notch.png", "Notch Filter Application", width=450)
+            display_image("Projects/Imaging/notch.png", "Notch Filter Application", width=600)
     
     with tab5:
         st.header("Real Estate Investments")
