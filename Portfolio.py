@@ -283,16 +283,31 @@ def main():
     
     with tab4:
         st.header("Projects")
-        
-        with st.expander("Numerical Image Recognition"):
-            st.subheader("September 2023 - December 2023")
+    
+        with st.expander("UCLA Mathematics - Modeling COVID-19 Research"):
+            st.subheader("[Insert date range]")
+            st.write("• [Insert details about the COVID-19 modeling research project]")
+            st.write("• [Add more bullet points as needed]")
+    
+        with st.expander("Machine Learning and AI Projects"):
+            st.subheader("Numerical Image Recognition")
+            st.write("September 2023 - December 2023")
             st.write("• Developed a two-layer CNN for number classification, achieving 94% accuracy")
             st.write("• Enhanced model performance through hyperparameter tuning")
         
-        with st.expander("Image Degradation and Restoration"):
-            st.subheader("September 2023 - December 2023")
+            st.subheader("[Add other ML/AI projects as needed]")
+            st.write("[Insert date range]")
+            st.write("• [Add project details]")
+    
+        with st.expander("Mathematical Imaging Projects"):
+            st.subheader("Image Degradation and Restoration")
+            st.write("September 2023 - December 2023")
             st.write("• Constructed a MATLAB project on image degradation and restoration")
             st.write("• Implemented an embedded notch filter to eliminate noise frequencies")
+        
+            st.subheader("[Add other mathematical imaging projects as needed]")
+            st.write("[Insert date range]")
+            st.write("• [Add project details]")
     
     with tab5:
         st.header("Real Estate Investments")
