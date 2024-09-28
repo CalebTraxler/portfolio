@@ -55,7 +55,7 @@ def main():
     <style>
         .stTabs {
             background-color: #f0f2f6;
-            padding: 10px 0px;
+            padding: 8px 0px;
             border-radius: 8px;
         }
         .stTabs [data-baseweb="tab-list"] {
@@ -63,18 +63,18 @@ def main():
             justify-content: space-evenly;
         }
         .stTabs [data-baseweb="tab"] {
-            height: 50px;
+            height: 40px;
             white-space: pre-wrap;
             background-color: transparent;
             border-radius: 5px 5px 0 0;
             color: #31333F;
-            font-size: 16px;
+            font-size: 14px;
             font-weight: 400;
             align-items: center;
             justify-content: center;
             border: none;
             transition: all 0.3s ease;
-            border-bottom: 3px solid transparent;
+            border-bottom: 2px solid transparent;
             margin: 0 5px;
         }
         .stTabs [aria-selected="true"] {
@@ -89,8 +89,6 @@ def main():
         }
     </style>
     """, unsafe_allow_html=True)
-
-    
 
     # Create the tabs
     tab1, tab2, tab3, tab4, tab5 = st.tabs([
