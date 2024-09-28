@@ -284,58 +284,79 @@ def main():
     with tab4:
         st.header("Projects")
 
-        # Function to display images with a consistent width
+        # Function to display images with customizable width
         def display_image(path, caption, width=400):
             st.image(path, caption=caption, width=width)
+
+        # Function to display two images side-by-side
+        def display_images_side_by_side(image1, caption1, image2, caption2, width1=300, width2=300):
+            col1, col2 = st.columns(2)
+            with col1:
+                st.image(image1, caption=caption1, width=width1)
+            with col2:
+                st.image(image2, caption=caption2, width=width2)
 
         with st.expander("UCLA Modeling COVID-19 Research"):
             st.subheader("Modeling and Data Analysis")
             st.write("• Conducted research on modeling COVID-19 spread and impact")
             st.write("• Analyzed and visualized complex datasets related to the pandemic")
-            display_image("Projects/Modeling/data.png", "COVID-19 Data Visualization")
-            display_image("Projects/Modeling/bifurcation.png", "Bifurcation Diagram")
+            display_images_side_by_side(
+                "Projects/Modeling/data.png", "COVID-19 Data Visualization",
+                "Projects/Modeling/bifurcation.png", "Bifurcation Diagram",
+                width1=350, width2=350
+            )
 
         with st.expander("Machine Learning Projects"):
             st.subheader("Two Layer Neural Network for Binary Classification (Even or Odd)")
             st.write("• Implemented a neural network for classifying numbers as even or odd")
             st.write("• Achieved high accuracy in binary classification tasks")
-            display_image("Projects/ML/ml1.png", "Neural Network Performance")
+            display_image("Projects/ML/ml1.png", "Neural Network Performance", width=500)
 
             st.subheader("K-means Clustering")
             st.write("• Developed a K-means clustering algorithm for data segmentation")
             st.write("• Applied the algorithm to various datasets to identify patterns")
-            display_image("Projects/ML/clustering1.png", "K-means Clustering Result 1")
-            display_image("Projects/ML/clustering2.png", "K-means Clustering Result 2")
+            display_images_side_by_side(
+                "Projects/ML/clustering1.png", "K-means Clustering Result 1",
+                "Projects/ML/clustering2.png", "K-means Clustering Result 2",
+                width1=300, width2=300
+            )
 
         with st.expander("AI Projects"):
             st.subheader("Bayesian Network")
             st.write("• Created a Bayesian network for probabilistic reasoning")
             st.write("• Applied the network to solve complex inference problems")
-            display_image("Projects/AI/bayesian.png", "Bayesian Network Structure")
+            display_image("Projects/AI/bayesian.png", "Bayesian Network Structure", width=450)
 
             st.subheader("Sokoban Game with Admissible Heuristic")
             st.write("• Implemented the Sokoban puzzle game with an AI solver")
             st.write("• Developed an admissible heuristic for efficient pathfinding")
-            display_image("Projects/AI/sako1.png", "Sokoban Game State 1")
-            display_image("Projects/AI/sako2.png", "Sokoban Game State 2")
-            display_image("Projects/AI/sako3.png", "Sokoban Game State 3")
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                st.image("Projects/AI/sako1.png", caption="Sokoban Game State 1", width=200)
+            with col2:
+                st.image("Projects/AI/sako2.png", caption="Sokoban Game State 2", width=200)
+            with col3:
+                st.image("Projects/AI/sako3.png", caption="Sokoban Game State 3", width=200)
 
         with st.expander("Math Imaging Projects"):
             st.subheader("Feature Extraction via Brightness Adjustments")
             st.write("• Developed algorithms for feature extraction using brightness adjustments")
             st.write("• Enhanced image features for improved analysis and recognition")
-            display_image("Projects/Imaging/dark.png", "Dark Image")
-            display_image("Projects/Imaging/light.png", "Light Image")
+            display_images_side_by_side(
+                "Projects/Imaging/dark.png", "Dark Image",
+                "Projects/Imaging/light.png", "Light Image",
+                width1=300, width2=300
+            )
 
             st.subheader("Image Sharpening")
             st.write("• Implemented image sharpening techniques to enhance details")
             st.write("• Compared various sharpening algorithms and their effects")
-            display_image("Projects/Imaging/sharpening.png", "Image Sharpening Result")
+            display_image("Projects/Imaging/sharpening.png", "Image Sharpening Result", width=450)
 
             st.subheader("Notch Filter using Fourier Transforms")
             st.write("• Applied Fourier transforms to implement a notch filter")
             st.write("• Removed specific frequency components to reduce image noise")
-            display_image("Projects/Imaging/notch.png", "Notch Filter Application")
+            display_image("Projects/Imaging/notch.png", "Notch Filter Application", width=450)
     
     with tab5:
         st.header("Real Estate Investments")
