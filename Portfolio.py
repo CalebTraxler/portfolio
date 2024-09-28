@@ -332,7 +332,9 @@ def main():
             display_image("Projects/AI/bayesian.png", "Bayesian Network Structure", width=600)
             st.write("Details: I was able to build a Bayesian network model based on the following statement: ")
             st.write(" When Sambot goes home at night, he wants to know if his family is home before he tries the doors. (Perhaps the most convenient door to enter is double locked when nobody is home). Often when Sambot’s wife leaves the house she turns on an outdoor light. However, she sometimes turns on this light if she is expecting a guest. Also, Sambot’s family has a dog. When nobody is home, the dog is put in the back yard. The same is true if the dog has bowel trouble. Finally, if the dog is in the backyard, Sambot will probably hear her barking, but sometimes he can be confused by other dogs barking. Sambot is equipped with two sensors: a light sensor for detecting outdoor lights and a sound sensor for detecting the barking of dogs(s). Both of these sensors are not completely reliable and can break. Moreover, they both require Sambot’s battery to be in good condition.  ")
+            st.write(" I was able to then reason about this situation using a UCLA inference tool called SamIam. Then given sensory input data I was able to visualize probabilistic outcomes subject to the input data. I was furthermore able to produce "what-if" scenarios by utilizing this Bayesian network as a causal model.  ")
 
+            
             st.subheader("Sokoban Game with Admissible Heuristic")
             st.write("• Implemented the Sokoban puzzle game with an AI solver")
             st.write("• Developed an admissible heuristic for efficient pathfinding")
