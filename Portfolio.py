@@ -283,31 +283,59 @@ def main():
     
     with tab4:
         st.header("Projects")
-    
-        with st.expander("UCLA Mathematics - Modeling COVID-19 Research"):
-            st.subheader("[Insert date range]")
-            st.write("• [Insert details about the COVID-19 modeling research project]")
-            st.write("• [Add more bullet points as needed]")
-    
-        with st.expander("Machine Learning and AI Projects"):
-            st.subheader("Numerical Image Recognition")
-            st.write("September 2023 - December 2023")
-            st.write("• Developed a two-layer CNN for number classification, achieving 94% accuracy")
-            st.write("• Enhanced model performance through hyperparameter tuning")
-        
-            st.subheader("[Add other ML/AI projects as needed]")
-            st.write("[Insert date range]")
-            st.write("• [Add project details]")
-    
-        with st.expander("Mathematical Imaging Projects"):
-            st.subheader("Image Degradation and Restoration")
-            st.write("September 2023 - December 2023")
-            st.write("• Constructed a MATLAB project on image degradation and restoration")
-            st.write("• Implemented an embedded notch filter to eliminate noise frequencies")
-        
-            st.subheader("[Add other mathematical imaging projects as needed]")
-            st.write("[Insert date range]")
-            st.write("• [Add project details]")
+
+        # Function to display images with a consistent width
+        def display_image(path, caption, width=400):
+            st.image(path, caption=caption, width=width)
+
+        with st.expander("UCLA Modeling COVID-19 Research"):
+            st.subheader("Modeling and Data Analysis")
+            st.write("• Conducted research on modeling COVID-19 spread and impact")
+            st.write("• Analyzed and visualized complex datasets related to the pandemic")
+            display_image("Projects/Modeling/data.png", "COVID-19 Data Visualization")
+            display_image("Projects/Modeling/bifurcation.png", "Bifurcation Diagram")
+
+        with st.expander("Machine Learning Projects"):
+            st.subheader("Two Layer Neural Network for Binary Classification (Even or Odd)")
+            st.write("• Implemented a neural network for classifying numbers as even or odd")
+            st.write("• Achieved high accuracy in binary classification tasks")
+            display_image("Projects/ML/ml1.png", "Neural Network Performance")
+
+            st.subheader("K-means Clustering")
+            st.write("• Developed a K-means clustering algorithm for data segmentation")
+            st.write("• Applied the algorithm to various datasets to identify patterns")
+            display_image("Projects/ML/clustering1.png", "K-means Clustering Result 1")
+            display_image("Projects/ML/clustering2.png", "K-means Clustering Result 2")
+
+        with st.expander("AI Projects"):
+            st.subheader("Bayesian Network")
+            st.write("• Created a Bayesian network for probabilistic reasoning")
+            st.write("• Applied the network to solve complex inference problems")
+            display_image("Projects/AI/bayesian.png", "Bayesian Network Structure")
+
+            st.subheader("Sokoban Game with Admissible Heuristic")
+            st.write("• Implemented the Sokoban puzzle game with an AI solver")
+            st.write("• Developed an admissible heuristic for efficient pathfinding")
+            display_image("Projects/AI/sako1.png", "Sokoban Game State 1")
+            display_image("Projects/AI/sako2.png", "Sokoban Game State 2")
+            display_image("Projects/AI/sako3.png", "Sokoban Game State 3")
+
+        with st.expander("Math Imaging Projects"):
+            st.subheader("Feature Extraction via Brightness Adjustments")
+            st.write("• Developed algorithms for feature extraction using brightness adjustments")
+            st.write("• Enhanced image features for improved analysis and recognition")
+            display_image("Projects/Imaging/dark.png", "Dark Image")
+            display_image("Projects/Imaging/light.png", "Light Image")
+
+            st.subheader("Image Sharpening")
+            st.write("• Implemented image sharpening techniques to enhance details")
+            st.write("• Compared various sharpening algorithms and their effects")
+            display_image("Projects/Imaging/sharpening.png", "Image Sharpening Result")
+
+            st.subheader("Notch Filter using Fourier Transforms")
+            st.write("• Applied Fourier transforms to implement a notch filter")
+            st.write("• Removed specific frequency components to reduce image noise")
+            display_image("Projects/Imaging/notch.png", "Notch Filter Application")
     
     with tab5:
         st.header("Real Estate Investments")
