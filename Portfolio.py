@@ -24,9 +24,9 @@ def set_custom_style():
         }
         .highlight {
             background-color: #e9ecef;
-            padding: 1rem;
-            border-radius: 0.5rem;
-            margin-bottom: 1rem;
+            padding: 5rem;
+            border-radius: 3rem;
+            margin-bottom: 3rem;
         }
         </style>
         """, unsafe_allow_html=True)
