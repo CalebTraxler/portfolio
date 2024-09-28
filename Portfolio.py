@@ -310,7 +310,7 @@ def main():
             st.subheader("Two Layer Neural Network for Binary Classification (Even or Odd)")
             st.write("• Implemented a neural network for classifying numbers as even or odd")
             st.write("• Achieved high accuracy in binary classification tasks")
-            display_image("Projects/ML/ml1.png", "Neural Network Performance", width=500)
+            display_image("Projects/ML/ml1.png", "Neural Network Performance", width=300)
 
             st.subheader("K-means Clustering")
             st.write("• Developed a K-means clustering algorithm for data segmentation")
