@@ -339,13 +339,13 @@ def main():
                 st.image("Projects/AI/sako3.png", caption="Sokoban Game State 3", width=400)
 
         with st.expander("Math Imaging Projects"):
-            st.subheader("Feature Extraction via Brightness Adjustments")
+            st.subheader("Feature Enhancement via Brightness Adjustments")
             st.write("• Developed algorithms for feature extraction using brightness adjustments")
             st.write("• Enhanced image features for improved analysis and recognition")
             display_images_side_by_side(
                 "Projects/Imaging/dark.png", "Dark Image",
                 "Projects/Imaging/light.png", "Light Image",
-                width1=300, width2=300
+                width1=500, width2=500
             )
 
             st.subheader("Image Sharpening")
