@@ -326,10 +326,12 @@ def main():
             st.write(" Details: Applied k-means to a popular visual classification CIFAR-10 dataset consisting of 60K labeled 32x32x3 images, such that each image contains 3 channels corresponding to RGB colors. Out of the 60K images, 50K images belong to the training set and 10K belong to the testing set. We first apply principal component analysis to the images to 2 dimensions, then we apply the k-mean clustering algorithm with k=10 (10 clusters) to the PCA transformed data to then get the ground truth labels. ")
 
         with st.expander("AI Projects"):
-            st.subheader("Bayesian Network")
+            st.subheader("Bayesian Network and Causal Modeling")
             st.write("• Created a Bayesian network for probabilistic reasoning")
             st.write("• Applied the network to solve complex inference problems")
             display_image("Projects/AI/bayesian.png", "Bayesian Network Structure", width=600)
+            st.write("Details: I was able to build a Bayesian network model based on the following statement: ")
+            st.write(" When Sambot goes home at night, he wants to know if his family is home before he tries the doors. (Perhaps the most convenient door to enter is double locked when nobody is home). Often when Sambot’s wife leaves the house she turns on an outdoor light. However, she sometimes turns on this light if she is expecting a guest. Also, Sambot’s family has a dog. When nobody is home, the dog is put in the back yard. The same is true if the dog has bowel trouble. Finally, if the dog is in the backyard, Sambot will probably hear her barking, but sometimes he can be confused by other dogs barking. Sambot is equipped with two sensors: a light sensor for detecting outdoor lights and a sound sensor for detecting the barking of dogs(s). Both of these sensors are not completely reliable and can break. Moreover, they both require Sambot’s battery to be in good condition.  ")
 
             st.subheader("Sokoban Game with Admissible Heuristic")
             st.write("• Implemented the Sokoban puzzle game with an AI solver")
