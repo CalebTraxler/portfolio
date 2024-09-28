@@ -109,7 +109,7 @@ def main():
     
         Beyond my technical pursuits, I'm an active investor in both real estate and securities markets, always looking for new 
         opportunities to grow and diversify my portfolio. My entrepreneurial spirit has led me to found Traxler Technology, 
-        where we're working on advancing humanity's reach into the cosmos through innovative Mars exploration and colonization solutions.
+        where we're working on deriving insights from data to make a positive and lasting impression on humanity though many different avenues. 
         
     
         In my free time, I enjoy:
