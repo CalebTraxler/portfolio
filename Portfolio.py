@@ -306,6 +306,10 @@ def main():
                 width1=600, width2=600
             )
 
+            st.write("Details: Led a COVID-19 research project at UCLA Mathematics Department in Junior year, under Professor Shiba
+Biswals supervision. Analyzed Orange County COVID-19 data using Jupyter notebooks and python; focused on data processing and in-depth analysis in python. Implemented error analysis methods using Matlab, enhancing accuracy. Utilized SIR and SEIR differential equations and nonlinear equations to develop an innovative bifurcation
+diagram, hence identifying a critical transcritical bifurcation threshold used for predictions.")
+
         with st.expander("Machine Learning Projects"):
             st.subheader("Two Layer Neural Network for Binary Classification (Even or Odd)")
             st.write("• Implemented a neural network for classifying numbers as even or odd")
