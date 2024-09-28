@@ -325,7 +325,7 @@ def main():
             st.subheader("Bayesian Network")
             st.write("• Created a Bayesian network for probabilistic reasoning")
             st.write("• Applied the network to solve complex inference problems")
-            display_image("Projects/AI/bayesian.png", "Bayesian Network Structure", width=550)
+            display_image("Projects/AI/bayesian.png", "Bayesian Network Structure", width=600)
 
             st.subheader("Sokoban Game with Admissible Heuristic")
             st.write("• Implemented the Sokoban puzzle game with an AI solver")
@@ -334,7 +334,7 @@ def main():
             with col1:
                 st.image("Projects/AI/sako1.png", caption="Sokoban Game State 1", width=200)
             with col2:
-                st.image("Projects/AI/sako2.png", caption="Sokoban Game State 2", width=250)
+                st.image("Projects/AI/sako2.png", caption="Sokoban Game State 2", width=215)
             with col3:
                 st.image("Projects/AI/sako3.png", caption="Sokoban Game State 3", width=400)
 
