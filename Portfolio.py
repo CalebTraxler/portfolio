@@ -298,13 +298,13 @@ def main():
         st.header("Real Estate Investments")
     
         st.markdown("""
-        <div class="highlight">
+        
         <h4>First Property Investment - Topeka, Kansas</h4>
         • Purchased first real estate property at 22 years old<br>
         • Currently renovating the property<br>
         • Plans to refinance and rent out for passive income<br>
         • Actively seeking next property investment in Texas by end of 2025
-        </div>
+
         """, unsafe_allow_html=True)
     
         st.write("I've just purchased my first real estate property in Topeka, Kansas at 22 years old! This home is definitely a fixer upper, however I am ready to take on the challenge. With some hard work and dedication, I plan to transform it, refinance, and rent it out and make this investment worthwhile. This is just the beginning of my real estate journey. I am already looking ahead to purchase my next property in Texas before the end of 2025. Stay tuned for more updates as I continue to grow my real estate portfolio!")
