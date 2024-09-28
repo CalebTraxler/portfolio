@@ -318,7 +318,7 @@ def main():
             display_images_side_by_side(
                 "Projects/ML/clustering1.png", "K-means Clustering Result 1",
                 "Projects/ML/clustering2.png", "K-means Clustering Result 2",
-                width1=300, width2=300
+                width1=500, width2=500
             )
 
         with st.expander("AI Projects"):
