@@ -303,7 +303,7 @@ def main():
             display_images_side_by_side(
                 "Projects/Modeling/data.png", "COVID-19 Data Visualization",
                 "Projects/Modeling/bifurcation.png", "Bifurcation Diagram",
-                width1=350, width2=350
+                width1=500, width2=500
             )
 
         with st.expander("Machine Learning Projects"):
