@@ -313,6 +313,7 @@ def main():
             st.write("• Implemented a neural network for classifying numbers as even or odd")
             st.write("• Achieved high accuracy in binary classification tasks")
             display_image("Projects/ML/ml1.png", "Neural Network Performance", width=300)
+            st.write(" Details: Performed forward and backward propagation process for a two-layer fully connected neural network. I used the open-source MNIST dataset (large database of hand written digits). Furthermore used L2 regularization and performed hyper parameter tuning for different learning rates. The best accuracy is achieved with a learning rate of 0.001, resulting in a validation accuracy of 97.24% and a test accuracy of 96.95%. ")
 
             st.subheader("K-means Clustering")
             st.write("• Developed a K-means clustering algorithm for data segmentation")
