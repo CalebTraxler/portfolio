@@ -55,32 +55,33 @@ def main():
     <style>
         .stTabs {
             background-color: #f0f2f6;
-            padding: 8px 0px;
-            border-radius: 8px;
+            padding: 6px 0px;
+            border-radius: 6px;
         }
         .stTabs [data-baseweb="tab-list"] {
             gap: 0;
             justify-content: space-evenly;
         }
         .stTabs [data-baseweb="tab"] {
-            height: 40px;
+            height: 28px;
             white-space: pre-wrap;
             background-color: transparent;
-            border-radius: 5px 5px 0 0;
+            border-radius: 4px 4px 0 0;
             color: #31333F;
-            font-size: 14px;
-            font-weight: 400;
+            font-size: 10px;
+            font-weight: 500;
             align-items: center;
             justify-content: center;
             border: none;
-            transition: all 0.3s ease;
-            border-bottom: 2px solid transparent;
-            margin: 0 5px;
-        }
+            transition: all 0.2s ease;
+            border-bottom: 1px solid transparent;
+            margin: 0 3px;
+            padding: 0 8px;
+        }    
         .stTabs [aria-selected="true"] {
             background-color: white;
             color: #4CAF50;
-            font-weight: 600;
+            font-weight: 700;
             border-bottom-color: #4CAF50;
         }
         .stTabs [data-baseweb="tab"]:hover {
