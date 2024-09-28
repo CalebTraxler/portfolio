@@ -327,21 +327,19 @@ def main():
             st.image(image3, caption="Property View 3", use_column_width=True)
     
         st.markdown("""
-        <div class="highlight">
         <h4>Investment Strategy</h4>
         • Focus on up-and-coming neighborhoods with growth potential<br>
         • Target properties with value-add opportunities through renovation<br>
         • Aim to build a diverse portfolio of residential and potentially commercial properties
-        </div>
         """, unsafe_allow_html=True)
+
+        st.write(" ")
     
         st.markdown("""
-        <div class="highlight">
         <h4>Future Plans</h4>
         • Research multi-family properties in emerging markets<br>
         • Network with local real estate investors and join investment groups<br>
         • Continuously educate myself on real estate market trends and investment strategies
-        </div>
         """, unsafe_allow_html=True)
     
         st.info("My goal is to build a robust real estate portfolio that generates passive income and appreciates in value over time. I'm committed to learning and growing as a real estate investor.")
