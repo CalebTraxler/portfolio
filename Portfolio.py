@@ -55,8 +55,8 @@ def main():
     <style>
         .stTabs {
             background-color: #f0f2f6;
-            padding: 6px 0px;
-            border-radius: 6px;
+            padding: 15px 0px;
+            border-radius: 15px;
         }
         .stTabs [data-baseweb="tab-list"] {
             gap: 0;
