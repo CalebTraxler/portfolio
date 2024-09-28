@@ -323,6 +323,7 @@ def main():
                 "Projects/ML/clustering2.png", "K-means Clustering Result 2",
                 width1=500, width2=500
             )
+            st.write(" Details: Applied k-means to a popular visual classification CIFAR-10 dataset consisting of 60K labeled 32x32x3 images, such that each image contains 3 channels corresponding to RGB colors. Out of the 60K images, 50K images belong to the training set and 10K belong to the testing set. We first apply principal component analysis to the images to 2 dimensions, then we apply the k-mean clustering algorithm with k=10 (10 clusters) to the PCA transformed data to then get the ground truth labels. ")
 
         with st.expander("AI Projects"):
             st.subheader("Bayesian Network")
