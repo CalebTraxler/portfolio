@@ -358,6 +358,7 @@ def main():
                 "Projects/Imaging/light.png", "Light Image",
                 width1=500, width2=500
             )
+            st.write(" Details: Utilized histogram equalization technique on an image of the MRI of a fractured human spine to extract features via brightness adjustments. I was basically able to use histogram equalization to uncover lots of hidden details that were otherwise un-visible. Overall the histogram equalization technique allowed me to reveal details that would have otherwise been hidden by dark pixels. ")
 
             st.subheader("Image Sharpening")
             st.write("• Implemented image sharpening techniques to enhance details")
