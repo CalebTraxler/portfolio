@@ -300,7 +300,7 @@ def main():
 
         # Custom layout for UCLA Modeling COVID-19 Research
         with st.expander("UCLA Mathematical Modeling - COVID-19 Research"):
-            st.subheader("Data Aanalysis and Bifurcation Analysis")
+            st.subheader("Data and Bifurcation Analysis")
             col1, col2 = st.columns([3, 2])
         
             with col1:
