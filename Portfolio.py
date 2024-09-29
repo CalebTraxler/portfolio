@@ -284,12 +284,12 @@ def main():
     with tab4:
         st.header("Projects")
 
-        # Function to display images vertically
+        # Function to display images vertically (for other sections)
         def display_images_vertically(images, captions, widths):
             for img, cap, w in zip(images, captions, widths):
                 st.image(img, caption=cap, width=w)
 
-        # Function to create a two-column layout with text on left and images on right
+        # Function to create a two-column layout with text on left and images on right (for other sections)
         def project_layout(title, details, images, captions, image_widths):
             st.subheader(title)
             col1, col2 = st.columns([3, 2])
@@ -298,19 +298,23 @@ def main():
             with col2:
                 display_images_vertically(images, captions, image_widths)
 
+        # Custom layout for UCLA Modeling COVID-19 Research
         with st.expander("UCLA Modeling COVID-19 Research"):
-            project_layout(
-                "Modeling and Data Analysis",
-                """
+            st.subheader("Modeling and Data Analysis")
+            col1, col2 = st.columns([3, 2])
+        
+            with col1:
+                st.write("""
                 • Conducted research on modeling COVID-19 spread and impact
                 • Analyzed and visualized complex datasets related to the pandemic
 
                 Details: Led a COVID-19 research project at UCLA Mathematics Department in Junior year, under Professor Shiba Biswals supervision. Analyzed Orange County COVID-19 data using Jupyter notebooks and python; focused on data processing and in-depth analysis in python. Implemented error analysis methods using Matlab, enhancing accuracy. Utilized SIR and SEIR differential equations and nonlinear equations to develop an innovative bifurcation diagram, hence identifying a critical transcritical bifurcation threshold used for predictions.
-                """,
-                ["Projects/Modeling/data.png", "Projects/Modeling/bifurcation.png"],
-                ["COVID-19 Data Visualization", "Bifurcation Diagram"],
-                [600, 600]
-            )
+                """)
+        
+            with col2:
+                st.image("Projects/Modeling/data.png", caption="COVID-19 Data Visualization", width=600)
+        
+            st.image("Projects/Modeling/bifurcation.png", caption="Bifurcation Diagram", width=600)
 
         with st.expander("Machine Learning Projects"):
             project_layout(
