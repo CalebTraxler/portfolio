@@ -309,7 +309,7 @@ def main():
                 """,
                 ["Projects/Modeling/data.png", "Projects/Modeling/bifurcation.png"],
                 ["COVID-19 Data Visualization", "Bifurcation Diagram"],
-                [300, 300]
+                [600, 600]
             )
 
         with st.expander("Machine Learning Projects"):
@@ -336,7 +336,7 @@ def main():
                 """,
                 ["Projects/ML/clustering1.png", "Projects/ML/clustering2.png"],
                 ["K-means Clustering Result 1", "K-means Clustering Result 2"],
-                [300, 300]
+                [500, 500]
             )
 
         with st.expander("AI Projects"):
@@ -354,7 +354,7 @@ def main():
                 """,
                 ["Projects/AI/bayesian.png"],
                 ["Bayesian Network Structure"],
-                [400]
+                [600]
             )
 
             project_layout(
@@ -383,7 +383,7 @@ def main():
                 """,
                 ["Projects/Imaging/dark.png", "Projects/Imaging/light.png"],
                 ["Dark Image", "Light Image"],
-                [300, 300]
+                [500, 500]
             )
 
             project_layout(
@@ -396,8 +396,8 @@ def main():
                 """,
                 ["Projects/Imaging/sharpening.png"],
                 ["Image Sharpening Result"],
-                [400]
-            )
+                [600]
+            )    
     
     with tab5:
         st.header("Real Estate Investments")
