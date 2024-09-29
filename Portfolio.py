@@ -284,87 +284,120 @@ def main():
     with tab4:
         st.header("Projects")
 
-        # Function to display images with customizable width
-        def display_image(path, caption, width=400):
-            st.image(path, caption=caption, width=width)
+        # Function to display images vertically
+        def display_images_vertically(images, captions, widths):
+            for img, cap, w in zip(images, captions, widths):
+                st.image(img, caption=cap, width=w)
 
-        # Function to display two images side-by-side
-        def display_images_side_by_side(image1, caption1, image2, caption2, width1=300, width2=300):
-            col1, col2 = st.columns(2)
+        # Function to create a two-column layout with text on left and images on right
+        def project_layout(title, details, images, captions, image_widths):
+            st.subheader(title)
+            col1, col2 = st.columns([3, 2])
             with col1:
-                st.image(image1, caption=caption1, width=width1)
+                st.write(details)
             with col2:
-                st.image(image2, caption=caption2, width=width2)
+                display_images_vertically(images, captions, image_widths)
 
         with st.expander("UCLA Modeling COVID-19 Research"):
-            st.subheader("Modeling and Data Analysis")
-            st.write("• Conducted research on modeling COVID-19 spread and impact")
-            st.write("• Analyzed and visualized complex datasets related to the pandemic")
-            display_images_side_by_side(
-                "Projects/Modeling/data.png", "COVID-19 Data Visualization",
-                "Projects/Modeling/bifurcation.png", "Bifurcation Diagram",
-                width1=600, width2=600
-            )
+            project_layout(
+                "Modeling and Data Analysis",
+                """
+                • Conducted research on modeling COVID-19 spread and impact
+                • Analyzed and visualized complex datasets related to the pandemic
 
-            st.write("Details: Led a COVID-19 research project at UCLA Mathematics Department in Junior year, under Professor Shiba Biswals supervision. Analyzed Orange County COVID-19 data using Jupyter notebooks and python; focused on data processing and in-depth analysis in python. Implemented error analysis methods using Matlab, enhancing accuracy. Utilized SIR and SEIR differential equations and nonlinear equations to develop an innovative bifurcation diagram, hence identifying a critical transcritical bifurcation threshold used for predictions.")
+                Details: Led a COVID-19 research project at UCLA Mathematics Department in Junior year, under Professor Shiba Biswals supervision. Analyzed Orange County COVID-19 data using Jupyter notebooks and python; focused on data processing and in-depth analysis in python. Implemented error analysis methods using Matlab, enhancing accuracy. Utilized SIR and SEIR differential equations and nonlinear equations to develop an innovative bifurcation diagram, hence identifying a critical transcritical bifurcation threshold used for predictions.
+                """,
+                ["Projects/Modeling/data.png", "Projects/Modeling/bifurcation.png"],
+                ["COVID-19 Data Visualization", "Bifurcation Diagram"],
+                [300, 300]
+            )
 
         with st.expander("Machine Learning Projects"):
-            st.subheader("Two Layer Neural Network for Binary Classification (Even or Odd)")
-            st.write("• Implemented a neural network for classifying numbers as even or odd")
-            st.write("• Achieved high accuracy in binary classification tasks")
-            display_image("Projects/ML/ml1.png", "Neural Network Performance", width=300)
-            st.write(" Details: Performed forward and backward propagation process for a two-layer fully connected neural network. I used the open-source MNIST dataset (large database of hand written digits). Furthermore used L2 regularization and performed hyper parameter tuning for different learning rates. The best accuracy is achieved with a learning rate of 0.001, resulting in a validation accuracy of 97.24% and a test accuracy of 96.95%. ")
+            project_layout(
+                "Two Layer Neural Network for Binary Classification (Even or Odd)",
+                """
+                • Implemented a neural network for classifying numbers as even or odd
+                • Achieved high accuracy in binary classification tasks
 
-            st.subheader("K-means Clustering")
-            st.write("• Developed a K-means clustering algorithm for data segmentation")
-            st.write("• Applied the algorithm to various datasets to identify patterns")
-            display_images_side_by_side(
-                "Projects/ML/clustering1.png", "K-means Clustering Result 1",
-                "Projects/ML/clustering2.png", "K-means Clustering Result 2",
-                width1=500, width2=500
+                Details: Performed forward and backward propagation process for a two-layer fully connected neural network. I used the open-source MNIST dataset (large database of hand written digits). Furthermore used L2 regularization and performed hyper parameter tuning for different learning rates. The best accuracy is achieved with a learning rate of 0.001, resulting in a validation accuracy of 97.24% and a test accuracy of 96.95%.
+                """,
+                ["Projects/ML/ml1.png"],
+                ["Neural Network Performance"],
+                [300]
             )
-            st.write(" Details: Applied k-means to a popular visual classification CIFAR-10 dataset consisting of 60K labeled 32x32x3 images, such that each image contains 3 channels corresponding to RGB colors. Out of the 60K images, 50K images belong to the training set and 10K belong to the testing set. We first apply principal component analysis to the images to 2 dimensions, then we apply the k-mean clustering algorithm with k=10 (10 clusters) to the PCA transformed data to then get the ground truth labels. ")
+
+            project_layout(
+                "K-means Clustering",
+                """
+                • Developed a K-means clustering algorithm for data segmentation
+                • Applied the algorithm to various datasets to identify patterns
+
+                Details: Applied k-means to a popular visual classification CIFAR-10 dataset consisting of 60K labeled 32x32x3 images, such that each image contains 3 channels corresponding to RGB colors. Out of the 60K images, 50K images belong to the training set and 10K belong to the testing set. We first apply principal component analysis to the images to 2 dimensions, then we apply the k-mean clustering algorithm with k=10 (10 clusters) to the PCA transformed data to then get the ground truth labels.
+                """,
+                ["Projects/ML/clustering1.png", "Projects/ML/clustering2.png"],
+                ["K-means Clustering Result 1", "K-means Clustering Result 2"],
+                [300, 300]
+            )
 
         with st.expander("AI Projects"):
-            st.subheader("Bayesian Network and Causal Modeling")
-            st.write("• Created a Bayesian network for probabilistic reasoning")
-            st.write("• Applied the network to solve complex inference problems")
-            display_image("Projects/AI/bayesian.png", "Bayesian Network Structure", width=600)
-            st.write("Details: I was able to build a Bayesian network model based on the following statement: ")
-            st.write(" When Sambot goes home at night, he wants to know if his family is home before he tries the doors. (Perhaps the most convenient door to enter is double locked when nobody is home). Often when Sambot’s wife leaves the house she turns on an outdoor light. However, she sometimes turns on this light if she is expecting a guest. Also, Sambot’s family has a dog. When nobody is home, the dog is put in the back yard. The same is true if the dog has bowel trouble. Finally, if the dog is in the backyard, Sambot will probably hear her barking, but sometimes he can be confused by other dogs barking. Sambot is equipped with two sensors: a light sensor for detecting outdoor lights and a sound sensor for detecting the barking of dogs(s). Both of these sensors are not completely reliable and can break. Moreover, they both require Sambot’s battery to be in good condition.  ")
-            st.write(" I was able to then reason about this situation using a UCLA inference tool called SamIam. Then given sensory input data I was able to visualize probabilistic outcomes subject to the input data. I was furthermore able to produce what-if scenarios by utilizing this Bayesian network as a causal model.  ")
+            project_layout(
+                "Bayesian Network and Causal Modeling",
+                """
+                • Created a Bayesian network for probabilistic reasoning
+                • Applied the network to solve complex inference problems
 
-            
-            st.subheader("Sokoban Game with Admissible Heuristic")
-            st.write("• Implemented the Sokoban puzzle game with an AI solver")
-            st.write("• Developed an admissible heuristic for efficient pathfinding")
-            col1, col2, col3 = st.columns(3)
-            with col1:
-                st.image("Projects/AI/sako1.png", caption="Sokoban Game State 1", width=200)
-            with col2:
-                st.image("Projects/AI/sako2.png", caption="Sokoban Game State 2", width=215)
-            with col3:
-                st.image("Projects/AI/sako3.png", caption="Sokoban Game State 3", width=400)
+                Details: I was able to build a Bayesian network model based on the following statement:
 
-            st.write(" Note: blank = 0, wall = 1, box = 2, keeper = 3, star = 4, boxstar = 5, keeperstar = 6 ")
-            st.write("  Details: Used the A* algorithm given a start-state and using specific admissible heuristics to obtain the final-state in the least  number of moves and in the fastest time. Overall I was able to create an agent that was able to solve 19 Sokoban games, all under 4 seconds. My fast heuristic approach was due to a combination of the minimization of the Manhattan distance between box and goal, subject to the minimization between the keeper and the box, with a particular usage of breadth first search for the next best move. ")
+                When Sambot goes home at night, he wants to know if his family is home before he tries the doors. (Perhaps the most convenient door to enter is double locked when nobody is home). Often when Sambot's wife leaves the house she turns on an outdoor light. However, she sometimes turns on this light if she is expecting a guest. Also, Sambot's family has a dog. When nobody is home, the dog is put in the back yard. The same is true if the dog has bowel trouble. Finally, if the dog is in the backyard, Sambot will probably hear her barking, but sometimes he can be confused by other dogs barking. Sambot is equipped with two sensors: a light sensor for detecting outdoor lights and a sound sensor for detecting the barking of dogs(s). Both of these sensors are not completely reliable and can break. Moreover, they both require Sambot's battery to be in good condition.
+
+                I was able to then reason about this situation using a UCLA inference tool called SamIam. Then given sensory input data I was able to visualize probabilistic outcomes subject to the input data. I was furthermore able to produce what-if scenarios by utilizing this Bayesian network as a causal model.
+                """,
+                ["Projects/AI/bayesian.png"],
+                ["Bayesian Network Structure"],
+                [400]
+            )
+
+            project_layout(
+                "Sokoban Game with Admissible Heuristic",
+                """
+                • Implemented the Sokoban puzzle game with an AI solver
+                • Developed an admissible heuristic for efficient pathfinding
+
+                Note: blank = 0, wall = 1, box = 2, keeper = 3, star = 4, boxstar = 5, keeperstar = 6
+
+                Details: Used the A* algorithm given a start-state and using specific admissible heuristics to obtain the final-state in the least number of moves and in the fastest time. Overall I was able to create an agent that was able to solve 19 Sokoban games, all under 4 seconds. My fast heuristic approach was due to a combination of the minimization of the Manhattan distance between box and goal, subject to the minimization between the keeper and the box, with a particular usage of breadth first search for the next best move.
+                """,
+                ["Projects/AI/sako1.png", "Projects/AI/sako2.png", "Projects/AI/sako3.png"],
+                ["Sokoban Game State 1", "Sokoban Game State 2", "Sokoban Game State 3"],
+                [200, 215, 400]
+            )
 
         with st.expander("Math Imaging Projects"):
-            st.subheader("Feature Enhancement via Brightness Adjustments")
-            st.write("• Developed algorithms for feature extraction using brightness adjustments")
-            st.write("• Enhanced image features for improved analysis and recognition")
-            display_images_side_by_side(
-                "Projects/Imaging/dark.png", "Dark Image",
-                "Projects/Imaging/light.png", "Light Image",
-                width1=500, width2=500
-            )
-            st.write(" Details: Utilized histogram equalization technique on an image of the MRI of a fractured human spine to extract features via brightness adjustments. I was basically able to use histogram equalization to uncover lots of hidden details that were otherwise un-visible. This process involves the mapping many of the dark pixels to a lighter-medium gray pixel and keeping white pixels white, then re-displaying the newly mapped image. Overall the histogram equalization technique allowed me to reveal details that would have otherwise been hidden by dark pixels. ")
+            project_layout(
+                "Feature Enhancement via Brightness Adjustments",
+                """
+                • Developed algorithms for feature extraction using brightness adjustments
+                • Enhanced image features for improved analysis and recognition
 
-            st.subheader("Image Sharpening")
-            st.write("• Implemented image sharpening techniques to enhance details")
-            st.write("• Compared various sharpening algorithms and their effects")
-            display_image("Projects/Imaging/sharpening.png", "Image Sharpening Result", width=600)
-            st.write(" Details: I was able to utilize a image sharpening technique called the composite Laplacian mask operator, which, when applied to an image highlights the areas where there is a rapid change in color intensity, hence corresponding to the edges of these features. In the moon image, I was able to make the craters and edges on the moons surface become more apparent and have a sharper appearance using this image sharpening technique.  ")
+                Details: Utilized histogram equalization technique on an image of the MRI of a fractured human spine to extract features via brightness adjustments. I was basically able to use histogram equalization to uncover lots of hidden details that were otherwise un-visible. This process involves the mapping many of the dark pixels to a lighter-medium gray pixel and keeping white pixels white, then re-displaying the newly mapped image. Overall the histogram equalization technique allowed me to reveal details that would have otherwise been hidden by dark pixels.
+                """,
+                ["Projects/Imaging/dark.png", "Projects/Imaging/light.png"],
+                ["Dark Image", "Light Image"],
+                [300, 300]
+            )
+
+            project_layout(
+                "Image Sharpening",
+                """
+                • Implemented image sharpening techniques to enhance details
+                • Compared various sharpening algorithms and their effects
+
+                Details: I was able to utilize a image sharpening technique called the composite Laplacian mask operator, which, when applied to an image highlights the areas where there is a rapid change in color intensity, hence corresponding to the edges of these features. In the moon image, I was able to make the craters and edges on the moons surface become more apparent and have a sharper appearance using this image sharpening technique.
+                """,
+                ["Projects/Imaging/sharpening.png"],
+                ["Image Sharpening Result"],
+                [400]
+            )
     
     with tab5:
         st.header("Real Estate Investments")
