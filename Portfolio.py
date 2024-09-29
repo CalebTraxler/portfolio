@@ -312,7 +312,7 @@ def main():
                 """)
         
             with col2:
-                st.image("Projects/Modeling/data.png", caption="COVID-19 Data Visualization", width=600)
+                st.image("Projects/Modeling/data.png", caption="COVID-19 Data Visualization", width=500)
         
             st.image("Projects/Modeling/bifurcation.png", caption="Bifurcation Diagram", width=600)
 
