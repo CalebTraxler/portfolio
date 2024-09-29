@@ -364,6 +364,7 @@ def main():
             st.write("• Implemented image sharpening techniques to enhance details")
             st.write("• Compared various sharpening algorithms and their effects")
             display_image("Projects/Imaging/sharpening.png", "Image Sharpening Result", width=600)
+            st.write(" Details: I was able to utilize a image sharpening technique called the composite Laplacian mask operator, which, when applied to an image highlights the areas where there is a rapid change in color intensity, hence corresponding to the edges of these features. In the moon image, I was able to make the craters and edges on the moons surface become more apparent and have a sharper appearance using this image sharpening technique.  ")
 
             st.subheader("Notch Filter using Fourier Transforms")
             st.write("• Applied Fourier transforms to implement a notch filter")
