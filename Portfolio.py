@@ -306,6 +306,7 @@ def main():
             with col1:
                 st.write("""
                 • Conducted research on modeling COVID-19 spread and impact
+                
                 • Analyzed and visualized complex datasets related to the pandemic
 
                 Details: Led a COVID-19 research project at UCLA Mathematics Department in Junior year, under Professor Shiba Biswals supervision. Analyzed Orange County COVID-19 data using Jupyter notebooks and python; focused on data processing and in-depth analysis in python. Implemented error analysis methods using Matlab, enhancing accuracy. Utilized SIR and SEIR differential equations and nonlinear equations to develop an innovative bifurcation diagram, hence identifying a critical transcritical bifurcation threshold used for predictions.
@@ -321,6 +322,7 @@ def main():
                 "Two Layer Neural Network for Binary Classification (Even or Odd)",
                 """
                 • Implemented a neural network for classifying numbers as even or odd
+                
                 • Achieved high accuracy in binary classification tasks
 
                 Details: Performed forward and backward propagation process for a two-layer fully connected neural network. I used the open-source MNIST dataset (large database of hand written digits). Furthermore used L2 regularization and performed hyper parameter tuning for different learning rates. The best accuracy is achieved with a learning rate of 0.001, resulting in a validation accuracy of 97.24% and a test accuracy of 96.95%.
@@ -334,6 +336,7 @@ def main():
                 "K-means Clustering",
                 """
                 • Developed a K-means clustering algorithm for data segmentation
+                
                 • Applied the algorithm to various datasets to identify patterns
 
                 Details: Applied k-means to a popular visual classification CIFAR-10 dataset consisting of 60K labeled 32x32x3 images, such that each image contains 3 channels corresponding to RGB colors. Out of the 60K images, 50K images belong to the training set and 10K belong to the testing set. We first apply principal component analysis to the images to 2 dimensions, then we apply the k-mean clustering algorithm with k=10 (10 clusters) to the PCA transformed data to then get the ground truth labels.
@@ -348,6 +351,7 @@ def main():
                 "Bayesian Network and Causal Modeling",
                 """
                 • Created a Bayesian network for probabilistic reasoning
+                
                 • Applied the network to solve complex inference problems
 
                 Details: I was able to build a Bayesian network model based on the following statement:
@@ -365,6 +369,7 @@ def main():
                 "Sokoban Game with Admissible Heuristic",
                 """
                 • Implemented the Sokoban puzzle game with an AI solver
+                
                 • Developed an admissible heuristic for efficient pathfinding
 
                 Note: blank = 0, wall = 1, box = 2, keeper = 3, star = 4, boxstar = 5, keeperstar = 6
@@ -381,6 +386,7 @@ def main():
                 "Feature Enhancement via Brightness Adjustments",
                 """
                 • Developed algorithms for feature extraction using brightness adjustments
+                
                 • Enhanced image features for improved analysis and recognition
 
                 Details: Utilized histogram equalization technique on an image of the MRI of a fractured human spine to extract features via brightness adjustments. I was basically able to use histogram equalization to uncover lots of hidden details that were otherwise un-visible. This process involves the mapping many of the dark pixels to a lighter-medium gray pixel and keeping white pixels white, then re-displaying the newly mapped image. Overall the histogram equalization technique allowed me to reveal details that would have otherwise been hidden by dark pixels.
@@ -394,6 +400,7 @@ def main():
                 "Image Sharpening",
                 """
                 • Implemented image sharpening techniques to enhance details
+                
                 • Compared various sharpening algorithms and their effects
 
                 Details: I was able to utilize a image sharpening technique called the composite Laplacian mask operator, which, when applied to an image highlights the areas where there is a rapid change in color intensity, hence corresponding to the edges of these features. In the moon image, I was able to make the craters and edges on the moons surface become more apparent and have a sharper appearance using this image sharpening technique.
