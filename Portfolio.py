@@ -299,8 +299,8 @@ def main():
                 display_images_vertically(images, captions, image_widths)
 
         # Custom layout for UCLA Modeling COVID-19 Research
-        with st.expander("UCLA Modeling COVID-19 Research"):
-            st.subheader("Modeling and Data Analysis")
+        with st.expander("UCLA Mathematical Modeling - COVID-19 Research"):
+            st.subheader("Data Aanalysis and Bifurcation Analysis")
             col1, col2 = st.columns([3, 2])
         
             with col1:
@@ -319,7 +319,7 @@ def main():
 
         with st.expander("Machine Learning Projects"):
             project_layout(
-                "Two Layer Neural Network for Binary Classification (Even or Odd)",
+                "Two Layer Neural Network for Numerical Binary Classification (Even or Odd)",
                 """
                 • Implemented a neural network for classifying numbers as even or odd
                 
@@ -333,7 +333,7 @@ def main():
             )
 
             project_layout(
-                "K-means Clustering",
+                "K-means Clustering on Image Datasets",
                 """
                 • Developed a K-means clustering algorithm for data segmentation
                 
