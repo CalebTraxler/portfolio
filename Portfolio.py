@@ -13,7 +13,7 @@ def set_custom_style():
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         
         .main {
-            padding: 1rem 2rem;
+            padding: 0.5rem 2rem;
             font-family: 'Inter', sans-serif;
         }
         
@@ -57,7 +57,7 @@ def set_custom_style():
             color: white;
             padding: 2rem;
             border-radius: 15px;
-            margin-bottom: 2rem;
+            margin-bottom: 1rem;
             box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
         }
         
@@ -66,7 +66,7 @@ def set_custom_style():
             color: white;
             padding: 1.5rem;
             border-radius: 12px;
-            margin: 1rem 0;
+            margin: 0.5rem 0;
             box-shadow: 0 4px 16px rgba(240, 147, 251, 0.3);
         }
         
@@ -211,7 +211,7 @@ def main():
             </div>
             <div class="contact-item">
                 <strong>📞 Phone</strong><br>
-                (805) 377-8182
+                <span style="color: #2D3748;">(805) 377-8182</span>
             </div>
             <div class="contact-item">
                 <strong>🎓 Academic</strong><br>
@@ -290,9 +290,9 @@ def main():
     <style>
         .stTabs {
             background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
-            padding: 1rem;
+            padding: 0.75rem;
             border-radius: 15px;
-            margin: 2rem 0;
+            margin: 1rem 0;
             box-shadow: 0 4px 16px rgba(0,0,0,0.1);
         }
         .stTabs [data-baseweb="tab-list"] {
