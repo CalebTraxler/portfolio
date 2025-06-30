@@ -1,4 +1,3 @@
-
 #cd Portfolio
 
 #streamlit run Portfolio.py
@@ -171,18 +170,20 @@ def set_custom_style():
         }
         
         .tab-content {
-            padding: 1rem 0;
+            padding: 1.5rem 0;
+            min-height: 400px;
         }
         
         .achievement-badge {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            padding: 0.3rem 0.8rem;
-            border-radius: 20px;
-            font-size: 0.8rem;
+            padding: 0.4rem 1rem;
+            border-radius: 25px;
+            font-size: 0.85rem;
             font-weight: 500;
-            margin: 0.2rem;
+            margin: 0.3rem 0.2rem;
             display: inline-block;
+            box-shadow: 0 2px 8px rgba(102, 126, 234, 0.3);
         }
         </style>
         """, unsafe_allow_html=True)
@@ -247,39 +248,42 @@ def main():
     """, unsafe_allow_html=True)
     
     # Quick Stats Section
+    st.markdown('<div style="margin: 2rem 0;">', unsafe_allow_html=True)
     col1, col2, col3, col4 = st.columns(4)
     
     with col1:
         st.markdown("""
         <div class="metric-card">
-            <h3 style="color: #667eea; margin: 0;">3.97</h3>
-            <p style="margin: 0.5rem 0 0 0; color: #4A5568;">Current GPA</p>
+            <h3 style="color: #667eea; margin: 0; font-size: 2rem;">3.97</h3>
+            <p style="margin: 0.5rem 0 0 0; color: #4A5568; font-weight: 500;">Current GPA</p>
         </div>
         """, unsafe_allow_html=True)
     
     with col2:
         st.markdown("""
         <div class="metric-card">
-            <h3 style="color: #667eea; margin: 0;">2</h3>
-            <p style="margin: 0.5rem 0 0 0; color: #4A5568;">Publications</p>
+            <h3 style="color: #667eea; margin: 0; font-size: 2rem;">2</h3>
+            <p style="margin: 0.5rem 0 0 0; color: #4A5568; font-weight: 500;">Publications</p>
         </div>
         """, unsafe_allow_html=True)
     
     with col3:
         st.markdown("""
         <div class="metric-card">
-            <h3 style="color: #667eea; margin: 0;">15+</h3>
-            <p style="margin: 0.5rem 0 0 0; color: #4A5568;">GitHub Projects</p>
+            <h3 style="color: #667eea; margin: 0; font-size: 2rem;">15+</h3>
+            <p style="margin: 0.5rem 0 0 0; color: #4A5568; font-weight: 500;">GitHub Projects</p>
         </div>
         """, unsafe_allow_html=True)
     
     with col4:
         st.markdown("""
         <div class="metric-card">
-            <h3 style="color: #667eea; margin: 0;">3</h3>
-            <p style="margin: 0.5rem 0 0 0; color: #4A5568;">Research Areas</p>
+            <h3 style="color: #667eea; margin: 0; font-size: 2rem;">3</h3>
+            <p style="margin: 0.5rem 0 0 0; color: #4A5568; font-weight: 500;">Research Areas</p>
         </div>
         """, unsafe_allow_html=True)
+    
+    st.markdown('</div>', unsafe_allow_html=True)
 
     # Custom CSS for enhanced tabs
     st.markdown("""
@@ -292,9 +296,10 @@ def main():
             box-shadow: 0 4px 16px rgba(0,0,0,0.1);
         }
         .stTabs [data-baseweb="tab-list"] {
-            gap: 0.5rem;
+            gap: 0.75rem;
             justify-content: space-evenly;
             flex-wrap: wrap;
+            padding: 0.5rem;
         }
         .stTabs [data-baseweb="tab"] {
             background: white;
@@ -398,7 +403,7 @@ def main():
             </div>
             """, unsafe_allow_html=True)
             try:
-                st.image("travel/japan.png", caption="Exploring Japan", use_column_width=True)
+                st.image("travel/japan.png", caption="Exploring Japan", use_container_width=True)
             except:
                 st.info("Travel photos coming soon!")
         
@@ -410,7 +415,7 @@ def main():
             </div>
             """, unsafe_allow_html=True)
             try:
-                st.image("parks/universal.png", caption="Universal Studios", use_column_width=True)
+                st.image("parks/universal.png", caption="Universal Studios", use_container_width=True)
             except:
                 st.info("Theme park photos coming soon!")
         
@@ -422,7 +427,7 @@ def main():
             </div>
             """, unsafe_allow_html=True)
             try:
-                st.image("food/crab.png", caption="Santa Barbara dining", use_column_width=True)
+                st.image("food/crab.png", caption="Santa Barbara dining", use_container_width=True)
             except:
                 st.info("Lifestyle photos coming soon!")
         
@@ -776,13 +781,13 @@ def main():
             col1, col2, col3 = st.columns(3)
             with col1:
                 image1 = Image.open("Investments/1.jpg")
-                st.image(image1, caption="Property Exterior", use_column_width=True)
+                st.image(image1, caption="Property Exterior", use_container_width=True)
             with col2:
                 image2 = Image.open("Investments/2.png")
-                st.image(image2, caption="Interior View", use_column_width=True)
+                st.image(image2, caption="Interior View", use_container_width=True)
             with col3:
                 image3 = Image.open("Investments/3.png")
-                st.image(image3, caption="Renovation Progress", use_column_width=True)
+                st.image(image3, caption="Renovation Progress", use_container_width=True)
         except:
             st.info("Property photos will be displayed here once available.")
         
