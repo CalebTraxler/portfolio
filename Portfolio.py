@@ -352,6 +352,7 @@ def main():
                     <li>Conducting research in variational inference and geospatial analysis</li>
                     <li>Leading Traxler Technology LLC, building multimodal AI systems</li>
                     <li>Active investor in real estate and securities markets</li>
+                    <li>Published academic researcher with 2 arXiv publications</li>
                 </ul>
             </div>
             """, unsafe_allow_html=True)
@@ -362,6 +363,21 @@ def main():
                 <ul>
                     <li>Seeking PhD opportunities in Computer Science (September 2026)</li>
                     <li>Open to data science and ML engineering roles (December 2025)</li>
+                    <li>Advancing Mars exploration and space technology applications</li>
+                    <li>Contributing to AI safety and alignment research</li>
+                </ul>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            st.markdown("""
+            <div class="info-box">
+                <h4>🔬 Research Interests</h4>
+                <ul>
+                    <li>Variational inference and probabilistic modeling</li>
+                    <li>Computer vision and vision-language models</li>
+                    <li>Geospatial analysis and climate data</li>
+                    <li>Augmented reality and wearable computing</li>
+                    <li>Human cognition and AI intersection</li>
                 </ul>
             </div>
             """, unsafe_allow_html=True)
@@ -423,13 +439,43 @@ def main():
             st.markdown("""
             <div class="info-box">
                 <h4>🏄‍♂️ Active Lifestyle</h4>
-                <p>Surfing, weight training, and outdoor adventures</p>
+                <p>Surfing, weight training, and outdoor adventures. Passionate about maintaining physical fitness and exploring nature.</p>
             </div>
             """, unsafe_allow_html=True)
             try:
                 st.image("food/crab.png", caption="Santa Barbara dining", use_container_width=True)
             except:
                 st.info("Lifestyle photos coming soon!")
+        
+        # Additional interests
+        st.markdown("### Professional Interests")
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("""
+            <div class="info-box">
+                <h4>💻 Technical Pursuits</h4>
+                <ul>
+                    <li>Programming full-stack applications</li>
+                    <li>Exploring new machine learning architectures</li>
+                    <li>Contributing to open-source projects</li>
+                    <li>Building innovative AI solutions</li>
+                </ul>
+            </div>
+            """, unsafe_allow_html=True)
+        
+        with col2:
+            st.markdown("""
+            <div class="info-box">
+                <h4>📊 Investment & Finance</h4>
+                <ul>
+                    <li>Financial modeling and portfolio strategy</li>
+                    <li>Real estate market analysis</li>
+                    <li>Data-driven investment decisions</li>
+                    <li>Long-term wealth building strategies</li>
+                </ul>
+            </div>
+            """, unsafe_allow_html=True)
         
         st.markdown('</div>', unsafe_allow_html=True)
     
@@ -486,6 +532,29 @@ def main():
             ucla_honors = ["Phi Theta Kappa", "AI Safety Fellowship", "UMSA Member", "Undergraduate Research"]
             for honor in ucla_honors:
                 st.markdown(f'<span class="achievement-badge">{honor}</span>', unsafe_allow_html=True)
+        
+        st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
+        
+        # Moorpark College
+        st.markdown("""
+        <div class="education-card">
+            <h3 style="color: white;">🎓 Associate of Science in Mathematics, Physics & Computer Science</h3>
+            <h4 style="color: rgba(255,255,255,0.9);">Moorpark College</h4>
+            <p><strong>GPA: 4.00</strong> | August 2020 - June 2022</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        col1, col2 = st.columns([1, 3])
+        with col1:
+            try:
+                st.image("Education/mpc_image.png", width=120)
+            except:
+                st.write("Moorpark College Logo")
+        
+        with col2:
+            moorpark_achievements = ["Dean's List (2020-2022)", "Honor Roll (2020-2022)", "Phi Theta Kappa", "NASA Aerospace Scholars", "Mathematics Tutor"]
+            for achievement in moorpark_achievements:
+                st.markdown(f'<span class="achievement-badge">{achievement}</span>', unsafe_allow_html=True)
         
         st.markdown('</div>', unsafe_allow_html=True)
     
@@ -597,12 +666,68 @@ def main():
         </div>
         """, unsafe_allow_html=True)
         
+        # Program Ambassador
+        st.markdown("""
+        <div class="experience-card">
+            <h3 style="color: white;">🎓 Program Ambassador - UC Irvine</h3>
+            <p style="color: rgba(255,255,255,0.9);">September 2024 - Present | Irvine, CA</p>
+            <p style="color: rgba(255,255,255,0.8);"><a href="https://ics.uci.edu/?people=caleb-traxler" style="color: rgba(255,255,255,0.9);">UCI Faculty Profile</a></p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div class="info-box">
+            <strong>Responsibilities:</strong>
+            <ul>
+                <li>Ambassador for Masters of Data Science program (2024-2025 cohort)</li>
+                <li>Support creation and development of marketing campaigns</li>
+                <li>Student outreach and program promotion</li>
+                <li>Represent program at university events and initiatives</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # AI Safety Fellowship
+        st.markdown("""
+        <div class="experience-card">
+            <h3 style="color: white;">🛡️ AI Safety Fellowship - UCLA</h3>
+            <p style="color: rgba(255,255,255,0.9);">January 2024 - March 2024 | Los Angeles, CA</p>
+            <p style="color: rgba(255,255,255,0.8);">Exploring AI safety and alignment challenges</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div class="info-box">
+            <strong>Program Focus:</strong>
+            <ul>
+                <li>Developed practical ML skills using PyTorch and micrograd</li>
+                <li>Explored AI safety and alignment challenges</li>
+                <li>Studied AI existential risks and impacts on humanity's future</li>
+                <li>Contributed to understanding AI system failure modes</li>
+                <li>Worked alongside fellow ML students at UCLA</li>
+            </ul>
+        </div>
+        """, unsafe_allow_html=True)
+        
         # NASA Internship
         st.markdown("""
         <div class="experience-card">
             <h3 style="color: white;">🚀 Engineering & Design Intern - NASA</h3>
             <p style="color: rgba(255,255,255,0.9);">February 2022 - August 2022 | Remote</p>
             <p style="color: rgba(255,255,255,0.8);">Community College Aerospace Scholars Program</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div class="info-box">
+            <strong>Project Achievements:</strong>
+            <ul>
+                <li>Collaborated on Mars rover capstone project</li>
+                <li>Designed modern Mars rover blueprint with ML/AI systems</li>
+                <li>Built project hardware and software components</li>
+                <li>Enhanced NASA Mars rover functionality and adaptability</li>
+                <li>Addressed complications with current Mars rover technology</li>
+            </ul>
         </div>
         """, unsafe_allow_html=True)
         
@@ -669,22 +794,40 @@ def main():
         col1, col2 = st.columns(2)
         
         with col1:
-            projects = [
-                "🚗 Autonomous Driving CNN (>95% accuracy)",
-                "🏠 Real Estate ROI Geo-Locator",
-                "🧠 Neural Network Binary Classification"
-            ]
-            for project in projects:
-                st.markdown(f'<div class="info-box"><strong>{project}</strong></div>', unsafe_allow_html=True)
+            st.markdown("""
+            <div class="project-card">
+                <h4 style="color: white;">🚗 Autonomous Driving via CNN and Groq API</h4>
+                <p style="color: rgba(255,255,255,0.9);">September 2024 - March 2025</p>
+                <p style="color: rgba(255,255,255,0.8);">Real-time lane detection using U-Net CNN with >95% accuracy and <50ms latency. Currently under review for publication.</p>
+                <p style="color: rgba(255,255,255,0.8);"><a href="https://github.com/CalebTraxler/Autonomous_Driving_CV" style="color: rgba(255,255,255,0.9);">GitHub Repository</a></p>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            st.markdown("""
+            <div class="project-card">
+                <h4 style="color: white;">🏠 Real Estate ROI Geo-Locator</h4>
+                <p style="color: rgba(255,255,255,0.9);">January 2025 - March 2025</p>
+                <p style="color: rgba(255,255,255,0.8);">Interactive 3D visualization using Streamlit and PyDeck to analyze real-time ROI trends across different markets.</p>
+                <p style="color: rgba(255,255,255,0.8);"><a href="https://lnkd.in/g_NrKj-b" style="color: rgba(255,255,255,0.9);">Live Application</a></p>
+            </div>
+            """, unsafe_allow_html=True)
         
         with col2:
-            projects = [
-                "🎯 K-means Clustering on CIFAR-10",
-                "🤖 Bayesian Network Modeling",
-                "🎮 Sokoban AI Solver"
-            ]
-            for project in projects:
-                st.markdown(f'<div class="info-box"><strong>{project}</strong></div>', unsafe_allow_html=True)
+            st.markdown("""
+            <div class="project-card">
+                <h4 style="color: white;">🧠 Neural Network Binary Classification</h4>
+                <p style="color: rgba(255,255,255,0.9);">Academic Project</p>
+                <p style="color: rgba(255,255,255,0.8);">Two-layer neural network for classifying numbers as even or odd. Achieved 97.24% validation accuracy on MNIST dataset with L2 regularization.</p>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            st.markdown("""
+            <div class="project-card">
+                <h4 style="color: white;">🎯 K-means Clustering on CIFAR-10</h4>
+                <p style="color: rgba(255,255,255,0.9);">Academic Project</p>
+                <p style="color: rgba(255,255,255,0.8);">Applied K-means clustering to 60K labeled images with PCA dimensionality reduction and k=10 clustering analysis.</p>
+            </div>
+            """, unsafe_allow_html=True)
         
         st.markdown('</div>', unsafe_allow_html=True)
     
