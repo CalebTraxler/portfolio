@@ -1,3 +1,4 @@
+
 #cd Portfolio
 
 #streamlit run Portfolio.py
@@ -13,927 +14,760 @@ def set_custom_style():
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
         
         .main {
-            padding: 2rem;
+            padding: 1rem 2rem;
             font-family: 'Inter', sans-serif;
         }
         
-        /* Color Variables */
-        :root {
-            --primary-blue: #0066CC;
-            --secondary-blue: #4A90E2;
-            --accent-green: #28A745;
-            --accent-purple: #6F42C1;
-            --accent-orange: #FD7E14;
-            --light-gray: #F8F9FA;
-            --medium-gray: #E9ECEF;
-            --dark-gray: #6C757D;
-            --success-green: #20C997;
-            --warning-yellow: #FFC107;
-        }
-        
-        /* Header Styles */
-        .header-container {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
-            padding: 2rem;
-            border-radius: 15px;
-            color: white;
-            margin-bottom: 2rem;
-            box-shadow: 0 10px 30px rgba(0, 102, 204, 0.2);
-        }
-        
-        .header-title {
-            font-size: 3rem;
-            font-weight: 700;
-            margin-bottom: 0.5rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
-        }
-        
-        .header-subtitle {
-            font-size: 1.3rem;
-            font-weight: 400;
-            opacity: 0.95;
-            margin-bottom: 1rem;
-        }
-        
-        /* Professional Summary Card */
-        .summary-card {
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            padding: 2rem;
-            border-radius: 15px;
-            border-left: 5px solid var(--accent-green);
-            margin-bottom: 2rem;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-        }
-        
-        .summary-title {
-            color: var(--primary-blue);
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 1rem;
-        }
-        
-        /* Tab Styling */
-        .stTabs {
-            background: white;
-            padding: 0.5rem;
-            border-radius: 12px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            margin-bottom: 2rem;
-        }
-        
-        .stTabs [data-baseweb="tab-list"] {
-            gap: 0.5rem;
-            justify-content: space-evenly;
-        }
-        
-        .stTabs [data-baseweb="tab"] {
-            height: 50px;
-            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-            border-radius: 10px;
-            color: var(--dark-gray);
-            font-size: 14px;
-            font-weight: 600;
-            border: 2px solid transparent;
-            transition: all 0.3s ease;
-            margin: 0.25rem;
-        }
-        
-        .stTabs [aria-selected="true"] {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
-            color: white;
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
-        }
-        
-        .stTabs [data-baseweb="tab"]:hover {
-            background: linear-gradient(135deg, var(--secondary-blue) 0%, var(--primary-blue) 100%);
-            color: white;
-            transform: translateY(-1px);
-        }
-        
-        /* Card Styles */
-        .info-card {
-            background: white;
-            padding: 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            margin-bottom: 1.5rem;
-            border-top: 4px solid var(--secondary-blue);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .info-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
-        }
-        
-        .education-card {
-            border-top-color: var(--accent-green);
-        }
-        
-        .research-card {
-            border-top-color: var(--accent-purple);
-        }
-        
-        .experience-card {
-            border-top-color: var(--accent-orange);
-        }
-        
-        .project-card {
-            border-top-color: var(--success-green);
-        }
-        
-        .publication-card {
-            background: linear-gradient(135deg, #fff8e1 0%, #fff3c4 100%);
-            border: 1px solid var(--warning-yellow);
-            border-radius: 12px;
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            box-shadow: 0 4px 15px rgba(255, 193, 7, 0.2);
-        }
-        
-        /* Metric Cards */
-        .metric-card {
-            background: linear-gradient(135deg, white 0%, #f8f9fa 100%);
-            padding: 1.5rem;
-            border-radius: 12px;
-            text-align: center;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-            border-top: 4px solid var(--accent-green);
-            margin-bottom: 1rem;
-        }
-        
-        .metric-value {
-            font-size: 2rem;
-            font-weight: 700;
-            color: var(--primary-blue);
-            margin-bottom: 0.5rem;
-        }
-        
-        .metric-label {
-            color: var(--dark-gray);
-            font-weight: 500;
-        }
-        
-        /* Skill Categories */
-        .skill-category {
-            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
-            padding: 1.25rem;
-            border-radius: 10px;
-            margin-bottom: 1rem;
-            border-left: 4px solid var(--primary-blue);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-        }
-        
-        .skill-category h4 {
-            color: var(--primary-blue);
-            margin-bottom: 0.75rem;
-            font-weight: 600;
-        }
-        
-        /* Status Badges */
-        .status-badge {
-            display: inline-block;
-            padding: 0.25rem 0.75rem;
-            border-radius: 20px;
-            font-size: 0.85rem;
-            font-weight: 500;
-            margin-bottom: 0.5rem;
-        }
-        
-        .status-active {
-            background: var(--success-green);
-            color: white;
-        }
-        
-        .status-completed {
-            background: var(--primary-blue);
-            color: white;
-        }
-        
-        .status-in-review {
-            background: var(--warning-yellow);
-            color: #333;
-        }
-        
-        /* Button Styles */
         .stButton>button {
-            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             font-weight: 600;
             border-radius: 8px;
             border: none;
-            padding: 0.75rem 1.5rem;
+            padding: 0.5rem 1.5rem;
             transition: all 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 102, 204, 0.3);
         }
         
         .stButton>button:hover {
             transform: translateY(-2px);
-            box-shadow: 0 8px 25px rgba(0, 102, 204, 0.4);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
         }
         
-        /* Link Buttons */
-        .custom-link-button {
-            display: inline-block;
-            background: linear-gradient(135deg, var(--accent-green) 0%, #20c997 100%);
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 6px;
-            font-weight: 500;
-            margin: 0.25rem;
-            transition: all 0.3s ease;
-            box-shadow: 0 2px 8px rgba(40, 167, 69, 0.3);
+        h1 {
+            color: #2D3748;
+            font-weight: 700;
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
         }
         
-        .custom-link-button:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 4px 15px rgba(40, 167, 69, 0.4);
-            text-decoration: none;
-            color: white;
-        }
-        
-        /* Section Headers */
-        .section-header {
-            color: var(--primary-blue);
-            font-size: 1.75rem;
+        h2 {
+            color: #4A5568;
             font-weight: 600;
-            margin-bottom: 1.5rem;
+            border-bottom: 3px solid #667eea;
             padding-bottom: 0.5rem;
-            border-bottom: 3px solid var(--medium-gray);
+            margin: 2rem 0 1rem 0;
         }
         
-        /* Footer */
-        .footer {
-            background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+        h3 {
+            color: #2D3748;
+            font-weight: 600;
+        }
+        
+        .header-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
-            text-align: center;
             padding: 2rem;
+            border-radius: 15px;
+            margin-bottom: 2rem;
+            box-shadow: 0 8px 32px rgba(102, 126, 234, 0.3);
+        }
+        
+        .summary-card {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            color: white;
+            padding: 1.5rem;
             border-radius: 12px;
-            margin-top: 3rem;
+            margin: 1rem 0;
+            box-shadow: 0 4px 16px rgba(240, 147, 251, 0.3);
         }
         
-        .footer a {
-            color: #74b9ff;
-            text-decoration: none;
-            margin: 0 0.5rem;
-            transition: color 0.3s ease;
+        .education-card {
+            background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            box-shadow: 0 4px 16px rgba(79, 172, 254, 0.3);
         }
         
-        .footer a:hover {
-            color: #0984e3;
+        .experience-card {
+            background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            box-shadow: 0 4px 16px rgba(67, 233, 123, 0.3);
         }
         
-        /* Contact Grid */
+        .project-card {
+            background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);
+            color: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            box-shadow: 0 4px 16px rgba(250, 112, 154, 0.3);
+        }
+        
+        .publication-card {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            color: #2D3748;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            box-shadow: 0 4px 16px rgba(168, 237, 234, 0.3);
+        }
+        
+        .investment-card {
+            background: linear-gradient(135deg, #ffecd2 0%, #fcb69f 100%);
+            color: #2D3748;
+            padding: 1.5rem;
+            border-radius: 12px;
+            margin: 1rem 0;
+            box-shadow: 0 4px 16px rgba(255, 236, 210, 0.3);
+        }
+        
+        .skill-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 1rem;
+            border-radius: 10px;
+            margin: 0.5rem 0;
+            text-align: center;
+        }
+        
+        .metric-card {
+            background: white;
+            padding: 1.5rem;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+            border-left: 4px solid #667eea;
+        }
+        
+        .info-box {
+            background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+            padding: 1rem;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            margin: 1rem 0;
+        }
+        
         .contact-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
             gap: 1rem;
-            margin-bottom: 1rem;
+            margin: 1rem 0;
         }
         
         .contact-item {
-            background: rgba(255, 255, 255, 0.9);
+            background: white;
             padding: 1rem;
             border-radius: 8px;
-            backdrop-filter: blur(10px);
+            text-align: center;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
         }
         
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header-title {
-                font-size: 2rem;
-            }
-            
-            .header-subtitle {
-                font-size: 1rem;
-            }
-            
-            .stTabs [data-baseweb="tab"] {
-                font-size: 12px;
-                padding: 0.5rem;
-            }
+        .contact-item:hover {
+            transform: translateY(-3px);
+        }
+        
+        .section-divider {
+            height: 3px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border: none;
+            border-radius: 2px;
+            margin: 2rem 0;
+        }
+        
+        .tab-content {
+            padding: 1rem 0;
+        }
+        
+        .achievement-badge {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 0.3rem 0.8rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            margin: 0.2rem;
+            display: inline-block;
         }
         </style>
         """, unsafe_allow_html=True)
 
 def main():
-    st.set_page_config(page_title="Caleb Traxler's Portfolio", layout="wide", page_icon="🎓")
+    st.set_page_config(
+        page_title="Caleb Traxler - Portfolio", 
+        layout="wide", 
+        page_icon="🎓",
+        initial_sidebar_state="collapsed"
+    )
     set_custom_style()
     
-    # Header Section
+    # Header Section with gradient background
     st.markdown("""
-    <div class="header-container">
-        <div style="display: flex; align-items: center; gap: 2rem;">
-            <div style="flex: 1;">
-                <h1 class="header-title">Caleb Traxler</h1>
-                <p class="header-subtitle">Data Scientist | ML Engineer | Researcher | Entrepreneur | Investor</p>
-                <div class="contact-grid">
-                    <div class="contact-item">
-                        <strong>📧 Email:</strong><br>
-                        <a href="mailto:calebtraxler34@gmail.com" style="color: white;">calebtraxler34@gmail.com</a>
-                    </div>
-                    <div class="contact-item">
-                        <strong>📞 Phone:</strong><br>
-                        (805) 377-8182
-                    </div>
-                    <div class="contact-item">
-                        <strong>🎓 Academic:</strong><br>
-                        <a href="mailto:traxlerc@uci.edu" style="color: white;">traxlerc@uci.edu</a>
-                    </div>
-                    <div class="contact-item">
-                        <strong>🔗 Links:</strong><br>
-                        <a href="https://www.linkedin.com/in/calebtraxler" style="color: white;">LinkedIn</a> | 
-                        <a href="https://github.com/calebtraxler" style="color: white;">GitHub</a> | 
-                        <a href="https://traxlertechnology.vercel.app" style="color: white;">Company</a>
-                    </div>
-                </div>
+    <div class="header-card">
+        <h1 style="color: white; margin-bottom: 0.5rem;">Caleb Traxler</h1>
+        <h3 style="color: rgba(255,255,255,0.9); font-weight: 400; margin-bottom: 1.5rem;">
+            Data Scientist | ML Engineer | Researcher | Entrepreneur | Investor
+        </h3>
+        <div class="contact-grid">
+            <div class="contact-item">
+                <strong>📧 Email</strong><br>
+                <a href="mailto:calebtraxler34@gmail.com" style="color: #667eea;">calebtraxler34@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <strong>📞 Phone</strong><br>
+                (805) 377-8182
+            </div>
+            <div class="contact-item">
+                <strong>🎓 Academic</strong><br>
+                <a href="mailto:traxlerc@uci.edu" style="color: #667eea;">traxlerc@uci.edu</a>
+            </div>
+            <div class="contact-item">
+                <strong>💼 LinkedIn</strong><br>
+                <a href="https://www.linkedin.com/in/calebtraxler" style="color: #667eea;">LinkedIn Profile</a>
+            </div>
+            <div class="contact-item">
+                <strong>💻 GitHub</strong><br>
+                <a href="https://www.github.com/calebtraxler" style="color: #667eea;">GitHub Profile</a>
+            </div>
+            <div class="contact-item">
+                <strong>🌐 Company</strong><br>
+                <a href="https://traxlertechnology.vercel.app" style="color: #667eea;">Traxler Technology</a>
             </div>
         </div>
     </div>
     """, unsafe_allow_html=True)
     
-    # Professional Summary
+    # Professional Summary with gradient card
     st.markdown("""
     <div class="summary-card">
-        <h3 class="summary-title">Professional Summary</h3>
-        <p style="font-size: 1.1rem; line-height: 1.6; color: #495057;">
-            Data Science graduate student specializing in Machine Learning, Data Science and Computer Vision. Published 
-            academic researcher with significant entrepreneurial experience developing scalable Artificial Intelligence systems. 
-            Actively seeking PhD opportunities in computer science (start date: September 2026) and job opportunities in 
-            the data science and machine learning space (start date: December 2025).
+        <h3 style="color: white; margin-bottom: 1rem;">🎯 Professional Summary</h3>
+        <p style="font-size: 1.1rem; line-height: 1.6;">
+            Data Science graduate student specializing in Machine Learning, Data Science and Computer Vision. 
+            Published academic researcher with significant entrepreneurial experience developing scalable 
+            Artificial Intelligence systems. Actively seeking PhD opportunities in computer science 
+            (start date: September 2026) and job opportunities in the data science and machine learning 
+            space (start date: December 2025).
         </p>
     </div>
     """, unsafe_allow_html=True)
     
-    # Create tabs
+    # Quick Stats Section
+    col1, col2, col3, col4 = st.columns(4)
+    
+    with col1:
+        st.markdown("""
+        <div class="metric-card">
+            <h3 style="color: #667eea; margin: 0;">3.97</h3>
+            <p style="margin: 0.5rem 0 0 0; color: #4A5568;">Current GPA</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col2:
+        st.markdown("""
+        <div class="metric-card">
+            <h3 style="color: #667eea; margin: 0;">2</h3>
+            <p style="margin: 0.5rem 0 0 0; color: #4A5568;">Publications</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col3:
+        st.markdown("""
+        <div class="metric-card">
+            <h3 style="color: #667eea; margin: 0;">15+</h3>
+            <p style="margin: 0.5rem 0 0 0; color: #4A5568;">GitHub Projects</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col4:
+        st.markdown("""
+        <div class="metric-card">
+            <h3 style="color: #667eea; margin: 0;">3</h3>
+            <p style="margin: 0.5rem 0 0 0; color: #4A5568;">Research Areas</p>
+        </div>
+        """, unsafe_allow_html=True)
+
+    # Custom CSS for enhanced tabs
+    st.markdown("""
+    <style>
+        .stTabs {
+            background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%);
+            padding: 1rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+        }
+        .stTabs [data-baseweb="tab-list"] {
+            gap: 0.5rem;
+            justify-content: space-evenly;
+            flex-wrap: wrap;
+        }
+        .stTabs [data-baseweb="tab"] {
+            background: white;
+            border-radius: 10px;
+            color: #4A5568;
+            font-size: 14px;
+            font-weight: 600;
+            padding: 12px 20px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .stTabs [aria-selected="true"] {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(102, 126, 234, 0.3);
+        }
+        .stTabs [data-baseweb="tab"]:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+        }
+    </style>
+    """, unsafe_allow_html=True)
+
+    # Create enhanced tabs
     tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
         "About Me", "Education", "Research", "Experience", "Projects", "Publications", "Investments"
     ])
     
     with tab1:
-        st.markdown('<h2 class="section-header">About Me</h2>', unsafe_allow_html=True)
+        st.markdown('<div class="tab-content">', unsafe_allow_html=True)
         
         col1, col2 = st.columns([2, 1])
         
         with col1:
             st.markdown("""
-            <div class="info-card">
-                <p style="font-size: 1.1rem; line-height: 1.7;">
-                    I'm Caleb Traxler, a passionate Data Science graduate student at UC Irvine with a strong 
-                    foundation in Machine Learning, Computer Vision, and AI research. As a published researcher and 
-                    entrepreneur, I'm dedicated to advancing the field of artificial intelligence and its applications.
-                </p>
-                
-                <h4 style="color: var(--primary-blue); margin-top: 1.5rem;">Current Focus</h4>
-                <ul style="line-height: 1.6;">
+            ## About Me
+            
+            I'm Caleb Traxler, a passionate Data Science graduate student at UC Irvine with a strong 
+            foundation in Machine Learning, Computer Vision, and AI research. As a published researcher and 
+            entrepreneur, I'm dedicated to advancing the field of artificial intelligence and its applications.
+            """)
+            
+            st.markdown("""
+            <div class="info-box">
+                <h4>🎯 Current Focus</h4>
+                <ul>
                     <li>Pursuing M.S. in Data Science at UC Irvine (GPA: 3.97)</li>
-                    <li>Conducting cutting-edge research in variational inference and geospatial analysis</li>
+                    <li>Conducting research in variational inference and geospatial analysis</li>
                     <li>Leading Traxler Technology LLC, building multimodal AI systems</li>
                     <li>Active investor in real estate and securities markets</li>
                 </ul>
-                
-                <h4 style="color: var(--primary-blue); margin-top: 1.5rem;">Career Goals</h4>
-                <ul style="line-height: 1.6;">
+            </div>
+            """, unsafe_allow_html=True)
+            
+            st.markdown("""
+            <div class="info-box">
+                <h4>🚀 Career Goals</h4>
+                <ul>
                     <li>Seeking PhD opportunities in Computer Science (September 2026)</li>
                     <li>Open to data science and ML engineering roles (December 2025)</li>
-                </ul>
-                
-                <h4 style="color: var(--primary-blue); margin-top: 1.5rem;">Personal Interests</h4>
-                <ul style="line-height: 1.6;">
-                    <li>Surfing and weight training</li>
-                    <li>Traveling and exploring new cultures</li>
-                    <li>Visiting amusement parks</li>
-                    <li>Discovering amazing cuisines</li>
-                    <li>Building full-stack applications</li>
-                    <li>Exploring new ML architectures and contributing to open-source projects</li>
                 </ul>
             </div>
             """, unsafe_allow_html=True)
         
         with col2:
-            st.markdown("### Quick Stats")
-            
-            # Metrics with custom styling
-            metrics_html = """
-            <div class="metric-card">
-                <div class="metric-value">3.97</div>
-                <div class="metric-label">Current GPA<br>UC Irvine</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-value">2</div>
-                <div class="metric-label">Publications<br>arXiv papers</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-value">15+</div>
-                <div class="metric-label">GitHub Projects<br>Public repos</div>
-            </div>
-            <div class="metric-card">
-                <div class="metric-value">3</div>
-                <div class="metric-label">Research Areas<br>Active projects</div>
-            </div>
-            """
-            st.markdown(metrics_html, unsafe_allow_html=True)
-        
-        # Download Resume Button
-        st.markdown("### Download Resume")
-        if st.button("Download Latest Resume", type="primary"):
             try:
-                file_path = "ResumeFinalpro.docx (8).pdf"
-                with open(file_path, "rb") as pdf_file:
-                    PDFbyte = pdf_file.read()
-                
-                st.download_button(
-                    label="Click here to download",
-                    data=PDFbyte,
-                    file_name="CalebTraxler_Resume.pdf",
-                    mime="application/pdf"
-                )
-            except FileNotFoundError:
-                st.error("Resume file not found. Please check the file path.")
+                image = Image.open("output.png")
+                st.image(image, width=275, caption="Caleb Traxler")
+            except:
+                st.info("Profile image will appear here")
+            
+            # Download Resume Button
+            if st.button("📄 Download Latest Resume", type="primary"):
+                try:
+                    file_path = "ResumeFinalpro.docx (8).pdf"
+                    with open(file_path, "rb") as pdf_file:
+                        PDFbyte = pdf_file.read()
+                    
+                    st.download_button(
+                        label="📄 Click here to download",
+                        data=PDFbyte,
+                        file_name="CalebTraxler_Resume.pdf",
+                        mime="application/pdf"
+                    )
+                except FileNotFoundError:
+                    st.error("Resume file not found. Please check the file path.")
         
-        # Personal photos section
-        st.markdown("### Personal Interests")
+        # Personal Interests Section
+        st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
+        st.markdown("## Personal Interests")
+        
         col1, col2, col3 = st.columns(3)
         
         with col1:
             st.markdown("""
-            <div class="info-card">
-                <h4 style="color: var(--primary-blue);">Travel Adventures</h4>
+            <div class="info-box">
+                <h4>✈️ Travel Adventures</h4>
+                <p>Exploring different cultures and cuisines around the world</p>
             </div>
             """, unsafe_allow_html=True)
             try:
                 st.image("travel/japan.png", caption="Exploring Japan", use_column_width=True)
-                st.image("travel/japan2.png", caption="Cultural experiences", use_column_width=True)
             except:
                 st.info("Travel photos coming soon!")
         
         with col2:
             st.markdown("""
-            <div class="info-card">
-                <h4 style="color: var(--accent-green);">Theme Parks</h4>
+            <div class="info-box">
+                <h4>🎢 Theme Parks</h4>
+                <p>Enjoying thrilling rides and magical experiences</p>
             </div>
             """, unsafe_allow_html=True)
             try:
                 st.image("parks/universal.png", caption="Universal Studios", use_column_width=True)
-                st.image("parks/stormtroopers.png", caption="Disneyland adventures", use_column_width=True)
             except:
                 st.info("Theme park photos coming soon!")
         
         with col3:
             st.markdown("""
-            <div class="info-card">
-                <h4 style="color: var(--accent-orange);">Culinary Experiences</h4>
+            <div class="info-box">
+                <h4>🏄‍♂️ Active Lifestyle</h4>
+                <p>Surfing, weight training, and outdoor adventures</p>
             </div>
             """, unsafe_allow_html=True)
             try:
-                st.image("food/crab.png", caption="Santa Barbara pier dining", use_column_width=True)
-                st.image("food/omlet.png", caption="Tamagoyaki in Japan", use_column_width=True)
+                st.image("food/crab.png", caption="Santa Barbara dining", use_column_width=True)
             except:
-                st.info("Food photos coming soon!")
+                st.info("Lifestyle photos coming soon!")
+        
+        st.markdown('</div>', unsafe_allow_html=True)
     
     with tab2:
-        st.markdown('<h2 class="section-header">Education</h2>', unsafe_allow_html=True)
+        st.markdown('<div class="tab-content">', unsafe_allow_html=True)
+        st.markdown("## Education")
         
         # UC Irvine
         st.markdown("""
-        <div class="info-card education-card">
-            <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                <div style="margin-right: 1rem;">
-                    <span style="background: var(--accent-green); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Current</span>
-                </div>
-                <h3 style="color: var(--primary-blue); margin: 0;">University of California, Irvine</h3>
-            </div>
-            <p style="font-size: 1.1rem; font-weight: 600; color: #495057;">Master of Science in Data Science | GPA: 3.97</p>
-            <p style="color: var(--dark-gray); margin-bottom: 1rem;">September 2024 - December 2025</p>
-            
-            <h4 style="color: var(--accent-green); margin-bottom: 0.5rem;">Specializations</h4>
-            <ul style="columns: 2; column-gap: 2rem;">
-                <li>Artificial Intelligence</li>
-                <li>Generative Models</li>
-                <li>Computer Vision</li>
-                <li>Geographic Information Systems (GIS)</li>
-                <li>Big Data Analytics</li>
-            </ul>
-            
-            <h4 style="color: var(--accent-green); margin-bottom: 0.5rem;">Key Achievements</h4>
-            <ul>
-                <li>UCI Master of Data Science Scholarship Recipient</li>
-                <li>Accelerated 15-month program</li>
-                <li>Maintaining 3.97 GPA</li>
-            </ul>
+        <div class="education-card">
+            <h3 style="color: white;">🎓 Master of Science in Data Science</h3>
+            <h4 style="color: rgba(255,255,255,0.9);">University of California, Irvine</h4>
+            <p><strong>GPA: 3.97</strong> | September 2024 - December 2025</p>
         </div>
         """, unsafe_allow_html=True)
+        
+        col1, col2 = st.columns([1, 3])
+        with col1:
+            try:
+                st.image("Education/uci_image.png", width=120)
+            except:
+                st.write("UC Irvine Logo")
+        
+        with col2:
+            st.markdown("**Specializations:**")
+            specializations = ["Artificial Intelligence", "Generative Models", "Computer Vision", "Geographic Information Systems", "Big Data Analytics"]
+            for spec in specializations:
+                st.markdown(f'<span class="achievement-badge">{spec}</span>', unsafe_allow_html=True)
+            
+            st.markdown("**Achievements:**")
+            achievements = ["UCI Scholarship Recipient", "3.97 GPA", "15-month Accelerated Program"]
+            for achievement in achievements:
+                st.markdown(f'<span class="achievement-badge">{achievement}</span>', unsafe_allow_html=True)
+        
+        st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
         
         # UCLA
         st.markdown("""
-        <div class="info-card education-card">
-            <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                <div style="margin-right: 1rem;">
-                    <span style="background: var(--primary-blue); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Completed</span>
-                </div>
-                <h3 style="color: var(--primary-blue); margin: 0;">University of California, Los Angeles</h3>
-            </div>
-            <p style="font-size: 1.1rem; font-weight: 600; color: #495057;">Bachelor of Science in Mathematics & Computer Science | GPA: 3.81</p>
-            <p style="color: var(--dark-gray); margin-bottom: 1rem;">September 2022 - June 2024</p>
-            
-            <h4 style="color: var(--accent-green); margin-bottom: 0.5rem;">Honors & Activities</h4>
-            <ul style="columns: 2; column-gap: 2rem;">
-                <li>Phi Theta Kappa Honors Society</li>
-                <li>AI Safety Fellowship</li>
-                <li>Undergraduate Mathematics Student Association (UMSA)</li>
-                <li>Undergraduate Mathematics Research (Prof. Shbia Biswal)</li>
-            </ul>
-            
-            <h4 style="color: var(--accent-green); margin-bottom: 0.5rem;">Concentrations</h4>
-            <ul>
-                <li>Applied Mathematics</li>
-                <li>Computer Science</li>
-            </ul>
+        <div class="education-card">
+            <h3 style="color: white;">🎓 Bachelor of Science in Mathematics & Computer Science</h3>
+            <h4 style="color: rgba(255,255,255,0.9);">University of California, Los Angeles</h4>
+            <p><strong>GPA: 3.81</strong> | September 2022 - June 2024</p>
         </div>
         """, unsafe_allow_html=True)
         
-        # Moorpark College
-        st.markdown("""
-        <div class="info-card education-card">
-            <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                <div style="margin-right: 1rem;">
-                    <span style="background: var(--primary-blue); color: white; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Completed</span>
-                </div>
-                <h3 style="color: var(--primary-blue); margin: 0;">Moorpark College</h3>
-            </div>
-            <p style="font-size: 1.1rem; font-weight: 600; color: #495057;">Associate of Science in Mathematics, Physics & Computer Science | GPA: 4.00</p>
-            <p style="color: var(--dark-gray); margin-bottom: 1rem;">August 2020 - June 2022</p>
-            
-            <h4 style="color: var(--accent-green); margin-bottom: 0.5rem;">Achievements</h4>
-            <ul style="columns: 2; column-gap: 2rem;">
-                <li>Dean's List (2020-2022)</li>
-                <li>Honor Roll (2020-2022)</li>
-                <li>Phi Theta Kappa Honors Society</li>
-                <li>NASA Community College Aerospace Scholars Internship</li>
-                <li>Mathematics Tutor</li>
-            </ul>
-        </div>
-        """, unsafe_allow_html=True)
+        col1, col2 = st.columns([1, 3])
+        with col1:
+            try:
+                st.image("Education/ucla_image.png", width=120)
+            except:
+                st.write("UCLA Logo")
+        
+        with col2:
+            ucla_honors = ["Phi Theta Kappa", "AI Safety Fellowship", "UMSA Member", "Undergraduate Research"]
+            for honor in ucla_honors:
+                st.markdown(f'<span class="achievement-badge">{honor}</span>', unsafe_allow_html=True)
+        
+        st.markdown('</div>', unsafe_allow_html=True)
     
     with tab3:
-        st.markdown('<h2 class="section-header">Research Experience</h2>', unsafe_allow_html=True)
+        st.markdown('<div class="tab-content">', unsafe_allow_html=True)
+        st.markdown("## Research Experience")
         
-        # Current Research Positions
-        st.subheader("Current Research Positions")
+        st.markdown("### Current Research Positions")
+        
+        # Research Position 1
+        st.markdown("""
+        <div class="experience-card">
+            <h4 style="color: white;">🧠 Variational Inference Research</h4>
+            <p style="color: rgba(255,255,255,0.9);"><strong>Graduate Research Assistant</strong> | Prof. Erik Sudderth</p>
+            <p style="color: rgba(255,255,255,0.8);">June 2025 - Present | UC Irvine</p>
+        </div>
+        """, unsafe_allow_html=True)
         
         st.markdown("""
-        <div class="info-card research-card">
-            <div style="display: flex; justify-content: between; align-items: center; margin-bottom: 1rem;">
-                <h3 style="color: var(--accent-purple); margin: 0;">Variational Inference Research</h3>
-                <span class="status-badge status-active">Active</span>
-            </div>
-            <p style="font-weight: 600; color: #495057;">Graduate Research Assistant - UC Irvine (Prof. Erik Sudderth)</p>
-            <p style="color: var(--dark-gray); margin-bottom: 1rem;">June 2025 - Present | Irvine, CA</p>
-            
-            <h4 style="color: var(--accent-purple); margin-bottom: 0.5rem;">Research Focus</h4>
+        <div class="info-box">
+            <strong>Research Focus:</strong>
             <ul>
                 <li>Variational inference with Gauss-Markov distributions</li>
-                <li>Applying methods to Stochastic Differential Equation (SDE) time series models</li>
-                <li>Future project involving chemical data analysis</li>
-                <li>Advanced probabilistic modeling and inference techniques</li>
+                <li>SDE time series models application</li>
+                <li>Chemical data analysis projects</li>
+                <li>Advanced probabilistic modeling</li>
             </ul>
         </div>
         """, unsafe_allow_html=True)
         
+        # Research Position 2
         st.markdown("""
-        <div class="info-card research-card">
-            <div style="display: flex; justify-content: between; align-items: center; margin-bottom: 1rem;">
-                <h3 style="color: var(--accent-purple); margin: 0;">Geospatial Climate Research</h3>
-                <span class="status-badge status-active">Active</span>
-            </div>
-            <p style="font-weight: 600; color: #495057;">Graduate Research Assistant - UC Irvine (Prof. Jun Wu)</p>
-            <p style="color: var(--dark-gray); margin-bottom: 1rem;">June 2025 - Present | Irvine, CA</p>
-            
-            <h4 style="color: var(--accent-purple); margin-bottom: 0.5rem;">Research Focus</h4>
+        <div class="experience-card">
+            <h4 style="color: white;">🌡️ Geospatial Climate Research</h4>
+            <p style="color: rgba(255,255,255,0.9);"><strong>Graduate Research Assistant</strong> | Prof. Jun Wu</p>
+            <p style="color: rgba(255,255,255,0.8);">June 2025 - Present | UC Irvine</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div class="info-box">
+            <strong>Research Focus:</strong>
             <ul>
                 <li>ECOSTRESS satellite data analysis</li>
-                <li>Extreme heat distribution mapping across California urban zones</li>
-                <li>Spatial data handling and GIS analysis</li>
-                <li>Python-based geospatial analysis and visualization</li>
+                <li>Urban heat distribution mapping in California</li>
+                <li>Python-based geospatial analysis</li>
+                <li>GIS and spatial data visualization</li>
             </ul>
         </div>
         """, unsafe_allow_html=True)
+        
+        st.markdown("### Previous Research")
         
         # Previous Research
-        st.subheader("Previous Research")
-        
         st.markdown("""
-        <div class="info-card research-card">
-            <div style="display: flex; justify-content: between; align-items: center; margin-bottom: 1rem;">
-                <h3 style="color: var(--accent-purple); margin: 0;">COVID-19 Mathematical Modeling</h3>
-                <span class="status-badge status-completed">Published</span>
-            </div>
-            <p style="font-weight: 600; color: #495057;">Undergraduate Researcher - UCLA (Prof. Shbia Biswal)</p>
-            <p style="color: var(--dark-gray); margin-bottom: 1rem;">March 2023 - June 2023 | Los Angeles, CA</p>
-            
-            <h4 style="color: var(--accent-purple); margin-bottom: 0.5rem;">Research Achievements</h4>
-            <ul>
-                <li>Modeled COVID-19 dynamics using extended SIR/SEIR models</li>
-                <li>Analyzed Orange County COVID-19 data using Python and Jupyter notebooks</li>
-                <li>Developed innovative bifurcation diagrams for predictive modeling</li>
-                <li><strong>Published in arXiv:</strong> <a href="https://arxiv.org/abs/2505.13753" class="custom-link-button" target="_blank">View Publication</a></li>
-                <li>Identified critical transcritical bifurcation thresholds for predictions</li>
-            </ul>
+        <div class="publication-card">
+            <h4>🦠 COVID-19 Mathematical Modeling</h4>
+            <p><strong>Undergraduate Researcher</strong> | Prof. Shbia Biswal</p>
+            <p>March 2023 - June 2023 | UCLA Mathematics</p>
+            <p><strong>Published:</strong> <a href="https://arxiv.org/abs/2505.13753">arXiv:2505.13753</a></p>
         </div>
         """, unsafe_allow_html=True)
+        
+        st.markdown('</div>', unsafe_allow_html=True)
     
     with tab4:
-        st.markdown('<h2 class="section-header">Professional Experience</h2>', unsafe_allow_html=True)
+        st.markdown('<div class="tab-content">', unsafe_allow_html=True)
+        st.markdown("## Professional Experience")
         
-        # Current Positions
+        # Current CEO Position
         st.markdown("""
-        <div class="info-card experience-card">
-            <div style="display: flex; justify-content: between; align-items: center; margin-bottom: 1rem;">
-                <h3 style="color: var(--accent-orange); margin: 0;">Founder & CEO - Traxler Technology LLC</h3>
-                <span class="status-badge status-active">Active</span>
-            </div>
-            <p style="color: var(--dark-gray); margin-bottom: 1rem;">November 2024 - Present | Los Angeles, CA</p>
-            
-            <h4 style="color: var(--accent-orange); margin-bottom: 0.5rem;">Company Overview</h4>
-            <ul>
-                <li>AI-focused startup building multimodal intelligence systems</li>
-                <li><a href="https://traxlertechnology.vercel.app/login" class="custom-link-button" target="_blank">Visit Traxler Technology</a></li>
-            </ul>
-            
-            <h4 style="color: var(--accent-orange); margin-bottom: 0.5rem;">Key Achievements</h4>
-            <ul>
-                <li>Designed and deployed scalable full-stack platforms</li>
-                <li>Tech Stack: React, Firebase, AWS EC2, Vercel, Auth0</li>
-                <li>Developing cross-platform mobile applications</li>
-                <li>Focus on vision-language models and AI-driven insights</li>
-            </ul>
+        <div class="experience-card">
+            <h3 style="color: white;">🚀 Founder & CEO - Traxler Technology LLC</h3>
+            <p style="color: rgba(255,255,255,0.9);">November 2024 - Present | Los Angeles, CA</p>
+            <p style="color: rgba(255,255,255,0.8);"><a href="https://traxlertechnology.vercel.app/login" style="color: rgba(255,255,255,0.9);">Visit Company Website</a></p>
         </div>
         """, unsafe_allow_html=True)
         
         st.markdown("""
-        <div class="info-card experience-card">
-            <div style="display: flex; justify-content: between; align-items: center; margin-bottom: 1rem;">
-                <h3 style="color: var(--accent-orange); margin: 0;">Program Ambassador - UC Irvine</h3>
-                <span class="status-badge status-active">Active</span>
-            </div>
-            <p style="color: var(--dark-gray); margin-bottom: 1rem;">September 2024 - Present | Irvine, CA</p>
-            
-            <h4 style="color: var(--accent-orange); margin-bottom: 0.5rem;">Responsibilities</h4>
+        <div class="info-box">
+            <strong>Key Achievements:</strong>
             <ul>
-                <li>Ambassador for Masters of Data Science program (2024-2025 cohort)</li>
-                <li>Support creation and development of marketing campaigns</li>
-                <li>Student outreach and program promotion</li>
-                <li><a href="https://ics.uci.edu/?people=caleb-traxler" class="custom-link-button" target="_blank">UCI Faculty Profile</a></li>
+                <li>Building multimodal intelligence systems</li>
+                <li>Full-stack platform development (React, Firebase, AWS EC2)</li>
+                <li>Cross-platform mobile applications</li>
+                <li>Vision-language models integration</li>
             </ul>
         </div>
         """, unsafe_allow_html=True)
         
-        # Previous Experience
+        # Amgen Internship
         st.markdown("""
-        <div class="info-card experience-card">
-            <div style="display: flex; justify-content: between; align-items: center; margin-bottom: 1rem;">
-                <h3 style="color: var(--accent-orange); margin: 0;">Data Scientist & ML Engineer Intern - Amgen</h3>
-                <span style="background: var(--warning-yellow); color: #333; padding: 0.25rem 0.75rem; border-radius: 20px; font-size: 0.85rem; font-weight: 500;">Award Winner</span>
-            </div>
-            <p style="color: var(--dark-gray); margin-bottom: 1rem;">July 2024 - September 2024 | Remote</p>
-            
-            <h4 style="color: var(--accent-orange); margin-bottom: 0.5rem;">Key Achievements</h4>
+        <div class="experience-card">
+            <h3 style="color: white;">🧬 Data Scientist & ML Engineer - Amgen</h3>
+            <p style="color: rgba(255,255,255,0.9);">July 2024 - September 2024 | Remote</p>
+            <p style="color: rgba(255,255,255,0.8);"><strong>Winner: Amgen AI Symposium 2024</strong></p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div class="info-box">
+            <strong>Major Accomplishments:</strong>
             <ul>
-                <li>Built rare disease prioritization model using generative AI</li>
-                <li>Reduced year-long process to minutes using GenAI pipeline</li>
-                <li>Developed Streamlit application for stakeholder data visualization</li>
-                <li><strong>Winner: Amgen AI Symposium 2024</strong></li>
-                <li>96% accuracy in disease scoring automation</li>
+                <li>96% accuracy in rare disease prioritization using GenAI</li>
+                <li>Reduced year-long process to minutes</li>
+                <li>Built Streamlit data visualization applications</li>
+                <li>Won company-wide AI Symposium competition</li>
             </ul>
         </div>
         """, unsafe_allow_html=True)
         
-        # Additional experiences in a more compact format
-        experiences = [
-            {
-                "title": "AI Safety Fellowship - UCLA",
-                "period": "January 2024 - March 2024",
-                "points": [
-                    "Developed practical ML skills using PyTorch and micrograd",
-                    "Explored AI safety and alignment challenges",
-                    "Studied AI existential risks and impacts on humanity's future"
-                ]
-            },
-            {
-                "title": "Engineering & Design Intern - NASA",
-                "period": "February 2022 - August 2022",
-                "points": [
-                    "Mars rover capstone project collaboration",
-                    "Designed modern Mars rover blueprint with ML/AI systems",
-                    "NASA Community College Aerospace Scholars Program"
-                ]
-            }
-        ]
+        # NASA Internship
+        st.markdown("""
+        <div class="experience-card">
+            <h3 style="color: white;">🚀 Engineering & Design Intern - NASA</h3>
+            <p style="color: rgba(255,255,255,0.9);">February 2022 - August 2022 | Remote</p>
+            <p style="color: rgba(255,255,255,0.8);">Community College Aerospace Scholars Program</p>
+        </div>
+        """, unsafe_allow_html=True)
         
-        for exp in experiences:
-            st.markdown(f"""
-            <div class="info-card experience-card">
-                <h4 style="color: var(--accent-orange); margin-bottom: 0.5rem;">{exp['title']}</h4>
-                <p style="color: var(--dark-gray); margin-bottom: 0.75rem;">{exp['period']}</p>
-                <ul>
-                    {''.join([f'<li>{point}</li>' for point in exp['points']])}
-                </ul>
-            </div>
-            """, unsafe_allow_html=True)
+        st.markdown('</div>', unsafe_allow_html=True)
     
     with tab5:
-        st.markdown('<h2 class="section-header">Technical Projects</h2>', unsafe_allow_html=True)
+        st.markdown('<div class="tab-content">', unsafe_allow_html=True)
+        st.markdown("## Technical Projects")
         
-        # Featured Projects
-        st.subheader("Featured Projects")
-        
+        # Featured Project 1
         st.markdown("""
-        <div class="info-card project-card">
-            <div style="display: flex; justify-content: between; align-items: center; margin-bottom: 1rem;">
-                <h3 style="color: var(--success-green); margin: 0;">AI Life Journal using VLMs and LangChain Memory</h3>
-                <span class="status-badge status-active">Active</span>
-            </div>
-            <p style="color: var(--dark-gray); margin-bottom: 1rem;">June 2025 - Present</p>
-            
-            <p style="margin-bottom: 1rem;">Cross-platform mobile application (Android & iOS) enabling users to capture, organize, and 
-            reflect on daily experiences using Meta Ray-Ban AI glasses and other life-logging devices.</p>
-            
-            <h4 style="color: var(--success-green); margin-bottom: 0.5rem;">Technical Stack</h4>
-            <ul style="columns: 2; column-gap: 2rem; margin-bottom: 1rem;">
-                <li>Vision-Language Models (VLMs)</li>
-                <li>LangChain for memory-augmented AI</li>
-                <li>Cross-platform mobile development</li>
-                <li>Secure cloud storage and processing</li>
-            </ul>
-            
-            <a href="https://github.com/CalebTraxler/TraxlerTechnologyApp_" class="custom-link-button" target="_blank">GitHub Repository</a>
-        </div>
-        """, unsafe_allow_html=True)
-        
-        # Project grid for remaining projects
-        projects = [
-            {
-                "title": "Generative Route Prediction with HMMs and 3D Point Clouds",
-                "status": "In Review",
-                "period": "May 2025 - June 2025",
-                "description": "Developed discrete Hidden Markov Models (HMMs) to generate realistic driving routes from KITTI-360 3D point cloud maps.",
-                "link": "https://github.com/CalebTraxler/HMM-3D-Routing",
-                "status_class": "status-in-review"
-            },
-            {
-                "title": "Multivariate Statistical Analysis of Exoplanet Habitability",
-                "status": "Published",
-                "period": "May 2025 - June 2025",
-                "description": "Comprehensive analysis of 517 exoplanets from NASA Exoplanet Archive to identify potentially habitable worlds.",
-                "link": "https://planet-habitability.streamlit.app/",
-                "status_class": "status-completed"
-            },
-            {
-                "title": "Autonomous Driving via CNN and Groq API",
-                "status": "In Review",
-                "period": "Sep 2024 - March 2025",
-                "description": "Real-time lane detection using U-Net CNN with >95% accuracy and <50ms latency.",
-                "link": "https://github.com/CalebTraxler/Autonomous_Driving_CV",
-                "status_class": "status-in-review"
-            },
-            {
-                "title": "Real Estate ROI Geo-Locator",
-                "status": "Completed",
-                "period": "Jan 2025 - March 2025",
-                "description": "Interactive 3D visualization using Streamlit and PyDeck to analyze real-time ROI trends.",
-                "link": "https://lnkd.in/g_NrKj-b",
-                "status_class": "status-completed"
-            }
-        ]
-        
-        col1, col2 = st.columns(2)
-        for i, project in enumerate(projects):
-            with col1 if i % 2 == 0 else col2:
-                st.markdown(f"""
-                <div class="info-card project-card">
-                    <div style="display: flex; justify-content: between; align-items: center; margin-bottom: 0.75rem;">
-                        <h4 style="color: var(--success-green); margin: 0; font-size: 1.1rem;">{project['title']}</h4>
-                        <span class="status-badge {project['status_class']}">{project['status']}</span>
-                    </div>
-                    <p style="color: var(--dark-gray); font-size: 0.9rem; margin-bottom: 0.75rem;">{project['period']}</p>
-                    <p style="margin-bottom: 1rem; font-size: 0.95rem;">{project['description']}</p>
-                    <a href="{project['link']}" class="custom-link-button" target="_blank">View Project</a>
-                </div>
-                """, unsafe_allow_html=True)
-    
-    with tab6:
-        st.markdown('<h2 class="section-header">Publications</h2>', unsafe_allow_html=True)
-        
-        # Publication Metrics
-        col1, col2, col3 = st.columns(3)
-        with col1:
-            st.markdown("""
-            <div class="metric-card">
-                <div class="metric-value">2</div>
-                <div class="metric-label">Total Papers</div>
-            </div>
-            """, unsafe_allow_html=True)
-        with col2:
-            st.markdown("""
-            <div class="metric-card">
-                <div class="metric-value">arXiv</div>
-                <div class="metric-label">Platform</div>
-            </div>
-            """, unsafe_allow_html=True)
-        with col3:
-            st.markdown("""
-            <div class="metric-card">
-                <div class="metric-value">3</div>
-                <div class="metric-label">Research Areas</div>
-            </div>
-            """, unsafe_allow_html=True)
-        
-        # Publications
-        st.markdown("""
-        <div class="publication-card">
-            <h4 style="color: var(--primary-blue); margin-bottom: 0.75rem;">Multivariate Statistical Analysis of Exoplanet Habitability: Detection Bias and Earth Analog Identification</h4>
-            <p><strong>Authors:</strong> <strong>Traxler, C.</strong>, et al.</p>
-            <p><strong>Published:</strong> 2025 | <strong>arXiv:</strong> 2506.18200</p>
-            <p style="margin-bottom: 1rem;"><strong>Abstract:</strong> Comprehensive multivariate statistical analysis of 517 exoplanets from the NASA Exoplanet Archive to identify potentially habitable worlds and quantify detection bias in current surveys.</p>
-            <div>
-                <a href="https://arxiv.org/abs/2506.18200" class="custom-link-button" target="_blank">Read Paper</a>
-                <a href="https://planet-habitability.streamlit.app/" class="custom-link-button" target="_blank">Live Demo</a>
-            </div>
+        <div class="project-card">
+            <h3 style="color: white;">📱 AI Life Journal using VLMs and LangChain</h3>
+            <p style="color: rgba(255,255,255,0.9);">June 2025 - Present</p>
+            <p style="color: rgba(255,255,255,0.8);"><a href="https://github.com/CalebTraxler/TraxlerTechnologyApp_" style="color: rgba(255,255,255,0.9);">View on GitHub</a></p>
         </div>
         """, unsafe_allow_html=True)
         
         st.markdown("""
-        <div class="publication-card">
-            <h4 style="color: var(--primary-blue); margin-bottom: 0.75rem;">Analysis of COVID-19 Infection Dynamics: Extended SIR Model Approach</h4>
-            <p><strong>Authors:</strong> <strong>Traxler, C.</strong>, et al.</p>
-            <p><strong>Published:</strong> 2025 | <strong>arXiv:</strong> 2505.13754</p>
-            <p style="margin-bottom: 1rem;"><strong>Abstract:</strong> Advanced mathematical modeling of COVID-19 dynamics using extended SIR/SEIR models with bifurcation analysis for predictive modeling of pandemic spread patterns.</p>
-            <div>
-                <a href="https://arxiv.org/abs/2505.13753" class="custom-link-button" target="_blank">Read Paper</a>
-            </div>
+        <div class="info-box">
+            Cross-platform mobile application enabling users to capture and reflect on daily experiences 
+            using Meta Ray-Ban AI glasses. Features vision-language models, LangChain memory, and secure 
+            AI-driven insights architecture.
         </div>
         """, unsafe_allow_html=True)
         
-        # Future Publications
-        st.markdown("### Upcoming Publications")
-        st.info("""
-        **In Review:**
-        - Generative Route Prediction with HMMs and 3D Point Clouds
-        - Autonomous Driving via CNN and Real-time Analysis
-        
-        **In Progress:**
-        - Variational Inference Applications in Chemical Data Analysis
-        - Geospatial Analysis of Urban Heat Islands using ECOSTRESS Data
-        """)
-    
-    with tab7:
-        st.markdown('<h2 class="section-header">Investment Portfolio</h2>', unsafe_allow_html=True)
-        
-        # Investment Philosophy
+        # Featured Project 2
         st.markdown("""
-        <div class="summary-card">
-            <h3 class="summary-title">Investment Philosophy</h3>
-            <p style="font-size: 1.1rem; line-height: 1.6;">
-                Active investor in real estate and public markets with a focus on long-term value creation, 
-                financial modeling, and portfolio diversification. Passionate about identifying emerging market 
-                opportunities and applying data-driven analysis to investment decisions.
+        <div class="project-card">
+            <h3 style="color: white;">🗺️ Generative Route Prediction with HMMs</h3>
+            <p style="color: rgba(255,255,255,0.9);">May 2025 - June 2025</p>
+            <p style="color: rgba(255,255,255,0.8);"><a href="https://github.com/CalebTraxler/HMM-3D-Routing" style="color: rgba(255,255,255,0.9);">View on GitHub</a></p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown("""
+        <div class="info-box">
+            Developed discrete Hidden Markov Models to generate realistic driving routes from KITTI-360 
+            3D point cloud maps. Under review for publication.
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Featured Project 3
+        st.markdown("""
+        <div class="project-card">
+            <h3 style="color: white;">🪐 Exoplanet Habitability Analysis</h3>
+            <p style="color: rgba(255,255,255,0.9);">May 2025 - June 2025</p>
+            <p style="color: rgba(255,255,255,0.8);">
+                <a href="https://planet-habitability.streamlit.app/" style="color: rgba(255,255,255,0.9);">Live App</a> | 
+                <a href="https://arxiv.org/abs/2506.18200" style="color: rgba(255,255,255,0.9);">arXiv Paper</a>
             </p>
         </div>
         """, unsafe_allow_html=True)
         
-        # Portfolio Metrics
-        col1, col2, col3, col4 = st.columns(4)
-        metrics = [
-            ("1", "Properties Owned", "First acquisition"),
-            ("15%+", "Target ROI", "Annual target"),
-            ("Long-term", "Investment Timeline", "10+ years"),
-            ("Q4 2025", "Next Purchase", "Texas market")
-        ]
-        
-        for i, (value, label, sublabel) in enumerate(metrics):
-            with [col1, col2, col3, col4][i]:
-                st.markdown(f"""
-                <div class="metric-card">
-                    <div class="metric-value">{value}</div>
-                    <div class="metric-label">{label}<br><small>{sublabel}</small></div>
-                </div>
-                """, unsafe_allow_html=True)
-        
-        # Real Estate Investment
         st.markdown("""
-        <div class="info-card">
-            <h3 style="color: var(--primary-blue); margin-bottom: 1rem;">First Property Investment - Topeka, Kansas</h3>
-            
-            <h4 style="color: var(--accent-green); margin-bottom: 0.5rem;">Investment Details</h4>
+        <div class="info-box">
+            Comprehensive multivariate statistical analysis of 517 exoplanets with interactive 3D visualization. 
+            Published in arXiv with live Streamlit application.
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Additional Projects Grid
+        st.markdown("### Additional Projects")
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            projects = [
+                "🚗 Autonomous Driving CNN (>95% accuracy)",
+                "🏠 Real Estate ROI Geo-Locator",
+                "🧠 Neural Network Binary Classification"
+            ]
+            for project in projects:
+                st.markdown(f'<div class="info-box"><strong>{project}</strong></div>', unsafe_allow_html=True)
+        
+        with col2:
+            projects = [
+                "🎯 K-means Clustering on CIFAR-10",
+                "🤖 Bayesian Network Modeling",
+                "🎮 Sokoban AI Solver"
+            ]
+            for project in projects:
+                st.markdown(f'<div class="info-box"><strong>{project}</strong></div>', unsafe_allow_html=True)
+        
+        st.markdown('</div>', unsafe_allow_html=True)
+    
+    with tab6:
+        st.markdown('<div class="tab-content">', unsafe_allow_html=True)
+        st.markdown("## Publications")
+        
+        # Publication Metrics
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.markdown('<div class="metric-card"><h4 style="color: #667eea;">2</h4><p>Total Papers</p></div>', unsafe_allow_html=True)
+        with col2:
+            st.markdown('<div class="metric-card"><h4 style="color: #667eea;">arXiv</h4><p>Platform</p></div>', unsafe_allow_html=True)
+        with col3:
+            st.markdown('<div class="metric-card"><h4 style="color: #667eea;">3</h4><p>Research Areas</p></div>', unsafe_allow_html=True)
+        
+        # Publication 1
+        st.markdown("""
+        <div class="publication-card">
+            <h4>🪐 Multivariate Statistical Analysis of Exoplanet Habitability</h4>
+            <p><strong>Authors:</strong> <strong>Traxler, C.</strong>, et al. (2025)</p>
+            <p><strong>arXiv:</strong> 2506.18200</p>
+            <p>Comprehensive analysis of 517 exoplanets from NASA Exoplanet Archive to identify 
+            potentially habitable worlds and quantify detection bias.</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.link_button("📄 Read Paper", "https://arxiv.org/abs/2506.18200")
+        with col2:
+            st.link_button("🌐 Live Demo", "https://planet-habitability.streamlit.app/")
+        with col3:
+            st.link_button("💻 GitHub", "https://github.com/CalebTraxler")
+        
+        # Publication 2
+        st.markdown("""
+        <div class="publication-card">
+            <h4>🦠 Analysis of COVID-19 Infection Dynamics</h4>
+            <p><strong>Authors:</strong> <strong>Traxler, C.</strong>, et al. (2025)</p>
+            <p><strong>arXiv:</strong> 2505.13754</p>
+            <p>Advanced mathematical modeling using extended SIR/SEIR models with bifurcation analysis 
+            for predictive modeling of pandemic spread patterns.</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        col1, col2 = st.columns(2)
+        with col1:
+            st.link_button("📄 Read Paper", "https://arxiv.org/abs/2505.13753")
+        with col2:
+            st.link_button("🔬 Research Details", "https://github.com/CalebTraxler")
+        
+        # Future Publications
+        st.markdown("""
+        <div class="info-box">
+            <h4>🔮 Upcoming Publications</h4>
             <ul>
-                <li><strong>Achievement:</strong> Purchased first property at age 22</li>
-                <li><strong>Location:</strong> Topeka, Kansas</li>
-                <li><strong>Status:</strong> Currently under renovation</li>
-                <li><strong>Strategy:</strong> Fix, refinance, rent (BRRRR method)</li>
-                <li><strong>Goal:</strong> Generate passive income and build equity</li>
+                <li><strong>In Review:</strong> Generative Route Prediction with HMMs and 3D Point Clouds</li>
+                <li><strong>In Review:</strong> Autonomous Driving via CNN and Real-time Analysis</li>
+                <li><strong>In Progress:</strong> Variational Inference in Chemical Data Analysis</li>
+                <li><strong>In Progress:</strong> Urban Heat Islands using ECOSTRESS Data</li>
             </ul>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        st.markdown('</div>', unsafe_allow_html=True)
+    
+    with tab7:
+        st.markdown('<div class="tab-content">', unsafe_allow_html=True)
+        st.markdown("## Investment Portfolio")
+        
+        # Investment Philosophy
+        st.markdown("""
+        <div class="investment-card">
+            <h3>💡 Investment Philosophy</h3>
+            <p>Active investor in real estate and public markets with a focus on long-term value creation, 
+            financial modeling, and portfolio diversification. Passionate about identifying emerging market 
+            opportunities and applying data-driven analysis to investment decisions.</p>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Current Investment
+        st.markdown("""
+        <div class="investment-card">
+            <h3>🏡 First Property Investment - Topeka, Kansas</h3>
+            <p><strong>Achievement:</strong> Purchased first property at age 22</p>
+            <p><strong>Strategy:</strong> BRRRR Method (Buy, Rehab, Rent, Refinance, Repeat)</p>
+            <p><strong>Status:</strong> Currently under renovation</p>
         </div>
         """, unsafe_allow_html=True)
         
@@ -952,84 +786,101 @@ def main():
         except:
             st.info("Property photos will be displayed here once available.")
         
-        # Investment Strategy
+        # Investment Goals
         col1, col2 = st.columns(2)
         
         with col1:
             st.markdown("""
-            <div class="info-card">
-                <h4 style="color: var(--primary-blue);">Real Estate Focus</h4>
+            <div class="info-box">
+                <h4>📈 2025 Goals</h4>
                 <ul>
-                    <li>Target emerging neighborhoods with growth potential</li>
-                    <li>Value-add opportunities through strategic renovation</li>
-                    <li>Geographic diversification (Midwest expansion)</li>
-                    <li>Focus on cash flow and appreciation</li>
-                    <li>Building relationships with local investors</li>
+                    <li>Acquire second property in Texas</li>
+                    <li>Research multi-family opportunities</li>
+                    <li>Develop automated analysis tools</li>
+                    <li>Join investment groups</li>
                 </ul>
             </div>
             """, unsafe_allow_html=True)
         
         with col2:
             st.markdown("""
-            <div class="info-card">
-                <h4 style="color: var(--primary-blue);">Investment Principles</h4>
+            <div class="info-box">
+                <h4>🎯 Long-term Vision</h4>
                 <ul>
-                    <li>Data-driven market analysis</li>
-                    <li>Long-term value creation</li>
-                    <li>Risk management and diversification</li>
-                    <li>Continuous market education</li>
-                    <li>Leveraging technology for analysis</li>
+                    <li>Diverse residential portfolio</li>
+                    <li>Commercial real estate exploration</li>
+                    <li>Geographic expansion</li>
+                    <li>AI/ML integration in analysis</li>
                 </ul>
             </div>
             """, unsafe_allow_html=True)
+        
+        # Portfolio Metrics
+        col1, col2, col3, col4 = st.columns(4)
+        
+        with col1:
+            st.markdown('<div class="metric-card"><h4 style="color: #667eea;">1</h4><p>Properties Owned</p></div>', unsafe_allow_html=True)
+        with col2:
+            st.markdown('<div class="metric-card"><h4 style="color: #667eea;">15%+</h4><p>Target ROI</p></div>', unsafe_allow_html=True)
+        with col3:
+            st.markdown('<div class="metric-card"><h4 style="color: #667eea;">10+</h4><p>Year Timeline</p></div>', unsafe_allow_html=True)
+        with col4:
+            st.markdown('<div class="metric-card"><h4 style="color: #667eea;">Q4 2025</h4><p>Next Purchase</p></div>', unsafe_allow_html=True)
+        
+        st.markdown('</div>', unsafe_allow_html=True)
     
-    # Technical Skills Section
-    st.markdown("---")
-    st.markdown('<h2 class="section-header">Technical Skills</h2>', unsafe_allow_html=True)
+    # Technical Skills Section with enhanced design
+    st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
+    st.markdown("## 🛠️ Technical Skills")
     
     col1, col2 = st.columns(2)
     
     with col1:
         st.markdown("""
-        <div class="skill-category">
-            <h4>Languages & Cloud Platforms</h4>
-            <p>Python • R • JavaScript (React) • SQL • MATLAB • Bash<br>
-            AWS (EC2, S3) • Firebase • Vercel • Docker • Git/GitHub</p>
+        <div class="skill-card">
+            <h4>💻 Languages & Platforms</h4>
+            <p>Python • R • JavaScript • SQL • MATLAB • Bash<br>
+            AWS • Firebase • Vercel • Docker • Git</p>
         </div>
         
-        <div class="skill-category">
-            <h4>Machine Learning & AI</h4>
-            <p>Deep Learning • Generative AI • Vision-Language Models (VLMs)<br>
-            Transformers • NLP • Reinforcement Learning • HMMs<br>
-            Variational Inference • Bayesian Networks</p>
+        <div class="skill-card">
+            <h4>🤖 Machine Learning & AI</h4>
+            <p>Deep Learning • Generative AI • VLMs<br>
+            Transformers • NLP • Reinforcement Learning<br>
+            HMMs • Variational Inference • Bayesian Networks</p>
         </div>
         """, unsafe_allow_html=True)
     
     with col2:
         st.markdown("""
-        <div class="skill-category">
-            <h4>Frameworks & Libraries</h4>
-            <p>NumPy • Pandas • Scikit-learn • TensorFlow • PyTorch<br>
-            Keras • OpenCV • Hugging Face • LangChain • Plotly</p>
+        <div class="skill-card">
+            <h4>📚 Frameworks & Libraries</h4>
+            <p>NumPy • Pandas • Scikit-learn • TensorFlow<br>
+            PyTorch • Keras • OpenCV • Hugging Face<br>
+            LangChain • Plotly • Streamlit</p>
         </div>
         
-        <div class="skill-category">
-            <h4>Development Tools</h4>
-            <p>Jupyter • VSCode • REST APIs • Linux CLI<br>
-            CI/CD (GitHub Actions) • Auth0 • Streamlit</p>
+        <div class="skill-card">
+            <h4>🔧 Development Tools</h4>
+            <p>Jupyter • VSCode • REST APIs • Linux<br>
+            CI/CD • Auth0 • Big Data Tools<br>
+            GIS • Scientific Computing</p>
         </div>
         """, unsafe_allow_html=True)
     
-    # Footer
+    # Enhanced Footer
+    st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
     st.markdown("""
-    <div class="footer">
-        <p style="font-size: 1.1rem; margin-bottom: 0.5rem;">© 2025 Caleb Traxler. All rights reserved.</p>
-        <p style="margin-bottom: 1rem;">Built with Streamlit • Last updated: January 2025</p>
-        <p>
-            <a href="mailto:calebtraxler34@gmail.com">Email</a> • 
-            <a href="https://www.linkedin.com/in/calebtraxler">LinkedIn</a> • 
-            <a href="https://github.com/calebtraxler">GitHub</a> • 
-            <a href="https://traxlertechnology.vercel.app">Company</a>
+    <div style="text-align: center; color: #4A5568; padding: 2rem; background: linear-gradient(135deg, #f7fafc 0%, #edf2f7 100%); border-radius: 15px; margin-top: 2rem;">
+        <h4 style="color: #2D3748; margin-bottom: 1rem;">Connect With Me</h4>
+        <p style="margin-bottom: 1rem;">
+            <a href="mailto:calebtraxler34@gmail.com" style="color: #667eea; margin: 0 1rem;">📧 Email</a> •
+            <a href="https://www.linkedin.com/in/calebtraxler" style="color: #667eea; margin: 0 1rem;">💼 LinkedIn</a> •
+            <a href="https://github.com/calebtraxler" style="color: #667eea; margin: 0 1rem;">💻 GitHub</a> •
+            <a href="https://traxlertechnology.vercel.app" style="color: #667eea; margin: 0 1rem;">🌐 Company</a>
+        </p>
+        <p style="font-size: 0.9rem; color: #718096;">
+            © 2025 Caleb Traxler. Built with Streamlit • Last updated: January 2025
         </p>
     </div>
     """, unsafe_allow_html=True)
