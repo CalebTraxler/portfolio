@@ -1,3 +1,4 @@
+
 #cd Portfolio
 
 #streamlit run Portfolio.py
@@ -44,7 +45,7 @@ def set_custom_style():
             font-weight: 600;
             border-bottom: 3px solid #667eea;
             padding-bottom: 0.5rem;
-            margin: 2rem 0 1rem 0;
+            margin: 0.5rem 0 0.5rem 0;
         }
         
         h3 {
@@ -166,7 +167,7 @@ def set_custom_style():
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             border: none;
             border-radius: 2px;
-            margin: 2rem 0;
+            margin: 1rem 0;
         }
         
         .tab-content {
@@ -331,7 +332,6 @@ def main():
     ])
     
     with tab1:
-        st.markdown('<div class="tab-content">', unsafe_allow_html=True)
         
         col1, col2 = st.columns([2, 1])
         
@@ -476,11 +476,8 @@ def main():
                 </ul>
             </div>
             """, unsafe_allow_html=True)
-        
-        st.markdown('</div>', unsafe_allow_html=True)
     
     with tab2:
-        st.markdown('<div class="tab-content">', unsafe_allow_html=True)
         st.markdown("## Education")
         
         # UC Irvine
@@ -556,10 +553,7 @@ def main():
             for achievement in moorpark_achievements:
                 st.markdown(f'<span class="achievement-badge">{achievement}</span>', unsafe_allow_html=True)
         
-        st.markdown('</div>', unsafe_allow_html=True)
-    
     with tab3:
-        st.markdown('<div class="tab-content">', unsafe_allow_html=True)
         st.markdown("## Research Experience")
         
         st.markdown("### Current Research Positions")
@@ -618,10 +612,7 @@ def main():
         </div>
         """, unsafe_allow_html=True)
         
-        st.markdown('</div>', unsafe_allow_html=True)
-    
     with tab4:
-        st.markdown('<div class="tab-content">', unsafe_allow_html=True)
         st.markdown("## Professional Experience")
         
         # Current CEO Position
@@ -731,10 +722,7 @@ def main():
         </div>
         """, unsafe_allow_html=True)
         
-        st.markdown('</div>', unsafe_allow_html=True)
-    
     with tab5:
-        st.markdown('<div class="tab-content">', unsafe_allow_html=True)
         st.markdown("## Technical Projects")
         
         # Featured Project 1
@@ -832,7 +820,6 @@ def main():
         st.markdown('</div>', unsafe_allow_html=True)
     
     with tab6:
-        st.markdown('<div class="tab-content">', unsafe_allow_html=True)
         st.markdown("## Publications")
         
         # Publication Metrics
@@ -893,10 +880,7 @@ def main():
         </div>
         """, unsafe_allow_html=True)
         
-        st.markdown('</div>', unsafe_allow_html=True)
-    
     with tab7:
-        st.markdown('<div class="tab-content">', unsafe_allow_html=True)
         st.markdown("## Investment Portfolio")
         
         # Investment Philosophy
@@ -975,8 +959,6 @@ def main():
         with col4:
             st.markdown('<div class="metric-card"><h4 style="color: #667eea;">Q4 2025</h4><p>Next Purchase</p></div>', unsafe_allow_html=True)
         
-        st.markdown('</div>', unsafe_allow_html=True)
-    
     # Technical Skills Section with enhanced design
     st.markdown('<hr class="section-divider">', unsafe_allow_html=True)
     st.markdown("## 🛠️ Technical Skills")
