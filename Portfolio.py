@@ -5,6 +5,7 @@
 import streamlit as st
 from PIL import Image
 import base64
+import os
 
 def set_custom_style():
     st.markdown("""
@@ -15,42 +16,82 @@ def set_custom_style():
             background-color: #f8f9fa;
         }
         .stButton>button {
-            background-color: #4CAF50;
+            background-color: #0066CC;
             color: white;
             font-weight: bold;
+            border-radius: 5px;
         }
         h1, h2, h3 {
-            color: #2C3E50;
+            color: #0066CC;
         }
         .highlight {
             background-color: #e9ecef;
-            padding: 5rem;
-            border-radius: 3rem;
-            margin-bottom: 3rem;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid #0066CC;
+        }
+        .publication-item {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            border-radius: 0.5rem;
+            margin-bottom: 1rem;
+            border: 1px solid #dee2e6;
+        }
+        .skill-category {
+            background-color: #e3f2fd;
+            padding: 0.5rem;
+            border-radius: 0.3rem;
+            margin-bottom: 0.5rem;
         }
         </style>
         """, unsafe_allow_html=True)
 
 def main():
-    st.set_page_config(page_title="Caleb Traxler's Portfolio", layout="wide")
+    st.set_page_config(page_title="Caleb Traxler's Portfolio", layout="wide", page_icon="🧠")
     set_custom_style()
     
+    # Header Section
     col1, col2 = st.columns([1, 2])
     
     with col1:
-        # Replace with your actual image path
-        image = Image.open("output.png")
-        st.image(image, width=275)
+        try:
+            image = Image.open("output.png")
+            st.image(image, width=275)
+        except:
+            st.info("Profile image not found. Please add 'output.png' to display your photo.")
     
     with col2:
         st.title("Caleb Traxler")
-        st.subheader("Data Scientist, ML Engineer, Entrepreneur, and Investor")
-        st.write("Contact Me : (805) 377-8182 | calebtraxler34@gmail.com | traxlerc@uci.edu")
-        st.write("Visit Websites : [LinkedIn](https://www.linkedin.com/in/calebtraxler) | [GitHub](https://www.github.com/calebtraxler) | [Traxler Technology](https://traxler.streamlit.app)")
+        st.subheader("Data Scientist | ML Engineer | Researcher | Entrepreneur | Investor")
+        
+        st.markdown("""
+        **Contact Information:**
+        - 📧 Email: [calebtraxler34@gmail.com](mailto:calebtraxler34@gmail.com)
+        - 📞 Phone: (805) 377-8182
+        - 🎓 Academic: traxlerc@uci.edu
+        
+        **Professional Links:**
+        - 💼 [LinkedIn](https://www.linkedin.com/in/calebtraxler) 
+        - 💻 [GitHub](https://www.github.com/calebtraxler) 
+        - 🌐 [Traxler Technology](https://traxlertechnology.vercel.app)
+        """)
     
     st.markdown("---")
     
-   # Custom CSS to style the tabs
+    # Professional Summary
+    with st.container():
+        st.markdown("""
+        <div class="highlight">
+        <h3>🎯 Professional Summary</h3>
+        <p>Data Science graduate student specializing in Machine Learning, Data Science and Computer Vision. Published 
+        academic researcher with significant entrepreneurial experience developing scalable Artificial Intelligence systems. 
+        Actively seeking PhD opportunities in computer science (start date: September 2026) and job opportunities in 
+        the data science and machine learning space (start date: December 2025).</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    # Custom CSS for tabs
     st.markdown("""
     <style>
         .stTabs {
@@ -59,410 +100,722 @@ def main():
             border-radius: 6px;
         }
         .stTabs [data-baseweb="tab-list"] {
-            gap: 0;
+            gap: 8px;
             justify-content: space-evenly;
             flex-wrap: wrap;
         }
         .stTabs [data-baseweb="tab"] {
             height: auto;
-            min-height: 28px;
+            min-height: 40px;
             white-space: normal;
             background-color: transparent;
-            border-radius: 4px 4px 0 0;
+            border-radius: 8px;
             color: #31333F;
-            font-size: 10px;
-            font-weight: 500;
+            font-size: 14px;
+            font-weight: 600;
             align-items: center;
             justify-content: center;
-            border: none;
-            transition: all 0.2s ease;
-            border-bottom: 1px solid transparent;
-            margin: 2px;
-            padding: 4px 8px;
+            border: 2px solid transparent;
+            transition: all 0.3s ease;
+            padding: 8px 12px;
             text-align: center;
-            word-break: keep-all;
-            overflow-wrap: anywhere;
         }
         .stTabs [aria-selected="true"] {
-            background-color: white;
-            color: #4CAF50;
-            font-weight: 700;
-            border-bottom-color: #4CAF50;
+            background-color: #0066CC;
+            color: white;
+            border-color: #0066CC;
         }
         .stTabs [data-baseweb="tab"]:hover {
-            color: #4CAF50;
-            background-color: rgba(255, 255, 255, 0.5);
-        }
-        @media (max-width: 600px) {
-            .stTabs [data-baseweb="tab"] {
-                flex: 1 1 auto;
-                font-size: 9px;
-            }
+            background-color: rgba(0, 102, 204, 0.1);
+            border-color: #0066CC;
         }
     </style>
     """, unsafe_allow_html=True)
 
-    # Create the tabs
-    tab1, tab2, tab3, tab4, tab5 = st.tabs([
-        "About Me", "Education", "Experience", "Projects", "Investments"
+    # Create tabs
+    tab1, tab2, tab3, tab4, tab5, tab6, tab7 = st.tabs([
+        "🏠 About Me", "🎓 Education", "🔬 Research", "💼 Experience", "🚀 Projects", "📄 Publications", "💰 Investments"
     ])
     
     with tab1:
         st.header("About Me")
-        st.write("""
-        Hello, my name is Caleb Traxler. 
-    
-        I'm a data scientist, machine learning engineer, investor and an aspiring entrepreneur with a passion for innovation and space exploration. 
-        As a UCLA Mathematics and Computer Science Alumni (Class of 2024) and current graduate student at UC Irvine, 
-        I bring a strong technical foundation to my work. My experience as an Ex-Data Scientist and ML Engineer at Amgen has honed my 
-        skills in applying cutting-edge technologies to real-world problems.
-    
-        Beyond my technical pursuits, I'm an active investor in both real estate and securities markets, always looking for new 
-        opportunities to grow and diversify my portfolio. My entrepreneurial spirit has led me to found Traxler Technology, 
-        where we're working on deriving insights from data to make a positive and lasting impression on humanity though many different avenues. 
         
-    
-        In my free time, I enjoy:
-        - Traveling to new places
-        - Visiting amusement parks
-        - Eating amazing foods
-        """)
+        col1, col2 = st.columns([2, 1])
+        
+        with col1:
+            st.write("""
+            Hello, I'm Caleb Traxler! I'm a passionate Data Science graduate student at UC Irvine with a strong 
+            foundation in Machine Learning, Computer Vision, and AI research. As a published researcher and 
+            entrepreneur, I'm dedicated to advancing the field of artificial intelligence and its applications.
 
-        def get_binary_file_downloader_html(bin_file, file_label='File'):
-            with open(bin_file, 'rb') as f:
-                data = f.read()
-            bin_str = base64.b64encode(data).decode()
-            href = f'<a href="data:application/octet-stream;base64,{bin_str}" download="{os.path.basename(bin_file)}">Download {file_label}</a>'
-            return href
+            **Current Focus:**
+            - 🎓 Pursuing M.S. in Data Science at UC Irvine (GPA: 3.97)
+            - 🔬 Conducting cutting-edge research in variational inference and geospatial analysis
+            - 🚀 Leading Traxler Technology LLC, building multimodal AI systems
+            - 📊 Active investor in real estate and securities markets
 
-        if st.button("Download Resume"):
-            file_path = "ResumeFinalpro.docx (8).pdf"
-    
+            **Career Goals:**
+            - 🎯 Seeking PhD opportunities in Computer Science (Sept 2026)
+            - 💼 Open to data science and ML engineering roles (Dec 2025)
+
+            **Personal Interests:**
+            - 🏄‍♂️ Surfing and weight training
+            - ✈️ Traveling and exploring new cultures
+            - 🎢 Visiting amusement parks
+            - 🍜 Discovering amazing cuisines
+            - 💻 Building full-stack applications
+            - 🤖 Exploring new ML architectures and contributing to open-source projects
+            """)
+        
+        with col2:
+            st.markdown("### Quick Stats")
+            st.metric("Current GPA", "3.97", "UC Irvine")
+            st.metric("Publications", "2", "arXiv papers")
+            st.metric("GitHub Projects", "15+", "Public repos")
+            st.metric("Research Areas", "3", "Active projects")
+        
+        # Download Resume Button
+        st.markdown("### 📄 Download Resume")
+        if st.button("📥 Download Latest Resume", type="primary"):
             try:
+                file_path = "ResumeFinalpro.docx (8).pdf"
                 with open(file_path, "rb") as pdf_file:
                     PDFbyte = pdf_file.read()
-        
+                
                 st.download_button(
-                    label="Click here to download",
+                    label="📄 Click here to download",
                     data=PDFbyte,
                     file_name="CalebTraxler_Resume.pdf",
-                    mime="application/octet-stream"
+                    mime="application/pdf"
                 )
             except FileNotFoundError:
                 st.error("Resume file not found. Please check the file path.")
-    
-        # Display personal interest photos
+        
+        # Personal photos section
+        st.markdown("### 📸 Personal Interests")
         col1, col2, col3 = st.columns(3)
-    
+        
         with col1:
-            st.subheader("Traveling - Japan")
-            st.image("travel/japan.png", caption="My latest travel adventure")
-
-            st.image("travel/japan2.png", caption="My latest travel adventure")
-            # Replace the placeholder with your actual travel photo:
-            # st.image("path_to_your_travel_photo.jpg", caption="My latest travel adventure")
-    
+            st.subheader("🗾 Travel Adventures")
+            try:
+                st.image("travel/japan.png", caption="Exploring Japan", use_column_width=True)
+                st.image("travel/japan2.png", caption="Cultural experiences", use_column_width=True)
+            except:
+                st.info("Travel photos coming soon!")
+        
         with col2:
-            st.subheader("Amusement Parks")
-            st.image("parks/universal.png", caption="Fun at the Universal Studios amusement park")
-
-            st.image("parks/stormtroopers.png", caption="Fun at the Disneyland amusement park")
-            # Replace the placeholder with your actual amusement park photo:
-            # st.image("path_to_your_amusement_park_photo.jpg", caption="Fun at the amusement park")
-    
+            st.subheader("🎢 Theme Parks")
+            try:
+                st.image("parks/universal.png", caption="Universal Studios", use_column_width=True)
+                st.image("parks/stormtroopers.png", caption="Disneyland adventures", use_column_width=True)
+            except:
+                st.info("Theme park photos coming soon!")
+        
         with col3:
-            st.subheader("Food")
-            st.image("food/crab.png", caption="Eating crab on the Santa Barbra pier")
-
-            st.image("food/omlet.png", caption="Eating tamagoyaki in Japan.")
-            # Replace the placeholder with your actual gym photo:
-            # st.image("path_to_your_gym_photo.jpg", caption="Staying fit at the gym")
+            st.subheader("🍱 Culinary Experiences")
+            try:
+                st.image("food/crab.png", caption="Santa Barbara pier dining", use_column_width=True)
+                st.image("food/omlet.png", caption="Tamagoyaki in Japan", use_column_width=True)
+            except:
+                st.info("Food photos coming soon!")
     
     with tab2:
-        st.header("Education")
-
-        with st.expander("M.S. Data Science - UC Irvine"):
-            col1, col2, col3 = st.columns([1, 8, 1])
+        st.header("🎓 Education")
+        
+        # UC Irvine
+        with st.expander("🏫 M.S. Data Science - UC Irvine (Current)", expanded=True):
+            col1, col2 = st.columns([1, 4])
             with col1:
-                st.image("Education/uci_image.png", width=100)
+                try:
+                    st.image("Education/uci_image.png", width=100)
+                except:
+                    st.write("🏫")
             with col2:
-                st.write(" ")
-                st.subheader("University of California Irvine (UCI)")
-            st.write("September 2024 - Expected December 2025")
-            st.write("I am pursuing a Master of Science in Data Science at UCI with a focus in machine learning and artificial intelligence at the UCI School of Information and Computer Sciences.")
-            st.write("• Concentrations in Machine Learning, Computer Vision and Artificial Intelligence")
-            st.write("• UCI Master of Data Science Scholarship Recipient")
-            st.write("• Accelerated Masters in Data Science Program (~15 months)")
-
-        with st.expander("B.S. Mathematics and Computer Science - UCLA"):
-            col1, col2, col3 = st.columns([1, 8, 1])
+                st.subheader("University of California, Irvine")
+                st.write("**Master of Science in Data Science** | GPA: 3.97")
+                st.write("📅 September 2024 - December 2025")
+            
+            st.markdown("""
+            **Specializations:**
+            - 🤖 Artificial Intelligence
+            - 🎨 Generative Models  
+            - 👁️ Computer Vision
+            - 🗺️ Geographic Information Systems (GIS)
+            - 📊 Big Data Analytics
+            
+            **Key Achievements:**
+            - 🏆 UCI Master of Data Science Scholarship Recipient
+            - 📚 Accelerated 15-month program
+            - 🎯 Maintaining 3.97 GPA
+            """)
+        
+        # UCLA
+        with st.expander("🏫 B.S. Mathematics & Computer Science - UCLA"):
+            col1, col2 = st.columns([1, 4])
             with col1:
-                st.image("Education/ucla_image.png", width=100)
+                try:
+                    st.image("Education/ucla_image.png", width=100)
+                except:
+                    st.write("🏫")
             with col2:
-                st.write(" ")
-                st.subheader("University of California Los Angeles (UCLA)")
-            st.write("September 2022 - June 2024")
-            st.write(" Graduated from UCLA with a Bachelor Degree in Mathematics and Computer Science. I was involved in many activities and societies: Undergraduate Mathematics Student Association (UMSA), AI Safety Fellowship. Phi Theta Kappa Honors Society. Undergraduate Mathematics Research under the supervision of Professor Shiba Biswal.")
-            st.write("• Joint Degree with Concentrations in Applied Mathematics and Computer Science")
-            st.write("• GPA: 3.81/4.00")
-            st.write("• UCLA Mathematics and Computer Science Alumni, Class of 2024")
-
-        with st.expander("A.S. Mathematics, Physics and Computer Science - Moorpark College"):
-            col1, col2, col3 = st.columns([1, 8, 1])
+                st.subheader("University of California, Los Angeles")
+                st.write("**Bachelor of Science in Mathematics & Computer Science** | GPA: 3.81")
+                st.write("📅 September 2022 - June 2024")
+            
+            st.markdown("""
+            **Honors & Activities:**
+            - 🏅 Phi Theta Kappa Honors Society
+            - 🛡️ AI Safety Fellowship
+            - 📈 Undergraduate Mathematics Student Association (UMSA)
+            - 🔬 Undergraduate Mathematics Research (Prof. Shbia Biswal)
+            
+            **Concentrations:**
+            - ➕ Applied Mathematics
+            - 💻 Computer Science
+            """)
+        
+        # Moorpark College
+        with st.expander("🏫 A.S. Multiple Disciplines - Moorpark College"):
+            col1, col2 = st.columns([1, 4])
             with col1:
-                st.image("Education/mpc_image.png", width=100)
+                try:
+                    st.image("Education/mpc_image.png", width=100)
+                except:
+                    st.write("🏫")
             with col2:
-                st.write(" ")
                 st.subheader("Moorpark College")
-            st.write("August 2020 - June 2022")
-            st.write("I graduated from Moorpark College in 2022 and transferred to UCLA. At Moorpark College I studied Mathematics, Physics and Computer Science. I was also an active partcipant of many activities and societies: Deans List (2020-2022), Honor Roll (2020 - 2022), Phi Theta Kappa Honors Society 2020-present, Nasa Community College Aerospace Scholars Internship, and I was a Mathematics tutor ")
-            st.write("• GPA: 4.00/4.00")
+                st.write("**Associate of Science in Mathematics, Physics & Computer Science** | GPA: 4.00")
+                st.write("📅 August 2020 - June 2022")
+            
+            st.markdown("""
+            **Achievements:**
+            - 🏆 Dean's List (2020-2022)
+            - 📜 Honor Roll (2020-2022)
+            - 🏅 Phi Theta Kappa Honors Society
+            - 🚀 NASA Community College Aerospace Scholars Internship
+            - 👨‍🏫 Mathematics Tutor
+            """)
     
     with tab3:
-        st.header("Experience")
-    
-        with st.expander("Founder and CEO - Traxler Technology"):
-            col1, col2 = st.columns([1, 8])
+        st.header("🔬 Research Experience")
+        
+        # Current Research Positions
+        st.subheader("Current Research Positions")
+        
+        with st.expander("🧠 Variational Inference Research - UC Irvine (Prof. Erik Sudderth)", expanded=True):
+            col1, col2 = st.columns([1, 4])
             with col1:
-                st.image("Experience/the_x.png", width=100)
+                st.write("🔬")
             with col2:
-                st.write(" ")
-                st.subheader("Traxler Technology, Irvine, CA")
-            st.write("June 2024 - Present")
-            st.write("• Founded a company focused on advancing Mars exploration and colonization")
-            st.write("• Developing interactive tools and simulations for Mars-related research")
-            st.write("At Traxler Technology, our mission is to advance humanity's reach into the cosmos by exploring innovative solutions for Mars exploration and colonization. We believe in a future where humans live and thrive on multiple planets. Explore our interactive tools and simulations to learn more about the Red Planet and how we plan to establish a sustainable human presence on Mars.")
-            st.write("• [Visit Traxler Technology](https://traxler.streamlit.app)")
-    
-        with st.expander("Data Science and ML Engineer Internship- Amgen"):
-            col1, col2 = st.columns([1, 5])
+                st.write("**Graduate Research Assistant**")
+                st.write("📅 June 2025 - Present | 📍 Irvine, CA")
+            
+            st.markdown("""
+            **Research Focus:**
+            - 📊 Variational inference with Gauss-Markov distributions
+            - 📈 Applying methods to Stochastic Differential Equation (SDE) time series models
+            - 🧪 Future project involving chemical data analysis
+            - 🎯 Advanced probabilistic modeling and inference techniques
+            """)
+        
+        with st.expander("🌡️ Geospatial Climate Research - UC Irvine (Prof. Jun Wu)"):
+            col1, col2 = st.columns([1, 4])
             with col1:
-                st.image("Experience/amgen_img.png", width=150)
+                st.write("🛰️")
             with col2:
-                st.subheader("Amgen, Thousand Oaks, CA")
-            st.write("June 2024 - September 2024")
-            st.write("• Built a rare disease prioritization model using Python and generative AI, achieving 96% accuracy")
-            st.write("• Accelerated a year-long scoring process to just a few days")
-            st.write("Joined the Technology and Innovation Lab at Amgen for a 10-week data science and machine learning role, focused on accelerating research and development using machine learning, AI and digital technologies. Used python to build a rare disease prioritization model able to automate a rare disease scoring process with generative artificial intelligence, yielding an accuracy of 96%. Accelerated a year-long scoring process into a few days.")
-    
-        with st.expander("AI-Safety Fellowship - UCLA"):
-            col1, col2 = st.columns([1, 8])
+                st.write("**Graduate Research Assistant**")
+                st.write("📅 June 2025 - Present | 📍 Irvine, CA")
+            
+            st.markdown("""
+            **Research Focus:**
+            - 🛰️ ECOSTRESS satellite data analysis
+            - 🌡️ Extreme heat distribution mapping across California urban zones
+            - 🗺️ Spatial data handling and GIS analysis
+            - 🐍 Python-based geospatial analysis and visualization
+            """)
+        
+        # Previous Research
+        st.subheader("Previous Research")
+        
+        with st.expander("🦠 COVID-19 Mathematical Modeling - UCLA (Prof. Shbia Biswal)"):
+            col1, col2 = st.columns([1, 4])
             with col1:
-                st.image("Experience/ai_safety.png", width=75)
+                try:
+                    st.image("Experience/ucla_math.png", width=80)
+                except:
+                    st.write("🔬")
             with col2:
-                st.write(" ")
-                st.subheader("UCLA AI Safety, Los Angeles, CA")
-            st.write("January 2024 - March 2024")
-            st.write("• Developed practical skills in ML, including neural networks using PyTorch and micrograd")
-            st.write("• Explored AI safety and alignment challenges")
-            st.write("Worked alongside fellow machine learning students at UCLA and gained insights about AI existential risks and the impacts of AI advancements on humanity's future. Developed practical stills in ML, including neural networks by using tools like PyTorch and micrograd. Explored AI safety and alignment challenges, contributing to understanding and mitigating potential failure modes in AI systems.")
-    
-        with st.expander("Undergraduate Mathematics Researcher - UCLA"):
-            col1, col2 = st.columns([1, 8])
-            with col1:
-                st.image("Experience/ucla_math.png", width=100)
-            with col2:
-                st.write(" ")
-                st.subheader("UCLA Mathematics Department, Los Angeles, CA")
-            st.write("March 2023 - June 2023")
-            st.write("• Led a COVID-19 research project, analyzing data using Python and Jupyter notebooks")
-            st.write("• Developed innovative bifurcation diagrams for predictive modeling")
-            st.write("Led a COVID-19 research project at UCLA Mathematics Department in Junior year, under Professor Shiba Biswals supervision. Analyzed Orange County COVID-19 data using Jupyter notebooks and python; focused on data processing an in-depth analysis in python. Implemented error analysis methods using Matlab, enhancing accuracy. Utilized SIR and SEIR differential equations and nonlinear equations to develop an innovative bifurcatin diagram, hence identifying a critical transcritical bifurcation threshold used for predictions.")
-    
-        with st.expander("Engineering and Design Internship - NASA"):
-            col1, col2 = st.columns([1, 8])
-            with col1:
-                st.image("Experience/nasa.png", width=100)
-            with col2:
-                st.write(" ")
-                st.subheader("NASA (Remote)")
-            st.write("February 2022 - August 2022")
-            st.write("• Collaborated on a Mars rover capstone project")
-            st.write("• Designed a modern Mars rover blueprint, introducing ML and AI systems")
-            st.write("Collaborated in a NASA National Community College Aerospace Scholars program and completed a mission capstone project; addressing complications with today's Mars rovers. Designed a modern Mars rover blueprint; the project served as an introduction to machine learning and AI systems. I was further able to build this project's hardware and software as a personal project. Improved NASA's Mars rover functionality and adaptability with this design.")
+                st.write("**Undergraduate Researcher**")
+                st.write("📅 March 2023 - June 2023 | 📍 Los Angeles, CA")
+            
+            st.markdown("""
+            **Research Achievements:**
+            - 🦠 Modeled COVID-19 dynamics using extended SIR/SEIR models
+            - 📊 Analyzed Orange County COVID-19 data using Python and Jupyter notebooks
+            - 🔄 Developed innovative bifurcation diagrams for predictive modeling
+            - 📄 **Published in arXiv**: [Analysis of COVID-19 Infection Dynamics](https://arxiv.org/abs/2505.13753)
+            - 🎯 Identified critical transcritical bifurcation thresholds for predictions
+            """)
     
     with tab4:
-        st.header("Projects")
-
-        # Function to display images vertically (for other sections)
-        def display_images_vertically(images, captions, widths):
-            for img, cap, w in zip(images, captions, widths):
-                st.image(img, caption=cap, width=w)
-
-        # Function to create a two-column layout with text on left and images on right (for other sections)
-        def project_layout(title, details, images, captions, image_widths):
-            st.subheader(title)
-            col1, col2 = st.columns([3, 2])
+        st.header("💼 Professional Experience")
+        
+        # Current Positions
+        with st.expander("🚀 Founder & CEO - Traxler Technology LLC", expanded=True):
+            col1, col2 = st.columns([1, 4])
             with col1:
-                st.write(details)
+                try:
+                    st.image("Experience/the_x.png", width=100)
+                except:
+                    st.write("🚀")
             with col2:
-                display_images_vertically(images, captions, image_widths)
-
-        # Custom layout for UCLA Modeling COVID-19 Research
-        with st.expander("UCLA Mathematical Modeling - COVID-19 Research"):
-            st.subheader("Data and Bifurcation Analysis")
-            col1, col2 = st.columns([3, 2])
+                st.write("**Founder & CEO**")
+                st.write("📅 November 2024 - Present | 📍 Los Angeles, CA")
+            
+            st.markdown("""
+            **Company Overview:**
+            - 🤖 AI-focused startup building multimodal intelligence systems
+            - 🌐 [Visit Traxler Technology](https://traxlertechnology.vercel.app/login)
+            
+            **Key Achievements:**
+            - 🏗️ Designed and deployed scalable full-stack platforms
+            - ⚛️ Tech Stack: React, Firebase, AWS EC2, Vercel, Auth0
+            - 📱 Developing cross-platform mobile applications
+            - 🔮 Focus on vision-language models and AI-driven insights
+            """)
         
+        with st.expander("🎓 Program Ambassador - UC Irvine"):
+            col1, col2 = st.columns([1, 4])
             with col1:
-                st.write("""
-                • Conducted research on modeling COVID-19 spread and impact
-                
-                • Analyzed and visualized complex datasets related to the pandemic
-
-                Details: Led a COVID-19 research project at UCLA Mathematics Department in Junior year, under Professor Shiba Biswals supervision. Analyzed Orange County COVID-19 data using Jupyter notebooks and python; focused on data processing and in-depth analysis in python. Implemented error analysis methods using Matlab, enhancing accuracy. Utilized SIR and SEIR differential equations and nonlinear equations to develop an innovative bifurcation diagram, hence identifying a critical transcritical bifurcation threshold used for predictions.
-                """)
-        
+                try:
+                    st.image("Education/uci_image.png", width=80)
+                except:
+                    st.write("🎓")
             with col2:
-                st.image("Projects/Modeling/data.png", caption="COVID-19 Data Visualization", width=500)
+                st.write("**Master of Data Science Program Ambassador**")
+                st.write("📅 September 2024 - Present | 📍 Irvine, CA")
+            
+            st.markdown("""
+            **Responsibilities:**
+            - 📢 Ambassador for Masters of Data Science program (2024-2025 cohort)
+            - 💡 Support creation and development of marketing campaigns
+            - 🤝 Student outreach and program promotion
+            - 🌐 [UCI Faculty Profile](https://ics.uci.edu/?people=caleb-traxler)
+            """)
         
-            st.image("Projects/Modeling/bifurcation.png", caption="Bifurcation Diagram", width=600)
-
-        with st.expander("Machine Learning Projects"):
-            project_layout(
-                "Two Layer Neural Network for Numerical Binary Classification (Even or Odd)",
-                """
-                • Implemented a neural network for classifying numbers as even or odd
-                
-                • Achieved high accuracy in binary classification tasks
-
-                Details: Performed forward and backward propagation process for a two-layer fully connected neural network. I used the open-source MNIST dataset (large database of hand written digits). Furthermore used L2 regularization and performed hyper parameter tuning for different learning rates. The best accuracy is achieved with a learning rate of 0.001, resulting in a validation accuracy of 97.24% and a test accuracy of 96.95%.
-                """,
-                ["Projects/ML/ml1.png"],
-                ["Neural Network Performance"],
-                [300]
-            )
-
-            project_layout(
-                "K-means Clustering on Image Datasets",
-                """
-                • Developed a K-means clustering algorithm for data segmentation
-                
-                • Applied the algorithm to various datasets to identify patterns
-
-                Details: Applied k-means to a popular visual classification CIFAR-10 dataset consisting of 60K labeled 32x32x3 images, such that each image contains 3 channels corresponding to RGB colors. Out of the 60K images, 50K images belong to the training set and 10K belong to the testing set. We first apply principal component analysis to the images to 2 dimensions, then we apply the k-mean clustering algorithm with k=10 (10 clusters) to the PCA transformed data to then get the ground truth labels.
-                """,
-                ["Projects/ML/clustering1.png", "Projects/ML/clustering2.png"],
-                ["K-means Clustering Result 1", "K-means Clustering Result 2"],
-                [500, 500]
-            )
-
-        with st.expander("AI Projects"):
-            project_layout(
-                "Bayesian Network and Causal Modeling",
-                """
-                • Created a Bayesian network for probabilistic reasoning
-                
-                • Applied the network to solve complex inference problems
-
-                Details: I was able to build a Bayesian network model based on the following statement:
-
-                When Sambot goes home at night, he wants to know if his family is home before he tries the doors. (Perhaps the most convenient door to enter is double locked when nobody is home). Often when Sambot's wife leaves the house she turns on an outdoor light. However, she sometimes turns on this light if she is expecting a guest. Also, Sambot's family has a dog. When nobody is home, the dog is put in the back yard. The same is true if the dog has bowel trouble. Finally, if the dog is in the backyard, Sambot will probably hear her barking, but sometimes he can be confused by other dogs barking. Sambot is equipped with two sensors: a light sensor for detecting outdoor lights and a sound sensor for detecting the barking of dogs(s). Both of these sensors are not completely reliable and can break. Moreover, they both require Sambot's battery to be in good condition.
-
-                I was able to then reason about this situation using a UCLA inference tool called SamIam. Then given sensory input data I was able to visualize probabilistic outcomes subject to the input data. I was furthermore able to produce what-if scenarios by utilizing this Bayesian network as a causal model.
-                """,
-                ["Projects/AI/bayesian.png"],
-                ["Bayesian Network Structure"],
-                [600]
-            )
-
-            project_layout(
-                "Sokoban Game with Admissible Heuristic",
-                """
-                • Implemented the Sokoban puzzle game with an AI solver
-                
-                • Developed an admissible heuristic for efficient pathfinding
-
-                Note: blank = 0, wall = 1, box = 2, keeper = 3, star = 4, boxstar = 5, keeperstar = 6
-
-                Details: Used the A* algorithm given a start-state and using specific admissible heuristics to obtain the final-state in the least number of moves and in the fastest time. Overall I was able to create an agent that was able to solve 19 Sokoban games, all under 4 seconds. My fast heuristic approach was due to a combination of the minimization of the Manhattan distance between box and goal, subject to the minimization between the keeper and the box, with a particular usage of breadth first search for the next best move.
-                """,
-                ["Projects/AI/sako1.png", "Projects/AI/sako2.png", "Projects/AI/sako3.png"],
-                ["Sokoban Game State 1", "Sokoban Game State 2", "Sokoban Game State 3"],
-                [200, 215, 400]
-            )
-
-        with st.expander("Math Imaging Projects"):
-            project_layout(
-                "Feature Enhancement via Brightness Adjustments",
-                """
-                • Developed algorithms for feature extraction using brightness adjustments
-                
-                • Enhanced image features for improved analysis and recognition
-
-                Details: Utilized histogram equalization technique on an image of the MRI of a fractured human spine to extract features via brightness adjustments. I was basically able to use histogram equalization to uncover lots of hidden details that were otherwise un-visible. This process involves the mapping many of the dark pixels to a lighter-medium gray pixel and keeping white pixels white, then re-displaying the newly mapped image. Overall the histogram equalization technique allowed me to reveal details that would have otherwise been hidden by dark pixels.
-                """,
-                ["Projects/Imaging/dark.png", "Projects/Imaging/light.png"],
-                ["Dark Image", "Light Image"],
-                [500, 500]
-            )
-
-            project_layout(
-                "Image Sharpening",
-                """
-                • Implemented image sharpening techniques to enhance details
-                
-                • Compared various sharpening algorithms and their effects
-
-                Details: I was able to utilize a image sharpening technique called the composite Laplacian mask operator, which, when applied to an image highlights the areas where there is a rapid change in color intensity, hence corresponding to the edges of these features. In the moon image, I was able to make the craters and edges on the moons surface become more apparent and have a sharper appearance using this image sharpening technique.
-                """,
-                ["Projects/Imaging/sharpening.png"],
-                ["Image Sharpening Result"],
-                [600]
-            )    
+        # Previous Experience
+        with st.expander("🧬 Data Scientist & ML Engineer Intern - Amgen"):
+            col1, col2 = st.columns([1, 4])
+            with col1:
+                try:
+                    st.image("Experience/amgen_img.png", width=120)
+                except:
+                    st.write("🧬")
+            with col2:
+                st.write("**Data Scientist & ML Engineer Intern**")
+                st.write("📅 July 2024 - September 2024 | 📍 Remote")
+            
+            st.markdown("""
+            **Key Achievements:**
+            - 🤖 Built rare disease prioritization model using generative AI
+            - ⚡ Reduced year-long process to minutes using GenAI pipeline
+            - 📊 Developed Streamlit application for stakeholder data visualization
+            - 🏆 **Winner: Amgen AI Symposium 2024**
+            - 🎯 96% accuracy in disease scoring automation
+            """)
+        
+        with st.expander("🛡️ AI Safety Fellowship - UCLA"):
+            col1, col2 = st.columns([1, 4])
+            with col1:
+                try:
+                    st.image("Experience/ai_safety.png", width=75)
+                except:
+                    st.write("🛡️")
+            with col2:
+                st.write("**AI Safety Fellow**")
+                st.write("📅 January 2024 - March 2024 | 📍 Los Angeles, CA")
+            
+            st.markdown("""
+            **Program Focus:**
+            - 🧠 Developed practical ML skills using PyTorch and micrograd
+            - ⚠️ Explored AI safety and alignment challenges
+            - 🔍 Studied AI existential risks and impacts on humanity's future
+            - 🛠️ Contributed to understanding AI system failure modes
+            """)
+        
+        with st.expander("🚀 Engineering & Design Intern - NASA"):
+            col1, col2 = st.columns([1, 4])
+            with col1:
+                try:
+                    st.image("Experience/nasa.png", width=80)
+                except:
+                    st.write("🚀")
+            with col2:
+                st.write("**Engineering & Design Intern**")
+                st.write("📅 February 2022 - August 2022 | 📍 Remote")
+            
+            st.markdown("""
+            **Project Achievements:**
+            - 🔴 Mars rover capstone project collaboration
+            - 🤖 Designed modern Mars rover blueprint with ML/AI systems
+            - 🛠️ Built project hardware and software components
+            - 🚀 Enhanced NASA Mars rover functionality and adaptability
+            - 🎓 NASA Community College Aerospace Scholars Program
+            """)
     
     with tab5:
-        st.header("Real Estate Investments")
-    
-        st.markdown("""
+        st.header("🚀 Technical Projects")
         
-        <h4>First Property Investment - Topeka, Kansas</h4>
-        • Purchased first real estate property at 22 years old<br>
-        • Currently renovating the property<br>
-        • Plans to refinance and rent out for passive income<br>
-        • Actively seeking next property investment in Texas by end of 2025
-
-        """, unsafe_allow_html=True)
-
-        st.write(" ")
-    
-        st.write("I've just purchased my first real estate property in Topeka, Kansas at 22 years old! This home is definitely a fixer upper, however I am ready to take on the challenge. With some hard work and dedication, I plan to transform it, refinance, and rent it out and make this investment worthwhile. This is just the beginning of my real estate journey. I am already looking ahead to purchase my next property in Texas before the end of 2025. Stay tuned for more updates as I continue to grow my real estate portfolio!")
-    
-        # Display images in a row
-        col1, col2, col3 = st.columns(3)
-    
+        # Featured Projects
+        st.subheader("🌟 Featured Projects")
+        
+        with st.expander("📱 AI Life Journal using VLMs and LangChain Memory", expanded=True):
+            col1, col2 = st.columns([3, 1])
+            with col1:
+                st.markdown("""
+                **Project Overview:**
+                Cross-platform mobile application (Android & iOS) enabling users to capture, organize, and 
+                reflect on daily experiences using Meta Ray-Ban AI glasses and other life-logging devices.
+                
+                **Technical Stack:**
+                - 👁️ Vision-Language Models (VLMs)
+                - 🔗 LangChain for memory-augmented AI
+                - 📱 Cross-platform mobile development
+                - ☁️ Secure cloud storage and processing
+                
+                **Key Features:**
+                - 📸 Media ingestion from wearable devices
+                - 🧠 AI-driven insights and summaries
+                - 📝 Intelligent journaling features
+                - 🔒 End-to-end secure architecture
+                """)
+            with col2:
+                st.markdown("**Status:** 🟢 Active")
+                st.markdown("**Period:** June 2025 - Present")
+                st.markdown("[🔗 GitHub](https://github.com/CalebTraxler/TraxlerTechnologyApp_)")
+        
+        with st.expander("🗺️ Generative Route Prediction with HMMs and 3D Point Clouds"):
+            st.markdown("""
+            **Project Overview:**
+            Developed discrete Hidden Markov Models (HMMs) to generate realistic driving routes from 
+            KITTI-360 3D point cloud maps.
+            
+            **Technical Achievements:**
+            - 🔍 Advanced probabilistic modeling with HMMs
+            - 📊 3D point cloud data processing
+            - 🚗 Realistic driving route generation
+            - 📄 Currently under review for publication
+            
+            **Timeline:** May 2025 - June 2025 | [🔗 GitHub](https://github.com/CalebTraxler/HMM-3D-Routing)
+            """)
+        
+        with st.expander("🪐 Multivariate Statistical Analysis of Exoplanet Habitability"):
+            st.markdown("""
+            **Project Overview:**
+            Comprehensive analysis of 517 exoplanets from NASA Exoplanet Archive to identify potentially 
+            habitable worlds and quantify detection bias.
+            
+            **Key Features:**
+            - 📊 Multivariate statistical analysis
+            - 🌍 Habitability assessment algorithms
+            - 📈 Interactive 3D visualization using Streamlit and PyDeck
+            - 📄 **Published in arXiv**
+            
+            **Links:**
+            - 🌐 [Live Application](https://planet-habitability.streamlit.app/)
+            - 📄 [arXiv Paper](https://arxiv.org/abs/2506.18200)
+            
+            **Timeline:** May 2025 - June 2025
+            """)
+        
+        # Additional Projects
+        st.subheader("💻 Additional Projects")
+        
+        col1, col2 = st.columns(2)
+        
         with col1:
-            image1 = Image.open("Investments/1.jpg")
-            st.image(image1, caption="Property View 1", use_column_width=True)
-    
+            with st.container():
+                st.markdown("""
+                **🚗 Autonomous Driving via CNN and Groq API**
+                - Real-time lane detection using U-Net CNN
+                - >95% accuracy, <50ms latency
+                - Under review for publication
+                - [GitHub](https://github.com/CalebTraxler/Autonomous_Driving_CV)
+                
+                **🏠 Real Estate ROI Geo-Locator**
+                - Interactive 3D visualization with Streamlit
+                - Real-time ROI trend analysis
+                - [Live App](https://lnkd.in/g_NrKj-b)
+                """)
+        
         with col2:
-            image2 = Image.open("Investments/2.png")
-            st.image(image2, caption="Property View 2", use_column_width=True)
+            with st.container():
+                st.markdown("""
+                **🧠 Neural Network Classification**
+                - Two-layer network for binary classification
+                - 97.24% validation accuracy on MNIST
+                - Implemented forward/backward propagation
+                
+                **🎯 K-means Clustering on CIFAR-10**
+                - Applied to 60K labeled images
+                - PCA dimensionality reduction
+                - K=10 clustering with ground truth analysis
+                """)
+        
+        # Legacy Projects
+        with st.expander("📚 Academic & Legacy Projects"):
+            st.markdown("""
+            **🤖 Bayesian Network and Causal Modeling**
+            - Probabilistic reasoning system
+            - SamIam inference tool implementation
+            - What-if scenario analysis
+            
+            **🎮 Sokoban Game with Admissible Heuristic**
+            - A* algorithm implementation
+            - Solved 19 games under 4 seconds
+            - Manhattan distance optimization
+            
+            **🔬 Mathematical Imaging Projects**
+            - Histogram equalization for MRI enhancement
+            - Image sharpening using Laplacian masks
+            - Feature extraction via brightness adjustments
+            """)
     
+    with tab6:
+        st.header("📄 Publications")
+        
+        st.markdown("""
+        <div style="background-color: #f0f8ff; padding: 1rem; border-radius: 0.5rem; margin-bottom: 1rem;">
+        <h4>📊 Publication Metrics</h4>
+        <div style="display: flex; gap: 2rem;">
+            <div><strong>Total Papers:</strong> 2</div>
+            <div><strong>Platform:</strong> arXiv</div>
+            <div><strong>Research Areas:</strong> AI, Statistics, Epidemiology</div>
+        </div>
+        </div>
+        """, unsafe_allow_html=True)
+        
+        # Publication 1
+        with st.container():
+            st.markdown("""
+            <div class="publication-item">
+            <h4>🪐 Multivariate Statistical Analysis of Exoplanet Habitability: Detection Bias and Earth Analog Identification</h4>
+            <p><strong>Authors:</strong> <strong>Traxler, C.</strong>, et al.</p>
+            <p><strong>Published:</strong> 2025 | <strong>arXiv:</strong> 2506.18200</p>
+            <p><strong>Abstract:</strong> Comprehensive multivariate statistical analysis of 517 exoplanets from the NASA Exoplanet Archive to identify potentially habitable worlds and quantify detection bias in current surveys.</p>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            col1, col2, col3 = st.columns(3)
+            with col1:
+                st.link_button("📄 Read Paper", "https://arxiv.org/abs/2506.18200")
+            with col2:
+                st.link_button("🌐 Live Demo", "https://planet-habitability.streamlit.app/")
+            with col3:
+                st.link_button("💻 GitHub", "https://github.com/CalebTraxler")
+        
+        # Publication 2  
+        with st.container():
+            st.markdown("""
+            <div class="publication-item">
+            <h4>🦠 Analysis of COVID-19 Infection Dynamics: Extended SIR Model Approach</h4>
+            <p><strong>Authors:</strong> <strong>Traxler, C.</strong>, et al.</p>
+            <p><strong>Published:</strong> 2025 | <strong>arXiv:</strong> 2505.13754</p>
+            <p><strong>Abstract:</strong> Advanced mathematical modeling of COVID-19 dynamics using extended SIR/SEIR models with bifurcation analysis for predictive modeling of pandemic spread patterns.</p>
+            </div>
+            """, unsafe_allow_html=True)
+            
+            col1, col2 = st.columns(2)
+            with col1:
+                st.link_button("📄 Read Paper", "https://arxiv.org/abs/2505.13753")
+            with col2:
+                st.link_button("🔬 Research Details", "https://github.com/CalebTraxler")
+        
+        # Research Impact
+        st.markdown("### 📈 Research Impact")
+        col1, col2, col3 = st.columns(3)
+        with col1:
+            st.metric("Citation Potential", "High", "Emerging research")
+        with col2:
+            st.metric("Research Areas", "3", "AI, Stats, Health")
         with col3:
-            image3 = Image.open("Investments/3.png")
-            st.image(image3, caption="Property View 3", use_column_width=True)
+            st.metric("Collaboration", "Multi-author", "Team research")
+        
+        # Future Publications
+        st.markdown("### 🔮 Upcoming Publications")
+        st.info("""
+        **📝 In Review:**
+        - Generative Route Prediction with HMMs and 3D Point Clouds
+        - Autonomous Driving via CNN and Real-time Analysis
+        
+        **🚀 In Progress:**
+        - Variational Inference Applications in Chemical Data Analysis
+        - Geospatial Analysis of Urban Heat Islands using ECOSTRESS Data
+        """)
     
+    with tab7:
+        st.header("💰 Investment Portfolio")
+        
+        # Investment Philosophy
         st.markdown("""
-        <h4>Investment Strategy</h4>
-        • Focus on up-and-coming neighborhoods with growth potential<br>
-        • Target properties with value-add opportunities through renovation<br>
-        • Aim to build a diverse portfolio of residential and potentially commercial properties
+        <div class="highlight">
+        <h3>💡 Investment Philosophy</h3>
+        <p>Active investor in real estate and public markets with a focus on long-term value creation, 
+        financial modeling, and portfolio diversification. Passionate about identifying emerging market 
+        opportunities and applying data-driven analysis to investment decisions.</p>
+        </div>
         """, unsafe_allow_html=True)
-
-        st.write(" ")
+        
+        # Real Estate Portfolio
+        st.subheader("🏠 Real Estate Investments")
+        
+        with st.expander("🏡 First Property Investment - Topeka, Kansas", expanded=True):
+            st.markdown("""
+            **Investment Details:**
+            - 🎯 **Achievement:** Purchased first property at age 22
+            - 📍 **Location:** Topeka, Kansas
+            - 🔨 **Status:** Currently under renovation
+            - 💰 **Strategy:** Fix, refinance, rent (BRRRR method)
+            - 📈 **Goal:** Generate passive income and build equity
+            """)
+            
+            # Property Images
+            try:
+                col1, col2, col3 = st.columns(3)
+                with col1:
+                    image1 = Image.open("Investments/1.jpg")
+                    st.image(image1, caption="Property Exterior", use_column_width=True)
+                with col2:
+                    image2 = Image.open("Investments/2.png")
+                    st.image(image2, caption="Interior View", use_column_width=True)
+                with col3:
+                    image3 = Image.open("Investments/3.png")
+                    st.image(image3, caption="Renovation Progress", use_column_width=True)
+            except:
+                st.info("Property photos will be displayed here once available.")
+        
+        # Investment Strategy
+        st.subheader("📊 Investment Strategy")
+        
+        col1, col2 = st.columns(2)
+        
+        with col1:
+            st.markdown("""
+            **🏠 Real Estate Focus:**
+            - 🎯 Target emerging neighborhoods with growth potential
+            - 🔨 Value-add opportunities through strategic renovation
+            - 🌍 Geographic diversification (Midwest expansion)
+            - 📈 Focus on cash flow and appreciation
+            - 🤝 Building relationships with local investors
+            """)
+        
+        with col2:
+            st.markdown("""
+            **📈 Investment Principles:**
+            - 📊 Data-driven market analysis
+            - ⏰ Long-term value creation
+            - 🛡️ Risk management and diversification
+            - 💡 Continuous market education
+            - 🤖 Leveraging technology for analysis
+            """)
+        
+        # Future Investment Plans
+        st.subheader("🚀 Future Investment Plans")
+        
+        with st.container():
+            st.markdown("""
+            **🎯 2025 Goals:**
+            - 🏡 Acquire second property in Texas by end of 2025
+            - 🏢 Research multi-family investment opportunities
+            - 📊 Develop automated investment analysis tools
+            - 🤝 Join local real estate investment groups
+            - 📚 Complete real estate education programs
+            
+            **📈 Long-term Vision:**
+            - 🏘️ Build diverse portfolio of residential properties
+            - 🏢 Explore commercial real estate opportunities  
+            - 💼 Potential real estate syndication participation
+            - 🌐 Geographic expansion to high-growth markets
+            - 🤖 Integration of AI/ML in property analysis
+            """)
+        
+        # Investment Performance Tracking
+        st.subheader("📊 Portfolio Tracking")
+        
+        # Create sample metrics (you can replace with real data)
+        col1, col2, col3, col4 = st.columns(4)
+        
+        with col1:
+            st.metric("Properties Owned", "1", "First acquisition")
+        with col2:
+            st.metric("Target ROI", "15%+", "Annual target")
+        with col3:
+            st.metric("Investment Timeline", "Long-term", "10+ years")
+        with col4:
+            st.metric("Next Purchase", "Q4 2025", "Texas market")
+        
+        # Investment Education
+        st.markdown("### 📚 Continuous Learning")
+        st.info("""
+        **🎓 Investment Education Focus:**
+        - 📈 Real estate market analysis and trends
+        - 💰 Financial modeling and cash flow analysis
+        - 🏛️ Tax strategies and legal structures
+        - 🤝 Networking with experienced investors
+        - 📊 Technology tools for property evaluation
+        """)
     
-        st.markdown("""
-        <h4>Future Plans</h4>
-        • Research multi-family properties in emerging markets<br>
-        • Network with local real estate investors and join investment groups<br>
-        • Continuously educate myself on real estate market trends and investment strategies
-        """, unsafe_allow_html=True)
-    
-        st.info("My goal is to build a robust real estate portfolio that generates passive income and appreciates in value over time. I'm committed to learning and growing as a real estate investor.")
-
+    # Technical Skills Section
     st.markdown("---")
-    st.write("© 2024 Caleb Traxler. All rights reserved.")
-
+    st.header("🛠️ Technical Skills")
+    
+    col1, col2 = st.columns(2)
+    
+    with col1:
+        st.markdown("""
+        <div class="skill-category">
+        <h4>💻 Languages & Cloud Platforms</h4>
+        <p>Python • R • JavaScript (React) • SQL • MATLAB • Bash<br>
+        AWS (EC2, S3) • Firebase • Vercel • Docker • Git/GitHub</p>
+        </div>
+        
+        <div class="skill-category">
+        <h4>🤖 Machine Learning & AI</h4>
+        <p>Deep Learning • Generative AI • Vision-Language Models (VLMs)<br>
+        Transformers • NLP • Reinforcement Learning • HMMs<br>
+        Variational Inference • Bayesian Networks</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    with col2:
+        st.markdown("""
+        <div class="skill-category">
+        <h4>📚 Frameworks & Libraries</h4>
+        <p>NumPy • Pandas • Scikit-learn • TensorFlow • PyTorch<br>
+        Keras • OpenCV • Hugging Face • LangChain • Plotly</p>
+        </div>
+        
+        <div class="skill-category">
+        <h4>🔧 Development Tools</h4>
+        <p>Jupyter • VSCode • REST APIs • Linux CLI<br>
+        CI/CD (GitHub Actions) • Auth0 • Streamlit</p>
+        </div>
+        """, unsafe_allow_html=True)
+    
+    # Footer
+    st.markdown("---")
+    st.markdown("""
+    <div style="text-align: center; color: #666; padding: 2rem;">
+        <p>© 2025 Caleb Traxler. All rights reserved.</p>
+        <p>Built with ❤️ using Streamlit • Last updated: January 2025</p>
+        <p>
+            <a href="mailto:calebtraxler34@gmail.com">📧 Email</a> • 
+            <a href="https://www.linkedin.com/in/calebtraxler">💼 LinkedIn</a> • 
+            <a href="https://github.com/calebtraxler">💻 GitHub</a> • 
+            <a href="https://traxlertechnology.vercel.app">🌐 Company</a>
+        </p>
+    </div>
+    """, unsafe_allow_html=True)
 
 if __name__ == "__main__":
     main()
